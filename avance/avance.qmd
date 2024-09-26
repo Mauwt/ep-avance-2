@@ -1,12 +1,17 @@
 ---
-title: "Análisis de los factores que influyen en el reconocimiento facial del sistema de control de ingreso y salida de la UTEC en el ciclo 2024-2"
-author: "Autor: [Tu nombre]"
+title: "Análisis de los factores que influyen en el reconocimiento facial a través del sistema de control de ingreso y salida de la UTEC en el ciclo 2024-2"
+author: 
+  - name: "Castro Revoredo, Luis Alonso"
+  - name: "Jacobo Ruiz, David Mauricio"
+  - name: "Javier Coripaco, Jhordy"
+  - name: "Navarro Romero, Jack Lazaro"
+  - name: "Orozco Ayala, Joaquin Alessandro"
 date: "`r Sys.Date()`"
 format:
   html:
     toc: true
     code-tools: true
-    toc-depth: 2
+    toc-depth: 3
     code-fold: true
 execute:
   echo: true
@@ -21,54 +26,59 @@ El presente estudio tiene como objetivo general determinar los factores que infl
 
 Se evaluarán variables relacionadas con la intensidad de la luz, las características del individuo (como altura, género, color de piel, uso de accesorios en el rostro, entre otros) y las condiciones del entorno (como la aglomeración de personas o las condiciones climáticas). Estas variables pueden afectar la precisión y el tiempo de respuesta del sistema de reconocimiento facial.
 
+## Objetivo General
+
+- Determinar los factores que influyen en el reconocimiento facial a través del sistema de control de ingreso y salida de la UTEC en el ciclo 2024-2.
+
 ## Objetivos específicos
 
-1.  **Analizar la relación entre la intensidad de la luz y el tiempo que le toma al sistema de reconocimiento facial permitir el ingreso a los estudiantes**.
+-  Analizar la relación entre la intensidad de la luz y el tiempo que le toma al sistema de reconocimiento facial permitir el ingreso a los estudiantes.
 
-2. **Analizar el impacto del uso de accesorios en la cabeza y rostro (capucha, gorra, lentes, mascarilla) en el tiempo de reconocimiento facial del sistema de control de ingreso y salida de los estudiantes de UTEC en el ciclo 2024-2.**
+-  Analizar el impacto del uso de accesorios en la cabeza y rostro (capucha, gorra, lentes, mascarilla) en el tiempo de reconocimiento facial del sistema de control de ingreso y salida de los estudiantes de UTEC en el ciclo 2024-2.
 
 
-## Variables estudiadas
-
-Las variables utilizadas para este análisis incluyen:
-
--   **Altura**: Variable numérica continua medida en metros.
--   **Lleva accesorios en la cabeza-rostro**: Variable categórica nominal (capucha, gorro, lentes, mascarilla, etc.).
--   **Género**: Variable categórica nominal (Masculino, Femenino).
--   **Tamaño del cabello**: Variable categórica ordinal, con categorías "corto", "mediano" o "largo".
--   **Color de piel**: Variable categórica nominal, utilizando la Escala Fitzpatrick.
--   **Horario**: Variable categórica nominal, dividida en mañana (6am - 11:59am), tarde (12pm - 18:59pm) y noche (19pm - 22pm).
--   **Intensidad de la luz**: Variable numérica discreta, medida en luxes.
--   **Distancia**: Variable numérica continua, medida en metros (distancia entre el detector y la persona).
--   **Aglomeración**: Variable categórica ordinal, categorizada como "casi vacío", "moderadamente concurrido" y "lleno".
--   **Tiempo del reconocimiento facial**: Variable numérica discreta, cronometrada en segundos.
--   **Color de la prenda superior**: Variable categórica nominal.
--   **Clima**: Variable categórica nominal (soleado, parcialmente nublado, nublado, lluvioso).
--   **Fallo en el acceso**: Variable booleana que indica si hubo un fallo en el reconocimiento facial (sí/no).
-
+---
 
 > Código para cargar los datos y librerías necesarias, además de constantes usadas en el análisis.
 
 ```{r}
+
+## Intenta instalar todas las dependencias usadas en el quarto document
+check_and_install <- function(package) {
+  if (!require(package, character.only = TRUE)) {
+    install.packages(package, dependencies = TRUE)
+  }
+}
+
+check_and_install("tidyverse")
+check_and_install("ggplot2")
+check_and_install("dplyr")
+check_and_install("formattable")
+check_and_install("skimr")
+
+
 library(tidyverse)
 library(ggplot2)
 library(dplyr)
-library(naniar)
-library(knitr)
-library(data.table)
 library(formattable)
-
-## Color constants
+library(skimr)
 
 customGreen0 = "#DeF7E9"
 customGreen = "#71CA97"
+customBlue = "#3498db"
+customBlue0 = "#11bedb"
 customRed = "#ff7f7f"
 
-## Load data
 df <- read_csv("datos_reconocimiento.csv", locale = locale(encoding = "ISO-8859-1"))
 
 ```
 
+
+---
+
+## Variables estudiadas
+
+Las variables utilizadas para este análisis incluyen:
 
 > Código: visualización de características generales de las variables
 
@@ -127,8 +137,6 @@ formattable(variables_df,
               ))
 ```
 
-
-
 ## Renombrar variables
 
 Para facilitar el análisis y evitar errores comunes en la manipulación de los datos, es crucial renombrar las variables utilizando el formato snake_case y asegurarse de que los nombres sean descriptivos y conciso.
@@ -175,7 +183,6 @@ formattable(
 ```
 
 ## Perfilamiento Inicial de datos
-
 
 > Código: funciones de ayuda para realizar un análisis simple de variables categóricas y numéricas.
 
@@ -276,24 +283,23 @@ analisis_numerica_simple <- function(df, variables) {
 }
 ```
 
+1.  **Altura**: Se ha clasificado como una variable numérica continua porque la altura de los sujetos es una medida que puede tomar cualquier valor dentro de un rango (1.0 a 2.5 metros). Aunque teóricamente es continua, es posible que en la recolección de datos solo se obtengan valores discretos.
 
-1. **Altura**: Se ha clasificado como una variable numérica continua porque la altura de los sujetos es una medida que puede tomar cualquier valor dentro de un rango (1.0 a 2.5 metros). Aunque teóricamente es continua, es posible que en la recolección de datos solo se obtengan valores discretos.
+2.  **Lleva Accesorios**: Esta variable se clasifica como categórica nominal debido a que describe la presencia de diferentes tipos de accesorios en el rostro o la cabeza, como capuchas o gafas, que no siguen ningún orden natural.
 
-2. **Lleva Accesorios**: Esta variable se clasifica como categórica nominal debido a que describe la presencia de diferentes tipos de accesorios en el rostro o la cabeza, como capuchas o gafas, que no siguen ningún orden natural.
+3.  **Género**: Aunque podría tratarse de una variable cualitativa, en esta muestra específica se clasifica como categórica nominal con dos valores posibles: "M" (Masculino) y "F" (Femenino).
 
-3. **Género**: Aunque podría tratarse de una variable cualitativa, en esta muestra específica se clasifica como categórica nominal con dos valores posibles: "M" (Masculino) y "F" (Femenino).
+4.  **Tamaño del Cabello**: Esta variable es categórica ordinal, ya que existen categorías que siguen un orden progresivo (Corto, Mediano, Largo). Aunque no tiene una métrica numérica exacta, sigue un gradiente lógico.
 
-4. **Tamaño del Cabello**: Esta variable es categórica ordinal, ya que existen categorías que siguen un orden progresivo (Corto, Mediano, Largo). Aunque no tiene una métrica numérica exacta, sigue un gradiente lógico.
+5.  **Color de Piel**: Se utiliza la escala Fitzpatrick para clasificar esta variable categórica nominalmente. Aunque la escala tiene un rango numérico, no hay una relación de orden en el contexto de esta investigación.
 
-5. **Color de Piel**: Se utiliza la escala Fitzpatrick para clasificar esta variable categórica nominalmente. Aunque la escala tiene un rango numérico, no hay una relación de orden en el contexto de esta investigación.
+6.  **Horario**: Se clasifica como categórica nominal, ya que se divide en tres intervalos de tiempo durante el día (mañana, tarde y noche) sin un orden estricto entre ellos.
 
-6. **Horario**: Se clasifica como categórica nominal, ya que se divide en tres intervalos de tiempo durante el día (mañana, tarde y noche) sin un orden estricto entre ellos.
+7.  **Intensidad de Luz**: Esta es una variable numérica discreta, ya que se mide en un rango de lúmenes, pero solo acepta valores enteros.
 
-7. **Intensidad de Luz**: Esta es una variable numérica discreta, ya que se mide en un rango de lúmenes, pero solo acepta valores enteros.
+8.  **Distancia**: Se clasifica como numérica continua, dado que la distancia entre el sujeto y la cámara se mide en metros y puede tener cualquier valor dentro de un rango continuo.
 
-8. **Distancia**: Se clasifica como numérica continua, dado que la distancia entre el sujeto y la cámara se mide en metros y puede tener cualquier valor dentro de un rango continuo.
-
-9. **Aglomeración**: Es categórica ordinal, ya que las categorías (casi vacío, moderadamente concurrido, lleno) siguen un orden lógico que afecta la precisión del sistema de reconocimiento.
+9.  **Aglomeración**: Es categórica ordinal, ya que las categorías (casi vacío, moderadamente concurrido, lleno) siguen un orden lógico que afecta la precisión del sistema de reconocimiento.
 
 10. **Tiempo de Reconocimiento**: Esta variable es numérica discreta, ya que mide el tiempo en segundos que tarda el sistema en identificar a una persona. Los valores están en un rango numérico fijo.
 
@@ -303,8 +309,7 @@ analisis_numerica_simple <- function(df, variables) {
 
 13. **Fallo en el Acceso**: Esta es una variable booleana, ya que tiene solo dos posibles estados: éxito o fallo en el proceso de reconocimiento facial.
 
-
-### Variables Categóricas
+## Variables Categóricas
 
 Se excluyó la variable `accesorios` ya que en el estado en crudo del dataset esta columna permite variables tipo lista e incluso `NAs`
 
@@ -344,43 +349,35 @@ formattable(tabla_numericas,
 
 ```
 
-
-
-
 ## Selección de variables relevantes
 
 Para alcanzar nuestros objetivos específicos, identificamos las siguientes variables del conjunto de datos que son clave para nuestro análisis:
 
-1. **Objetivo 1**: Relación entre la intensidad de la luz y el tiempo de reconocimiento facial.
-  
-  - **Intensidad de la luz**: numérica discreta.
-  - **Tiempo de reconocimiento facial**:numérica discreta.
+1.  **Objetivo 1**: Relación entre la intensidad de la luz y el tiempo de reconocimiento facial.
 
-2. **Objetivo 2**: Impacto del uso de accesorios en la cabeza y rostro en el tiempo de reconocimiento.
+-   **Intensidad de la luz**: numérica discreta.
+-   **Tiempo de reconocimiento facial**:numérica discreta.
 
-  - **Accesorios en cabeza/rostro**: Variable categórica nominal que indica el uso de capucha, gorra, lentes, o mascarilla.
-  - **Tiempo de reconocimiento facial**: Variable numérica discreta.
+2.  **Objetivo 2**: Impacto del uso de accesorios en la cabeza y rostro en el tiempo de reconocimiento.
+
+-   **Accesorios en cabeza/rostro**: Variable categórica nominal que indica el uso de capucha, gorra, lentes, o mascarilla.
+-   **Tiempo de reconocimiento facial**: Variable numérica discreta.
 
 Estas variables serán el foco del análisis en las siguientes secciones, con el fin de visualizar y evaluar cómo se relacionan entre sí.
-
-
 
 ```{r}
 df_seleccion <- df %>% select(luz, tiempo, accesorios)
 ```
 
-
-
 ## Exploración y Análisis Univariado de las Variables Seleccionadas
 
-1. **Variable: Intensidad de la Luz**
+1.  **Variable: Intensidad de la Luz**
 
 La intensidad de la luz es una variable numérica discreta que mide la cantidad de luz en el ambiente. En este análisis, exploraremos su distribución mediante un gráfico de barras, calcularemos la media y la mediana, y observaremos su dispersión a través de un gráfico de caja y bigotes.
 
-
 ```{r}
 # Estadísticas descriptivas de la intensidad de luz
-summary(df$luz)
+skim(df$luz)
 
 # Gráfico de caja y bigotes para la intensidad de luz
 ggplot(df, aes(y = df$luz)) +
@@ -390,49 +387,113 @@ ggplot(df, aes(y = df$luz)) +
 
 ```
 
-
-2. **Variable: Tiempo de Reconocimiento Facial**
+2.  **Variable: Tiempo de Reconocimiento Facial**
 
 ```{r}
-# Estadísticas descriptivas del tiempo de reconocimiento
-summary(df$tiempo)
 
-# Diagrama de barras para la distribución del tiempo de reconocimiento
+skim(df$tiempo)
+
+#ggplot(df, aes(x = df$tiempo)) +
+#  geom_histogram(binwidth = 1, fill = customGreen, color = "white", alpha = 0.8) +
+#  labs(title = "Distribución del Tiempo de Reconocimiento Facial",
+#       x = "Tiempo de Reconocimiento (segundos)",
+#       y = "Frecuencia") +
+#  theme_minimal() +
+#  theme(plot.title = element_text(hjust = 0.5))
+
+# Cálculo de la media y mediana
+media_tiempo <- mean(df$tiempo, na.rm = TRUE)
+mediana_tiempo <- median(df$tiempo, na.rm = TRUE)
+
+# Histograma con líneas de media y mediana
 ggplot(df, aes(x = df$tiempo)) +
-  geom_bar(fill = "#E9C46A", color = "white") +
-  labs(title = "Distribución del Tiempo de Reconocimiento Facial", x = "Tiempo de Reconocimiento (segundos)", y = "Frecuencia") +
-  theme_minimal()
+  geom_histogram(binwidth = 1, fill = "#2a9d8f", color = "white", alpha = 0.8) +
+  labs(title = "Distribución del Tiempo de Reconocimiento Facial",
+       x = "Tiempo de Reconocimiento (segundos)",
+       y = "Frecuencia") +
+  geom_vline(aes(xintercept = media_tiempo), color = "blue", linetype = "dashed", size = 1.2) +
+  geom_vline(aes(xintercept = mediana_tiempo), color = "red", linetype = "dashed", size = 1.2) +
+  annotate("text", x = media_tiempo + 1, y = max(table(df$tiempo)) * 0.9, label = paste("Media =", round(media_tiempo, 2)), color = "blue") +
+  annotate("text", x = mediana_tiempo - 1, y = max(table(df$tiempo)) * 0.8, label = paste("Mediana =", round(mediana_tiempo, 2)), color = "white") +
+  theme_minimal() +
+  theme(plot.title = element_text(hjust = 0.5))
 
-# Gráfico de caja y bigotes del tiempo de reconocimiento facial
+q1 <- quantile(df$tiempo, 0.25, na.rm = TRUE)
+q2 <- quantile(df$tiempo, 0.50, na.rm = TRUE)
+q3 <- quantile(df$tiempo, 0.75, na.rm = TRUE)
+
+
 ggplot(df, aes(y = df$tiempo)) +
   geom_boxplot(fill = "#F4A261", color = "#264653") +
   labs(title = "Gráfico de Caja y Bigotes: Tiempo de Reconocimiento", y = "Tiempo de Reconocimiento (segundos)") +
-  theme_minimal()
+  geom_hline(aes(yintercept = q1), color = customGreen, linetype = "dashed", size = 1.2) +
+  geom_hline(aes(yintercept = q2), color = customBlue, linetype = "dashed", size = 1.2) +
+  geom_hline(aes(yintercept = q3), color = customGreen, linetype = "dashed", size = 1.2) +
+  annotate("text", x = 0.6, y = q1+2, label = paste("Q1 =", round(q1, 2)), color = customGreen, hjust = 1) +
+  annotate("text", x = 0.6, y = q2+2, label = paste("Mediana =", round(q2, 2)), color = customBlue0, hjust = 1) +
+  annotate("text", x = 0.6, y = q3+2, label = paste("Q3 =", round(q3, 2)), color = customGreen, hjust = 1) +
+  theme_minimal() +
+  theme(plot.title = element_text(hjust = 5),
+        axis.text.x = element_blank(),  
+        axis.ticks.x = element_blank()) 
+```
 
+3.  **Variable: Accesorios en la Cabeza y Rostro**
+
+Consideraciones:
+
+-   Cada persona puede llevar 0, 1, 2 o más accesorios.
+-   Debemos contar la cantidad de accesorios que cada individuo llevaba y generar una nueva columna que contenga esa información.
+
+```{r}
+
+df$num_accesorios <- sapply(df$accesorios, function(x) {
+  if (is.na(x) || x == "") {
+    return(0)  
+  } else {
+    return(length(unlist(strsplit(x, ", ")))) 
+  }
+})
+
+desc_accesorios <- df %>%
+  summarise(
+    total_observaciones = n(),
+    accesorios_promedio = mean(num_accesorios, na.rm = TRUE),
+    accesorios_min = min(num_accesorios, na.rm = TRUE),
+    accesorios_max = max(num_accesorios, na.rm = TRUE),
+    num_accesorios_unicos = length(unique(num_accesorios)),
+    num_nas = sum(is.na(accesorios))
+  )
+
+
+print(desc_accesorios)
+
+ggplot(df, aes(x = as.factor(num_accesorios))) +
+  geom_bar(fill = "#2a9d8f", color = "white") +
+  labs(title = "Distribución de la cantidad de accesorios por persona",
+       x = "Cantidad de accesorios", y = "Frecuencia") +
+  theme_minimal()
 ```
 
 
-3. **Variable: Accesorios en la Cabeza y Rostro**
-    
-    ///TODO. 
+```{r}
 
-## Análisis Bivariado
-
-1. **Gráfico de Caja y Bigotes para la Relación entre el Uso de Accesorios y el Tiempo de Reconocimiento**
+df$accesorios_count <- sapply(strsplit(as.character(df$accesorios), ","), length)
 
 
-`{r}
-# Gráfico de caja y bigotes multivariable entre accesorios y tiempo de reconocimiento
-ggplot(df, aes(x =df$accesorios, y = df$tiempo, fill = df$accesorios)) +
-  geom_boxplot(alpha = 0.7, outlier.color = "#E76F51", outlier.shape = 16) +
-  labs(title = "Tiempo de Reconocimiento por Uso de Accesorios en Cabeza/Rostro", 
-       x = "Accesorios en Cabeza y Rostro", 
+df$accesorios_cat <- cut(df$accesorios_count, 
+                         breaks = c(-Inf, 0, 1, 2, Inf), 
+                         labels = c("Ninguno", "1 accesorio", "2 accesorios", "3 o más accesorios"))
+
+ggplot(df, aes(x = accesorios_cat, y = tiempo)) +
+  geom_boxplot(fill = "#E76F51", color = "#264653") +
+  labs(title = "Comparación del Tiempo de Reconocimiento por Número de Accesorios",
+       x = "Cantidad de Accesorios en Cabeza y Rostro",
        y = "Tiempo de Reconocimiento (segundos)") +
-  scale_fill_manual(values = c("#F4A261", "#E9C46A", "#2A9D8F", "#264653")) +
-  theme_minimal()
-``
+  geom_hline(aes(yintercept = median(df$tiempo, na.rm = TRUE)), linetype = "dashed", color = customBlue0) +
+  annotate("text", x = 4, y = median(df$tiempo, na.rm = TRUE) + 1, label = paste("Mediana Global =", round(median(df$tiempo, na.rm = TRUE), 2)), color = "black", hjust = 1.1) +
+  theme_minimal() +
+  theme(plot.title = element_text(hjust = 0.5))
 
 
-
-
-
+```
