@@ -1,0 +1,2639 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Autor: [Tu nombre]">
+<meta name="dcterms.date" content="2024-09-25">
+
+<title>Análisis de los factores que influyen en el reconocimiento facial del sistema de control de ingreso y salida de la UTEC en el ciclo 2024-2</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="avance_files/libs/clipboard/clipboard.min.js"></script>
+<script src="avance_files/libs/quarto-html/quarto.js"></script>
+<script src="avance_files/libs/quarto-html/popper.min.js"></script>
+<script src="avance_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="avance_files/libs/quarto-html/anchor.min.js"></script>
+<link href="avance_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="avance_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="avance_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="avance_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="avance_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body>
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul class="collapse">
+  <li><a href="#introducción" id="toc-introducción" class="nav-link active" data-scroll-target="#introducción">Introducción</a>
+  <ul class="collapse">
+  <li><a href="#objetivos-específicos" id="toc-objetivos-específicos" class="nav-link" data-scroll-target="#objetivos-específicos">Objetivos específicos</a></li>
+  <li><a href="#variables-estudiadas" id="toc-variables-estudiadas" class="nav-link" data-scroll-target="#variables-estudiadas">Variables estudiadas</a></li>
+  <li><a href="#renombrar-variables" id="toc-renombrar-variables" class="nav-link" data-scroll-target="#renombrar-variables">Renombrar variables</a></li>
+  <li><a href="#perfilamiento-inicial-de-datos" id="toc-perfilamiento-inicial-de-datos" class="nav-link" data-scroll-target="#perfilamiento-inicial-de-datos">Perfilamiento Inicial de datos</a></li>
+  <li><a href="#variables-numéricas" id="toc-variables-numéricas" class="nav-link" data-scroll-target="#variables-numéricas">Variables Numéricas</a></li>
+  <li><a href="#selección-de-variables-relevantes" id="toc-selección-de-variables-relevantes" class="nav-link" data-scroll-target="#selección-de-variables-relevantes">Selección de variables relevantes</a></li>
+  <li><a href="#exploración-y-análisis-univariado-de-las-variables-seleccionadas" id="toc-exploración-y-análisis-univariado-de-las-variables-seleccionadas" class="nav-link" data-scroll-target="#exploración-y-análisis-univariado-de-las-variables-seleccionadas">Exploración y Análisis Univariado de las Variables Seleccionadas</a></li>
+  <li><a href="#análisis-bivariado" id="toc-análisis-bivariado" class="nav-link" data-scroll-target="#análisis-bivariado">Análisis Bivariado</a></li>
+  </ul></li>
+  </ul>
+</nav>
+</div>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<div class="quarto-title-block"><div><h1 class="title">Análisis de los factores que influyen en el reconocimiento facial del sistema de control de ingreso y salida de la UTEC en el ciclo 2024-2</h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li><li><hr class="dropdown-divider"></li><li><a id="quarto-view-source" class="dropdown-item" href="javascript:void(0)" role="button">View Source</a></li></ul></div></div>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Autor: [Tu nombre] </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">September 25, 2024</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="introducción" class="level1">
+<h1>Introducción</h1>
+<p>El presente estudio tiene como objetivo general determinar los factores que influyen en el reconocimiento facial a través del sistema de control de ingreso y salida de la Universidad de Ingeniería y Tecnología (UTEC) durante el ciclo 2024-2. Este análisis es de gran importancia, ya que un sistema de control eficiente es fundamental para el acceso ágil y seguro de los estudiantes al campus universitario.</p>
+<p>Se evaluarán variables relacionadas con la intensidad de la luz, las características del individuo (como altura, género, color de piel, uso de accesorios en el rostro, entre otros) y las condiciones del entorno (como la aglomeración de personas o las condiciones climáticas). Estas variables pueden afectar la precisión y el tiempo de respuesta del sistema de reconocimiento facial.</p>
+<section id="objetivos-específicos" class="level2">
+<h2 class="anchored" data-anchor-id="objetivos-específicos">Objetivos específicos</h2>
+<ol type="1">
+<li><p><strong>Analizar la relación entre la intensidad de la luz y el tiempo que le toma al sistema de reconocimiento facial permitir el ingreso a los estudiantes</strong>.</p></li>
+<li><p><strong>Analizar el impacto del uso de accesorios en la cabeza y rostro (capucha, gorra, lentes, mascarilla) en el tiempo de reconocimiento facial del sistema de control de ingreso y salida de los estudiantes de UTEC en el ciclo 2024-2.</strong></p></li>
+</ol>
+</section>
+<section id="variables-estudiadas" class="level2">
+<h2 class="anchored" data-anchor-id="variables-estudiadas">Variables estudiadas</h2>
+<p>Las variables utilizadas para este análisis incluyen:</p>
+<ul>
+<li><strong>Altura</strong>: Variable numérica continua medida en metros.</li>
+<li><strong>Lleva accesorios en la cabeza-rostro</strong>: Variable categórica nominal (capucha, gorro, lentes, mascarilla, etc.).</li>
+<li><strong>Género</strong>: Variable categórica nominal (Masculino, Femenino).</li>
+<li><strong>Tamaño del cabello</strong>: Variable categórica ordinal, con categorías “corto”, “mediano” o “largo”.</li>
+<li><strong>Color de piel</strong>: Variable categórica nominal, utilizando la Escala Fitzpatrick.</li>
+<li><strong>Horario</strong>: Variable categórica nominal, dividida en mañana (6am - 11:59am), tarde (12pm - 18:59pm) y noche (19pm - 22pm).</li>
+<li><strong>Intensidad de la luz</strong>: Variable numérica discreta, medida en luxes.</li>
+<li><strong>Distancia</strong>: Variable numérica continua, medida en metros (distancia entre el detector y la persona).</li>
+<li><strong>Aglomeración</strong>: Variable categórica ordinal, categorizada como “casi vacío”, “moderadamente concurrido” y “lleno”.</li>
+<li><strong>Tiempo del reconocimiento facial</strong>: Variable numérica discreta, cronometrada en segundos.</li>
+<li><strong>Color de la prenda superior</strong>: Variable categórica nominal.</li>
+<li><strong>Clima</strong>: Variable categórica nominal (soleado, parcialmente nublado, nublado, lluvioso).</li>
+<li><strong>Fallo en el acceso</strong>: Variable booleana que indica si hubo un fallo en el reconocimiento facial (sí/no).</li>
+</ul>
+<blockquote class="blockquote">
+<p>Código para cargar los datos y librerías necesarias, además de constantes usadas en el análisis.</p>
+</blockquote>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(naniar)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(knitr)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(data.table)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(formattable)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="do">## Color constants</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>customGreen0 <span class="ot">=</span> <span class="st">"#DeF7E9"</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>customGreen <span class="ot">=</span> <span class="st">"#71CA97"</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>customRed <span class="ot">=</span> <span class="st">"#ff7f7f"</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="do">## Load data</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"datos_reconocimiento.csv"</span>, <span class="at">locale =</span> <span class="fu">locale</span>(<span class="at">encoding =</span> <span class="st">"ISO-8859-1"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<blockquote class="blockquote">
+<p>Código: visualización de características generales de las variables</p>
+</blockquote>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>variables_df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">Variable =</span> <span class="fu">c</span>(<span class="st">"Altura"</span>, <span class="st">"Lleva Accesorios"</span>, <span class="st">"Género"</span>, <span class="st">"Tamaño del Cabello"</span>, </span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>               <span class="st">"Color de Piel"</span>, <span class="st">"Horario"</span>, <span class="st">"Intensidad de Luz"</span>, <span class="st">"Distancia"</span>, </span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>               <span class="st">"Aglomeración"</span>, <span class="st">"Tiempo de Reconocimiento"</span>, <span class="st">"Color de Prenda Superior"</span>, <span class="st">"Clima"</span>, <span class="st">"Fallo en el Acceso"</span>),</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">Tipo =</span> <span class="fu">c</span>(<span class="st">"Numérica continua"</span>, <span class="st">"Categórica nominal"</span>, <span class="st">"Categórica nominal"</span>, <span class="st">"Categórica ordinal"</span>, </span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>           <span class="st">"Categórica nominal"</span>, <span class="st">"Categórica nominal"</span>, <span class="st">"Numérica discreta"</span>, <span class="st">"Numérica continua"</span>, </span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>           <span class="st">"Categórica ordinal"</span>, <span class="st">"Numérica discreta"</span>, <span class="st">"Categórica nominal"</span>, <span class="st">"Categórica nominal"</span>, <span class="st">"Booleana"</span>),</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Valores Aceptados"</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"Rango: 1.0 - 2.5 metros"</span>, </span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>                          <span class="st">"Capucha, gorro, lentes, mascarilla, ninguno"</span>, </span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>                          <span class="st">"M, F"</span>, </span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>                          <span class="st">"Corto, Mediano, Largo"</span>, </span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>                          <span class="st">"Escala Fitzpatrick 1-6"</span>, </span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>                          <span class="st">"Mañana, Tarde, Noche"</span>, </span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>                          <span class="st">"Rango: 0-1000 lúmenes"</span>, </span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>                          <span class="st">"Rango: 0.5-3.0 metros"</span>, </span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>                          <span class="st">"Casi vacío, Moderadamente concurrido, Lleno"</span>, </span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>                          <span class="st">"Rango: 1-10 segundos"</span>, </span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>                          <span class="st">"Variedad de colores"</span>, </span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>                          <span class="st">"Soleado, Parcialmente nublado, Nublado, Lluvioso"</span>, </span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>                          <span class="st">"Sí, No"</span>),</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Características"</span> <span class="ot">=</span> <span class="fu">c</span>(</span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Puede tener valores atípicos si no es reportado correctamente."</span>,</span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Puede afectar la precisión del reconocimiento facial."</span>,</span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Asignado como nominal para mantenerlo en formato no numérico."</span>,</span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Clasificado como ordinal debido al rango progresivo de longitudes."</span>,</span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Categórica según la escala Fitzpatrick de tonalidad de piel."</span>,</span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Basado en el rango de horas del día."</span>,</span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Debería ser numérica discreta, relacionada con condiciones de luz."</span>,</span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Valores continuos de distancia medida en metros."</span>,</span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Cantidad de personas afecta el rendimiento del sistema."</span>,</span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>    <span class="st">"El sistema registra tiempo en segundos."</span>,</span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Los colores de la prenda pueden afectar la detección."</span>,</span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>    <span class="st">"El clima puede influir en la calidad de la detección."</span>,</span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Es binaria; representa éxito o fallo en la operación."</span></span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a>  ),</span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>  <span class="at">stringsAsFactors =</span> <span class="cn">FALSE</span></span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a>tipo_formatter <span class="ot">&lt;-</span> <span class="fu">formatter</span>(<span class="st">"span"</span>, <span class="at">style =</span> x <span class="sc">~</span> <span class="fu">style</span>(<span class="at">color =</span> <span class="fu">ifelse</span>(x <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"Numérica continua"</span>, <span class="st">"Numérica discreta"</span>), <span class="st">"#3498db"</span>, customGreen)))</span>
+<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a><span class="fu">formattable</span>(variables_df, </span>
+<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a>            <span class="at">table.attr =</span> <span class="st">'style="color:black; background-color:#f4f4f4; font-size: 12px; width: 100%;text-align: center;"'</span>,</span>
+<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>            <span class="fu">list</span>(</span>
+<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a>              <span class="at">Variable =</span> <span class="fu">formatter</span>(<span class="st">"span"</span>, <span class="at">style =</span> <span class="sc">~</span> <span class="fu">style</span>(<span class="at">color =</span> <span class="st">"black"</span>, <span class="at">font.weight =</span> <span class="st">"bold"</span>)),</span>
+<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a>              <span class="at">Tipo =</span> tipo_formatter,</span>
+<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a>              <span class="st">"Valores Aceptados"</span> <span class="ot">=</span> <span class="fu">formatter</span>(<span class="st">"span"</span>, <span class="at">style =</span> <span class="sc">~</span> <span class="fu">style</span>(<span class="at">color =</span> <span class="st">"orange"</span>)),</span>
+<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a>              <span class="st">"Características"</span> <span class="ot">=</span> <span class="fu">formatter</span>(<span class="st">"span"</span>, <span class="at">style =</span> <span class="sc">~</span> <span class="fu">style</span>(<span class="at">color =</span> <span class="st">"gray"</span>))</span>
+<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a>              ))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<table style="color:black; background-color:#f4f4f4; font-size: 12px; width: 100%;text-align: center;">
+<thead>
+<tr>
+<th style="text-align:right;">
+Variable
+</th>
+<th style="text-align:right;">
+Tipo
+</th>
+<th style="text-align:right;">
+Valores.Aceptados
+</th>
+<th style="text-align:right;">
+Características
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+<span style="color: black; font-weight: bold">Altura </span>
+</td>
+<td style="text-align:right;">
+<span style="color: #3498db">Numérica continua </span>
+</td>
+<td style="text-align:right;">
+Rango: 1.0 - 2.5 metros
+</td>
+<td style="text-align:right;">
+<span style="color: gray">Puede tener valores atípicos si no es reportado correctamente. </span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+<span style="color: black; font-weight: bold">Lleva Accesorios </span>
+</td>
+<td style="text-align:right;">
+<span style="color: #71CA97">Categórica nominal</span>
+</td>
+<td style="text-align:right;">
+Capucha, gorro, lentes, mascarilla, ninguno
+</td>
+<td style="text-align:right;">
+<span style="color: gray">Puede afectar la precisión del reconocimiento facial. </span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+<span style="color: black; font-weight: bold">Género </span>
+</td>
+<td style="text-align:right;">
+<span style="color: #71CA97">Categórica nominal</span>
+</td>
+<td style="text-align:right;">
+M, F
+</td>
+<td style="text-align:right;">
+<span style="color: gray">Asignado como nominal para mantenerlo en formato no numérico. </span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+<span style="color: black; font-weight: bold">Tamaño del Cabello </span>
+</td>
+<td style="text-align:right;">
+<span style="color: #71CA97">Categórica ordinal</span>
+</td>
+<td style="text-align:right;">
+Corto, Mediano, Largo
+</td>
+<td style="text-align:right;">
+<span style="color: gray">Clasificado como ordinal debido al rango progresivo de longitudes.</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+<span style="color: black; font-weight: bold">Color de Piel </span>
+</td>
+<td style="text-align:right;">
+<span style="color: #71CA97">Categórica nominal</span>
+</td>
+<td style="text-align:right;">
+Escala Fitzpatrick 1-6
+</td>
+<td style="text-align:right;">
+<span style="color: gray">Categórica según la escala Fitzpatrick de tonalidad de piel. </span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+<span style="color: black; font-weight: bold">Horario </span>
+</td>
+<td style="text-align:right;">
+<span style="color: #71CA97">Categórica nominal</span>
+</td>
+<td style="text-align:right;">
+Mañana, Tarde, Noche
+</td>
+<td style="text-align:right;">
+<span style="color: gray">Basado en el rango de horas del día. </span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+<span style="color: black; font-weight: bold">Intensidad de Luz </span>
+</td>
+<td style="text-align:right;">
+<span style="color: #3498db">Numérica discreta </span>
+</td>
+<td style="text-align:right;">
+Rango: 0-1000 lúmenes
+</td>
+<td style="text-align:right;">
+<span style="color: gray">Debería ser numérica discreta, relacionada con condiciones de luz.</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+<span style="color: black; font-weight: bold">Distancia </span>
+</td>
+<td style="text-align:right;">
+<span style="color: #3498db">Numérica continua </span>
+</td>
+<td style="text-align:right;">
+Rango: 0.5-3.0 metros
+</td>
+<td style="text-align:right;">
+<span style="color: gray">Valores continuos de distancia medida en metros. </span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+<span style="color: black; font-weight: bold">Aglomeración </span>
+</td>
+<td style="text-align:right;">
+<span style="color: #71CA97">Categórica ordinal</span>
+</td>
+<td style="text-align:right;">
+Casi vacío, Moderadamente concurrido, Lleno
+</td>
+<td style="text-align:right;">
+<span style="color: gray">Cantidad de personas afecta el rendimiento del sistema. </span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+<span style="color: black; font-weight: bold">Tiempo de Reconocimiento</span>
+</td>
+<td style="text-align:right;">
+<span style="color: #3498db">Numérica discreta </span>
+</td>
+<td style="text-align:right;">
+Rango: 1-10 segundos
+</td>
+<td style="text-align:right;">
+<span style="color: gray">El sistema registra tiempo en segundos. </span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+<span style="color: black; font-weight: bold">Color de Prenda Superior</span>
+</td>
+<td style="text-align:right;">
+<span style="color: #71CA97">Categórica nominal</span>
+</td>
+<td style="text-align:right;">
+Variedad de colores
+</td>
+<td style="text-align:right;">
+<span style="color: gray">Los colores de la prenda pueden afectar la detección. </span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+<span style="color: black; font-weight: bold">Clima </span>
+</td>
+<td style="text-align:right;">
+<span style="color: #71CA97">Categórica nominal</span>
+</td>
+<td style="text-align:right;">
+Soleado, Parcialmente nublado, Nublado, Lluvioso
+</td>
+<td style="text-align:right;">
+<span style="color: gray">El clima puede influir en la calidad de la detección. </span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+<span style="color: black; font-weight: bold">Fallo en el Acceso </span>
+</td>
+<td style="text-align:right;">
+<span style="color: #71CA97">Booleana </span>
+</td>
+<td style="text-align:right;">
+Sí, No
+</td>
+<td style="text-align:right;">
+<span style="color: gray">Es binaria; representa éxito o fallo en la operación. </span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="renombrar-variables" class="level2">
+<h2 class="anchored" data-anchor-id="renombrar-variables">Renombrar variables</h2>
+<p>Para facilitar el análisis y evitar errores comunes en la manipulación de los datos, es crucial renombrar las variables utilizando el formato snake_case y asegurarse de que los nombres sean descriptivos y conciso.</p>
+<blockquote class="blockquote">
+<p>Código: renombrar las variables del dataset.</p>
+</blockquote>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">fecha =</span> <span class="st">`</span><span class="at">Marca temporal</span><span class="st">`</span>,</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">edad =</span> <span class="st">`</span><span class="at">Edad</span><span class="st">`</span>,</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">altura =</span> <span class="st">`</span><span class="at">Estatura en metros</span><span class="st">`</span>,</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">peso =</span> <span class="st">`</span><span class="at">Peso en kilogramos</span><span class="st">`</span>,</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">intentos =</span> <span class="st">`</span><span class="at">Numero de intentos para reconocimiento</span><span class="st">`</span>,</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">tiempo =</span> <span class="st">`</span><span class="at">Tiempo total que tomo el reconocimiento en segundos</span><span class="st">`</span>,</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">luz =</span> <span class="st">`</span><span class="at">Intensidad de luz en luxes</span><span class="st">`</span>,</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">temperatura =</span> <span class="st">`</span><span class="at">Temperatura en C°</span><span class="st">`</span>,</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">distancia_detector =</span> <span class="st">`</span><span class="at">Distancia entre el detector y la persona en metros</span><span class="st">`</span>,</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">distancia_cabeza =</span> <span class="st">`</span><span class="at">Distancia de la parte superior de cabeza hasta la camara</span><span class="st">`</span>,</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">inclinacion =</span> <span class="st">`</span><span class="at">Angulo de inclinación-sexagesimales</span><span class="st">`</span>,</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">dispositivo =</span> <span class="st">`</span><span class="at">Dispositivo</span><span class="st">`</span>,</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">turno =</span> <span class="st">`</span><span class="at">Turno del registro</span><span class="st">`</span>,</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">cabello_color =</span> <span class="st">`</span><span class="at">Color de cabello</span><span class="st">`</span>,</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">rostro_forma =</span> <span class="st">`</span><span class="at">Forma del rostro</span><span class="st">`</span>,</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">piel_tipo =</span> <span class="st">`</span><span class="at">Tipo de piel</span><span class="st">`</span>,</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>    <span class="at">cejas_forma =</span> <span class="st">`</span><span class="at">Forma de cejas</span><span class="st">`</span>,</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>    <span class="at">nariz_tipo =</span> <span class="st">`</span><span class="at">Tipo de nariz</span><span class="st">`</span>,</span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>    <span class="at">accesorios =</span> <span class="st">`</span><span class="at">Accesorios en la cabeza-rostro</span><span class="st">`</span>,</span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>    <span class="at">clima =</span> <span class="st">`</span><span class="at">Clima</span><span class="st">`</span>,</span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>    <span class="at">viento =</span> <span class="st">`</span><span class="at">Corriente del viento</span><span class="st">`</span>,</span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>    <span class="at">lectura_estado =</span> <span class="st">`</span><span class="at">Estado de la lectura</span><span class="st">`</span>,</span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>    <span class="at">genero =</span> <span class="st">`</span><span class="at">Género</span><span class="st">`</span>,</span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>    <span class="at">ojos_color =</span> <span class="st">`</span><span class="at">Color de ojos</span><span class="st">`</span>,</span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>    cabello_tamaño <span class="ot">=</span> <span class="st">`</span><span class="at">Tamaño de cabello</span><span class="st">`</span>,</span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>    <span class="at">ropa_color =</span> <span class="st">`</span><span class="at">Color de ropa</span><span class="st">`</span></span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a><span class="fu">formattable</span>(</span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>(df),</span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>  <span class="at">table.attr =</span> <span class="st">'style="color:black; background-color:#f4f4f4; font-size: 12px; width: 100%;text-align: center;"'</span></span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<table style="color:black; background-color:#f4f4f4; font-size: 12px; width: 100%;text-align: center;">
+<thead>
+<tr>
+<th style="text-align:right;">
+fecha
+</th>
+<th style="text-align:right;">
+edad
+</th>
+<th style="text-align:right;">
+altura
+</th>
+<th style="text-align:right;">
+peso
+</th>
+<th style="text-align:right;">
+intentos
+</th>
+<th style="text-align:right;">
+tiempo
+</th>
+<th style="text-align:right;">
+luz
+</th>
+<th style="text-align:right;">
+temperatura
+</th>
+<th style="text-align:right;">
+distancia_detector
+</th>
+<th style="text-align:right;">
+distancia_cabeza
+</th>
+<th style="text-align:right;">
+inclinacion
+</th>
+<th style="text-align:right;">
+dispositivo
+</th>
+<th style="text-align:right;">
+turno
+</th>
+<th style="text-align:right;">
+cabello_color
+</th>
+<th style="text-align:right;">
+rostro_forma
+</th>
+<th style="text-align:right;">
+piel_tipo
+</th>
+<th style="text-align:right;">
+cejas_forma
+</th>
+<th style="text-align:right;">
+nariz_tipo
+</th>
+<th style="text-align:right;">
+accesorios
+</th>
+<th style="text-align:right;">
+clima
+</th>
+<th style="text-align:right;">
+viento
+</th>
+<th style="text-align:right;">
+lectura_estado
+</th>
+<th style="text-align:right;">
+genero
+</th>
+<th style="text-align:right;">
+ojos_color
+</th>
+<th style="text-align:right;">
+ropa_color
+</th>
+<th style="text-align:right;">
+cabello_tamaño
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+03/01/2024 16:14:45
+</td>
+<td style="text-align:right;">
+25
+</td>
+<td style="text-align:right;">
+1.96
+</td>
+<td style="text-align:right;">
+67.4
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+19.4
+</td>
+<td style="text-align:right;">
+539
+</td>
+<td style="text-align:right;">
+19.7
+</td>
+<td style="text-align:right;">
+0.51
+</td>
+<td style="text-align:right;">
+0.58
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+3I
+</td>
+<td style="text-align:right;">
+Mañana
+</td>
+<td style="text-align:right;">
+negro
+</td>
+<td style="text-align:right;">
+cuadrado
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+rectas
+</td>
+<td style="text-align:right;">
+silla de montar
+</td>
+<td style="text-align:right;">
+capucha, lentes
+</td>
+<td style="text-align:right;">
+Soleado
+</td>
+<td style="text-align:right;">
+mediana
+</td>
+<td style="text-align:right;">
+fallido
+</td>
+<td style="text-align:right;">
+Masculino
+</td>
+<td style="text-align:right;">
+marron claro
+</td>
+<td style="text-align:right;">
+claro
+</td>
+<td style="text-align:right;">
+mediano
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+12/11/2023 13:13:17
+</td>
+<td style="text-align:right;">
+27
+</td>
+<td style="text-align:right;">
+1.89
+</td>
+<td style="text-align:right;">
+54.2
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+21.8
+</td>
+<td style="text-align:right;">
+148
+</td>
+<td style="text-align:right;">
+16.8
+</td>
+<td style="text-align:right;">
+1.95
+</td>
+<td style="text-align:right;">
+0.71
+</td>
+<td style="text-align:right;">
+38
+</td>
+<td style="text-align:right;">
+1I
+</td>
+<td style="text-align:right;">
+Noche
+</td>
+<td style="text-align:right;">
+marron claro
+</td>
+<td style="text-align:right;">
+redondo
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+arqueadas
+</td>
+<td style="text-align:right;">
+aguileña
+</td>
+<td style="text-align:right;">
+capucha
+</td>
+<td style="text-align:right;">
+nublado
+</td>
+<td style="text-align:right;">
+fuerte
+</td>
+<td style="text-align:right;">
+fallido
+</td>
+<td style="text-align:right;">
+Masculino
+</td>
+<td style="text-align:right;">
+otro
+</td>
+<td style="text-align:right;">
+claro
+</td>
+<td style="text-align:right;">
+largo
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+26/06/2024 08:48:11
+</td>
+<td style="text-align:right;">
+19
+</td>
+<td style="text-align:right;">
+1.69
+</td>
+<td style="text-align:right;">
+70.4
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+23.4
+</td>
+<td style="text-align:right;">
+354
+</td>
+<td style="text-align:right;">
+21.8
+</td>
+<td style="text-align:right;">
+0.64
+</td>
+<td style="text-align:right;">
+0.94
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+6I
+</td>
+<td style="text-align:right;">
+Mañana
+</td>
+<td style="text-align:right;">
+castaño
+</td>
+<td style="text-align:right;">
+alargado
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+rectas
+</td>
+<td style="text-align:right;">
+aguileña
+</td>
+<td style="text-align:right;">
+gorra
+</td>
+<td style="text-align:right;">
+Soleado
+</td>
+<td style="text-align:right;">
+debil
+</td>
+<td style="text-align:right;">
+fallido
+</td>
+<td style="text-align:right;">
+Masculino
+</td>
+<td style="text-align:right;">
+marron claro
+</td>
+<td style="text-align:right;">
+claro
+</td>
+<td style="text-align:right;">
+corto
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+11/01/2024 10:25:01
+</td>
+<td style="text-align:right;">
+28
+</td>
+<td style="text-align:right;">
+1.76
+</td>
+<td style="text-align:right;">
+56.2
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+23.4
+</td>
+<td style="text-align:right;">
+489
+</td>
+<td style="text-align:right;">
+20.7
+</td>
+<td style="text-align:right;">
+1.15
+</td>
+<td style="text-align:right;">
+0.56
+</td>
+<td style="text-align:right;">
+33
+</td>
+<td style="text-align:right;">
+6I
+</td>
+<td style="text-align:right;">
+Tarde
+</td>
+<td style="text-align:right;">
+negro
+</td>
+<td style="text-align:right;">
+triangular a
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+arqueadas
+</td>
+<td style="text-align:right;">
+gibal nasal
+</td>
+<td style="text-align:right;">
+gorra, lentes
+</td>
+<td style="text-align:right;">
+lluvioso
+</td>
+<td style="text-align:right;">
+mediana
+</td>
+<td style="text-align:right;">
+exitoso
+</td>
+<td style="text-align:right;">
+Femenino
+</td>
+<td style="text-align:right;">
+negro
+</td>
+<td style="text-align:right;">
+claro
+</td>
+<td style="text-align:right;">
+corto
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+16/10/2023 09:27:52
+</td>
+<td style="text-align:right;">
+21
+</td>
+<td style="text-align:right;">
+1.66
+</td>
+<td style="text-align:right;">
+50.8
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+25.2
+</td>
+<td style="text-align:right;">
+512
+</td>
+<td style="text-align:right;">
+19.3
+</td>
+<td style="text-align:right;">
+1.75
+</td>
+<td style="text-align:right;">
+0.83
+</td>
+<td style="text-align:right;">
+35
+</td>
+<td style="text-align:right;">
+3I
+</td>
+<td style="text-align:right;">
+Noche
+</td>
+<td style="text-align:right;">
+negro
+</td>
+<td style="text-align:right;">
+redondo
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+rectas
+</td>
+<td style="text-align:right;">
+silla de montar
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+lluvioso
+</td>
+<td style="text-align:right;">
+debil
+</td>
+<td style="text-align:right;">
+exitoso
+</td>
+<td style="text-align:right;">
+Femenino
+</td>
+<td style="text-align:right;">
+negro
+</td>
+<td style="text-align:right;">
+claro
+</td>
+<td style="text-align:right;">
+mediano
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+12/09/2024 12:43:29
+</td>
+<td style="text-align:right;">
+22
+</td>
+<td style="text-align:right;">
+1.96
+</td>
+<td style="text-align:right;">
+99.7
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+6.9
+</td>
+<td style="text-align:right;">
+779
+</td>
+<td style="text-align:right;">
+20.2
+</td>
+<td style="text-align:right;">
+1.14
+</td>
+<td style="text-align:right;">
+0.58
+</td>
+<td style="text-align:right;">
+39
+</td>
+<td style="text-align:right;">
+3E
+</td>
+<td style="text-align:right;">
+Tarde
+</td>
+<td style="text-align:right;">
+marron claro
+</td>
+<td style="text-align:right;">
+triangular v
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+forma de s
+</td>
+<td style="text-align:right;">
+aplastad
+</td>
+<td style="text-align:right;">
+lentes, capucha, gorra
+</td>
+<td style="text-align:right;">
+Soleado
+</td>
+<td style="text-align:right;">
+debil
+</td>
+<td style="text-align:right;">
+fallido
+</td>
+<td style="text-align:right;">
+Masculino
+</td>
+<td style="text-align:right;">
+negro
+</td>
+<td style="text-align:right;">
+claro
+</td>
+<td style="text-align:right;">
+mediano
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="perfilamiento-inicial-de-datos" class="level2">
+<h2 class="anchored" data-anchor-id="perfilamiento-inicial-de-datos">Perfilamiento Inicial de datos</h2>
+<blockquote class="blockquote">
+<p>Código: funciones de ayuda para realizar un análisis simple de variables categóricas y numéricas.</p>
+</blockquote>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>analisis_categorica_simple <span class="ot">&lt;-</span> <span class="cf">function</span>(df, variables) {</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  resultados <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Variable"</span> <span class="ot">=</span> <span class="fu">character</span>(),</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Valores Únicos"</span> <span class="ot">=</span> <span class="fu">integer</span>(),</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"NAs"</span> <span class="ot">=</span> <span class="fu">integer</span>(),</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Moda"</span> <span class="ot">=</span> <span class="fu">character</span>(),</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">stringsAsFactors =</span> <span class="cn">FALSE</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (var <span class="cf">in</span> variables) {</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>    valores_unicos <span class="ot">&lt;-</span> <span class="fu">length</span>(<span class="fu">unique</span>(<span class="fu">na.omit</span>(df[[var]])))</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>    n_nas <span class="ot">&lt;-</span> <span class="fu">sum</span>(<span class="fu">is.na</span>(df[[var]]))</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>    moda <span class="ot">&lt;-</span> <span class="fu">names</span>(<span class="fu">sort</span>(<span class="fu">table</span>(df[[var]]), <span class="at">decreasing =</span> <span class="cn">TRUE</span>))[<span class="dv">1</span>]</span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>    resultados <span class="ot">&lt;-</span> <span class="fu">rbind</span>(resultados, <span class="fu">data.frame</span>(</span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Variable"</span> <span class="ot">=</span> var,</span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Valores Únicos"</span> <span class="ot">=</span> valores_unicos,</span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>      <span class="st">"NAs"</span> <span class="ot">=</span> n_nas,</span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Moda"</span> <span class="ot">=</span> moda,</span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>      <span class="at">stringsAsFactors =</span> <span class="cn">FALSE</span></span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>    ))</span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(resultados)</span>
+<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a>analisis_numerica_simple <span class="ot">&lt;-</span> <span class="cf">function</span>(df, variables) {</span>
+<span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a>  resultados <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Variable"</span> <span class="ot">=</span> <span class="fu">character</span>(),</span>
+<span id="cb4-36"><a href="#cb4-36" aria-hidden="true" tabindex="-1"></a>    <span class="st">"NAs"</span> <span class="ot">=</span> <span class="fu">integer</span>(),</span>
+<span id="cb4-37"><a href="#cb4-37" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Media"</span> <span class="ot">=</span> <span class="fu">numeric</span>(),</span>
+<span id="cb4-38"><a href="#cb4-38" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Mediana"</span> <span class="ot">=</span> <span class="fu">numeric</span>(),</span>
+<span id="cb4-39"><a href="#cb4-39" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Desviación Estándar"</span> <span class="ot">=</span> <span class="fu">numeric</span>(),</span>
+<span id="cb4-40"><a href="#cb4-40" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Coeficiente Variación"</span> <span class="ot">=</span> <span class="fu">numeric</span>(),</span>
+<span id="cb4-41"><a href="#cb4-41" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Mínimo"</span> <span class="ot">=</span> <span class="fu">numeric</span>(),</span>
+<span id="cb4-42"><a href="#cb4-42" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Máximo"</span> <span class="ot">=</span> <span class="fu">numeric</span>(),</span>
+<span id="cb4-43"><a href="#cb4-43" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Valores Atípicos"</span> <span class="ot">=</span> <span class="fu">integer</span>(),</span>
+<span id="cb4-44"><a href="#cb4-44" aria-hidden="true" tabindex="-1"></a>    <span class="at">stringsAsFactors =</span> <span class="cn">FALSE</span></span>
+<span id="cb4-45"><a href="#cb4-45" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb4-46"><a href="#cb4-46" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb4-47"><a href="#cb4-47" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (var <span class="cf">in</span> variables) {</span>
+<span id="cb4-48"><a href="#cb4-48" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb4-49"><a href="#cb4-49" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (<span class="sc">!</span>var <span class="sc">%in%</span> <span class="fu">colnames</span>(df)) <span class="cf">next</span></span>
+<span id="cb4-50"><a href="#cb4-50" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb4-51"><a href="#cb4-51" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (<span class="fu">is.numeric</span>(df[[var]]) <span class="sc">&amp;&amp;</span> <span class="sc">!</span><span class="fu">all</span>(<span class="fu">is.na</span>(df[[var]]))) {</span>
+<span id="cb4-52"><a href="#cb4-52" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb4-53"><a href="#cb4-53" aria-hidden="true" tabindex="-1"></a>      n_nas <span class="ot">&lt;-</span> <span class="fu">sum</span>(<span class="fu">is.na</span>(df[[var]]))</span>
+<span id="cb4-54"><a href="#cb4-54" aria-hidden="true" tabindex="-1"></a>      media <span class="ot">&lt;-</span> <span class="fu">mean</span>(df[[var]], <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb4-55"><a href="#cb4-55" aria-hidden="true" tabindex="-1"></a>      mediana <span class="ot">&lt;-</span> <span class="fu">median</span>(df[[var]], <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb4-56"><a href="#cb4-56" aria-hidden="true" tabindex="-1"></a>      desviacion_estandar <span class="ot">&lt;-</span> <span class="fu">sd</span>(df[[var]], <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb4-57"><a href="#cb4-57" aria-hidden="true" tabindex="-1"></a>      coeficiente_variacion <span class="ot">&lt;-</span> desviacion_estandar <span class="sc">/</span> media</span>
+<span id="cb4-58"><a href="#cb4-58" aria-hidden="true" tabindex="-1"></a>      minimo <span class="ot">&lt;-</span> <span class="fu">min</span>(df[[var]], <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb4-59"><a href="#cb4-59" aria-hidden="true" tabindex="-1"></a>      maximo <span class="ot">&lt;-</span> <span class="fu">max</span>(df[[var]], <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb4-60"><a href="#cb4-60" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb4-61"><a href="#cb4-61" aria-hidden="true" tabindex="-1"></a>      Q1 <span class="ot">&lt;-</span> <span class="fu">quantile</span>(df[[var]], <span class="fl">0.25</span>, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb4-62"><a href="#cb4-62" aria-hidden="true" tabindex="-1"></a>      Q3 <span class="ot">&lt;-</span> <span class="fu">quantile</span>(df[[var]], <span class="fl">0.75</span>, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb4-63"><a href="#cb4-63" aria-hidden="true" tabindex="-1"></a>      IQR_valor <span class="ot">&lt;-</span> Q3 <span class="sc">-</span> Q1</span>
+<span id="cb4-64"><a href="#cb4-64" aria-hidden="true" tabindex="-1"></a>      lower_bound <span class="ot">&lt;-</span> Q1 <span class="sc">-</span> <span class="fl">1.5</span> <span class="sc">*</span> IQR_valor</span>
+<span id="cb4-65"><a href="#cb4-65" aria-hidden="true" tabindex="-1"></a>      upper_bound <span class="ot">&lt;-</span> Q3 <span class="sc">+</span> <span class="fl">1.5</span> <span class="sc">*</span> IQR_valor</span>
+<span id="cb4-66"><a href="#cb4-66" aria-hidden="true" tabindex="-1"></a>      valores_atipicos <span class="ot">&lt;-</span> <span class="fu">sum</span>(df[[var]] <span class="sc">&lt;</span> lower_bound <span class="sc">|</span> df[[var]] <span class="sc">&gt;</span> upper_bound, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb4-67"><a href="#cb4-67" aria-hidden="true" tabindex="-1"></a>    } <span class="cf">else</span> {</span>
+<span id="cb4-68"><a href="#cb4-68" aria-hidden="true" tabindex="-1"></a>      n_nas <span class="ot">&lt;-</span> <span class="fu">sum</span>(<span class="fu">is.na</span>(df[[var]]))</span>
+<span id="cb4-69"><a href="#cb4-69" aria-hidden="true" tabindex="-1"></a>      media <span class="ot">&lt;-</span> <span class="cn">NA</span></span>
+<span id="cb4-70"><a href="#cb4-70" aria-hidden="true" tabindex="-1"></a>      mediana <span class="ot">&lt;-</span> <span class="cn">NA</span></span>
+<span id="cb4-71"><a href="#cb4-71" aria-hidden="true" tabindex="-1"></a>      desviacion_estandar <span class="ot">&lt;-</span> <span class="cn">NA</span></span>
+<span id="cb4-72"><a href="#cb4-72" aria-hidden="true" tabindex="-1"></a>      coeficiente_variacion <span class="ot">&lt;-</span> <span class="cn">NA</span></span>
+<span id="cb4-73"><a href="#cb4-73" aria-hidden="true" tabindex="-1"></a>      minimo <span class="ot">&lt;-</span> <span class="cn">NA</span></span>
+<span id="cb4-74"><a href="#cb4-74" aria-hidden="true" tabindex="-1"></a>      maximo <span class="ot">&lt;-</span> <span class="cn">NA</span></span>
+<span id="cb4-75"><a href="#cb4-75" aria-hidden="true" tabindex="-1"></a>      valores_atipicos <span class="ot">&lt;-</span> <span class="cn">NA</span></span>
+<span id="cb4-76"><a href="#cb4-76" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb4-77"><a href="#cb4-77" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb4-78"><a href="#cb4-78" aria-hidden="true" tabindex="-1"></a>    resultados <span class="ot">&lt;-</span> <span class="fu">rbind</span>(resultados, <span class="fu">data.frame</span>(</span>
+<span id="cb4-79"><a href="#cb4-79" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Variable"</span> <span class="ot">=</span> var,</span>
+<span id="cb4-80"><a href="#cb4-80" aria-hidden="true" tabindex="-1"></a>      <span class="st">"NAs"</span> <span class="ot">=</span> n_nas,</span>
+<span id="cb4-81"><a href="#cb4-81" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Media"</span> <span class="ot">=</span> media,</span>
+<span id="cb4-82"><a href="#cb4-82" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Mediana"</span> <span class="ot">=</span> mediana,</span>
+<span id="cb4-83"><a href="#cb4-83" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Desviación Estándar"</span> <span class="ot">=</span> desviacion_estandar,</span>
+<span id="cb4-84"><a href="#cb4-84" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Coeficiente Variación"</span> <span class="ot">=</span> coeficiente_variacion,</span>
+<span id="cb4-85"><a href="#cb4-85" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Mínimo"</span> <span class="ot">=</span> minimo,</span>
+<span id="cb4-86"><a href="#cb4-86" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Máximo"</span> <span class="ot">=</span> maximo,</span>
+<span id="cb4-87"><a href="#cb4-87" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Valores Atípicos"</span> <span class="ot">=</span> valores_atipicos,</span>
+<span id="cb4-88"><a href="#cb4-88" aria-hidden="true" tabindex="-1"></a>      <span class="at">stringsAsFactors =</span> <span class="cn">FALSE</span></span>
+<span id="cb4-89"><a href="#cb4-89" aria-hidden="true" tabindex="-1"></a>    ))</span>
+<span id="cb4-90"><a href="#cb4-90" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb4-91"><a href="#cb4-91" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb4-92"><a href="#cb4-92" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(resultados)</span>
+<span id="cb4-93"><a href="#cb4-93" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<ol type="1">
+<li><p><strong>Altura</strong>: Se ha clasificado como una variable numérica continua porque la altura de los sujetos es una medida que puede tomar cualquier valor dentro de un rango (1.0 a 2.5 metros). Aunque teóricamente es continua, es posible que en la recolección de datos solo se obtengan valores discretos.</p></li>
+<li><p><strong>Lleva Accesorios</strong>: Esta variable se clasifica como categórica nominal debido a que describe la presencia de diferentes tipos de accesorios en el rostro o la cabeza, como capuchas o gafas, que no siguen ningún orden natural.</p></li>
+<li><p><strong>Género</strong>: Aunque podría tratarse de una variable cualitativa, en esta muestra específica se clasifica como categórica nominal con dos valores posibles: “M” (Masculino) y “F” (Femenino).</p></li>
+<li><p><strong>Tamaño del Cabello</strong>: Esta variable es categórica ordinal, ya que existen categorías que siguen un orden progresivo (Corto, Mediano, Largo). Aunque no tiene una métrica numérica exacta, sigue un gradiente lógico.</p></li>
+<li><p><strong>Color de Piel</strong>: Se utiliza la escala Fitzpatrick para clasificar esta variable categórica nominalmente. Aunque la escala tiene un rango numérico, no hay una relación de orden en el contexto de esta investigación.</p></li>
+<li><p><strong>Horario</strong>: Se clasifica como categórica nominal, ya que se divide en tres intervalos de tiempo durante el día (mañana, tarde y noche) sin un orden estricto entre ellos.</p></li>
+<li><p><strong>Intensidad de Luz</strong>: Esta es una variable numérica discreta, ya que se mide en un rango de lúmenes, pero solo acepta valores enteros.</p></li>
+<li><p><strong>Distancia</strong>: Se clasifica como numérica continua, dado que la distancia entre el sujeto y la cámara se mide en metros y puede tener cualquier valor dentro de un rango continuo.</p></li>
+<li><p><strong>Aglomeración</strong>: Es categórica ordinal, ya que las categorías (casi vacío, moderadamente concurrido, lleno) siguen un orden lógico que afecta la precisión del sistema de reconocimiento.</p></li>
+<li><p><strong>Tiempo de Reconocimiento</strong>: Esta variable es numérica discreta, ya que mide el tiempo en segundos que tarda el sistema en identificar a una persona. Los valores están en un rango numérico fijo.</p></li>
+<li><p><strong>Color de Prenda Superior</strong>: Esta variable es categórica nominal, ya que el color de la prenda no tiene un orden lógico y se clasifica simplemente por el color.</p></li>
+<li><p><strong>Clima</strong>: Se clasifica como categórica nominal, con diferentes estados del clima (soleado, nublado, lluvioso) que no siguen un orden específico.</p></li>
+<li><p><strong>Fallo en el Acceso</strong>: Esta es una variable booleana, ya que tiene solo dos posibles estados: éxito o fallo en el proceso de reconocimiento facial.</p></li>
+</ol>
+<section id="variables-categóricas" class="level3">
+<h3 class="anchored" data-anchor-id="variables-categóricas">Variables Categóricas</h3>
+<p>Se excluyó la variable <code>accesorios</code> ya que en el estado en crudo del dataset esta columna permite variables tipo lista e incluso <code>NAs</code></p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>categoricas <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"dispositivo"</span>, <span class="st">"turno"</span>, <span class="st">"cabello_color"</span>, <span class="st">"rostro_forma"</span>, </span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>                 <span class="st">"piel_tipo"</span>, <span class="st">"cejas_forma"</span>, <span class="st">"nariz_tipo"</span>, <span class="st">"clima"</span>, <span class="st">"viento"</span>, <span class="st">"lectura_estado"</span>,</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>                 <span class="st">"genero"</span>, <span class="st">"ojos_color"</span>, <span class="st">"cabello_tamaño"</span>)</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>numericas <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"altura"</span>, <span class="st">"tiempo_reconocimiento"</span>, <span class="st">"intensidad_luz"</span>, <span class="st">"distancia_detector"</span>, </span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>               <span class="st">"distancia_cabeza"</span>, <span class="st">"temperatura"</span>)</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>tabla_categoricas <span class="ot">&lt;-</span> <span class="fu">analisis_categorica_simple</span>(df, categoricas)</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="fu">formattable</span>(tabla_categoricas,</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>            <span class="at">table.attr =</span> <span class="st">'style="color:black; background-color:#f4f4f4; font-size: 12px; width: 100%;text-align: center;"'</span>,</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>            <span class="fu">list</span>(</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>              <span class="st">`</span><span class="at">Valores.Únicos</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">color_tile</span>(<span class="st">"white"</span>, customGreen),</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>               <span class="at">NAs =</span> <span class="fu">color_tile</span>(<span class="st">"white"</span>, customRed)</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>            ))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<table style="color:black; background-color:#f4f4f4; font-size: 12px; width: 100%;text-align: center;">
+<thead>
+<tr>
+<th style="text-align:right;">
+Variable
+</th>
+<th style="text-align:right;">
+Valores.Únicos
+</th>
+<th style="text-align:right;">
+NAs
+</th>
+<th style="text-align:right;">
+Moda
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+dispositivo
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #71ca97">14</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+</td>
+<td style="text-align:right;">
+3I
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+turno
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #f3faf6">3</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+</td>
+<td style="text-align:right;">
+Mañana
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+cabello_color
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #f3faf6">3</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+</td>
+<td style="text-align:right;">
+castaño
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+rostro_forma
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ace0c2">9</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+</td>
+<td style="text-align:right;">
+diamante
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+piel_tipo
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #cfeddc">6</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+cejas_forma
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #dbf1e5">5</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+</td>
+<td style="text-align:right;">
+arqueadas
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+nariz_tipo
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #c3e8d3">7</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+</td>
+<td style="text-align:right;">
+silla de montar
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+clima
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #f3faf6">3</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+</td>
+<td style="text-align:right;">
+nublado
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+viento
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #f3faf6">3</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+</td>
+<td style="text-align:right;">
+debil
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+lectura_estado
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">2</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+</td>
+<td style="text-align:right;">
+exitoso
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+genero
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">2</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+</td>
+<td style="text-align:right;">
+Masculino
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+ojos_color
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #e7f6ed">4</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+</td>
+<td style="text-align:right;">
+marron oscuro
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+cabello_tamaño
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #f3faf6">3</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+</td>
+<td style="text-align:right;">
+mediano
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+</section>
+<section id="variables-numéricas" class="level2">
+<h2 class="anchored" data-anchor-id="variables-numéricas">Variables Numéricas</h2>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>tabla_numericas <span class="ot">&lt;-</span> <span class="fu">analisis_numerica_simple</span>(df, numericas)</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="fu">formattable</span>(tabla_numericas,</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>            <span class="at">table.attr =</span> <span class="st">'style="color:black; background-color:#f4f4f4; font-size: 12px; width: 100%;text-align: center;"'</span>,</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>            <span class="fu">list</span>(</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>              <span class="at">NAs =</span> <span class="fu">color_tile</span>(customGreen0, customRed),</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>              <span class="st">`</span><span class="at">Coeficiente.Variación</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">color_tile</span>(customGreen, customRed),  </span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>              <span class="st">`</span><span class="at">Valores.Atípicos</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">color_tile</span>(<span class="st">"white"</span>, customRed)</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>            ))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<table style="color:black; background-color:#f4f4f4; font-size: 12px; width: 100%;text-align: center;">
+<thead>
+<tr>
+<th style="text-align:right;">
+Variable
+</th>
+<th style="text-align:right;">
+NAs
+</th>
+<th style="text-align:right;">
+Media
+</th>
+<th style="text-align:right;">
+Mediana
+</th>
+<th style="text-align:right;">
+Desviación.Estándar
+</th>
+<th style="text-align:right;">
+Coeficiente.Variación
+</th>
+<th style="text-align:right;">
+Mínimo
+</th>
+<th style="text-align:right;">
+Máximo
+</th>
+<th style="text-align:right;">
+Valores.Atípicos
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+altura
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #def7e9">0</span>
+</td>
+<td style="text-align:right;">
+1.74710
+</td>
+<td style="text-align:right;">
+1.74
+</td>
+<td style="text-align:right;">
+0.1323904
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #71ca97">0.07577725</span>
+</td>
+<td style="text-align:right;">
+1.5
+</td>
+<td style="text-align:right;">
+1.99
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+distancia_detector
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #def7e9">0</span>
+</td>
+<td style="text-align:right;">
+1.28575
+</td>
+<td style="text-align:right;">
+1.29
+</td>
+<td style="text-align:right;">
+0.4313988
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ff7f7f">0.33552311</span>
+</td>
+<td style="text-align:right;">
+0.5
+</td>
+<td style="text-align:right;">
+2.00
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+distancia_cabeza
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #def7e9">0</span>
+</td>
+<td style="text-align:right;">
+0.75230
+</td>
+<td style="text-align:right;">
+0.73
+</td>
+<td style="text-align:right;">
+0.1467357
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #b2a78b">0.19504945</span>
+</td>
+<td style="text-align:right;">
+0.5
+</td>
+<td style="text-align:right;">
+1.00
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+temperatura
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #def7e9">0</span>
+</td>
+<td style="text-align:right;">
+18.74400
+</td>
+<td style="text-align:right;">
+19.10
+</td>
+<td style="text-align:right;">
+2.1598120
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #86be93">0.11522685</span>
+</td>
+<td style="text-align:right;">
+15.0
+</td>
+<td style="text-align:right;">
+22.00
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="selección-de-variables-relevantes" class="level2">
+<h2 class="anchored" data-anchor-id="selección-de-variables-relevantes">Selección de variables relevantes</h2>
+<p>Para alcanzar nuestros objetivos específicos, identificamos las siguientes variables del conjunto de datos que son clave para nuestro análisis:</p>
+<ol type="1">
+<li><strong>Objetivo 1</strong>: Relación entre la intensidad de la luz y el tiempo de reconocimiento facial.</li>
+</ol>
+<ul>
+<li><strong>Intensidad de la luz</strong>: numérica discreta.</li>
+<li><strong>Tiempo de reconocimiento facial</strong>:numérica discreta.</li>
+</ul>
+<ol start="2" type="1">
+<li><strong>Objetivo 2</strong>: Impacto del uso de accesorios en la cabeza y rostro en el tiempo de reconocimiento.</li>
+</ol>
+<ul>
+<li><strong>Accesorios en cabeza/rostro</strong>: Variable categórica nominal que indica el uso de capucha, gorra, lentes, o mascarilla.</li>
+<li><strong>Tiempo de reconocimiento facial</strong>: Variable numérica discreta.</li>
+</ul>
+<p>Estas variables serán el foco del análisis en las siguientes secciones, con el fin de visualizar y evaluar cómo se relacionan entre sí.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>df_seleccion <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span> <span class="fu">select</span>(luz, tiempo, accesorios)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+<section id="exploración-y-análisis-univariado-de-las-variables-seleccionadas" class="level2">
+<h2 class="anchored" data-anchor-id="exploración-y-análisis-univariado-de-las-variables-seleccionadas">Exploración y Análisis Univariado de las Variables Seleccionadas</h2>
+<ol type="1">
+<li><strong>Variable: Intensidad de la Luz</strong></li>
+</ol>
+<p>La intensidad de la luz es una variable numérica discreta que mide la cantidad de luz en el ambiente. En este análisis, exploraremos su distribución mediante un gráfico de barras, calcularemos la media y la mediana, y observaremos su dispersión a través de un gráfico de caja y bigotes.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Estadísticas descriptivas de la intensidad de luz</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(df<span class="sc">$</span>luz)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+  100.0   344.8   577.5   567.2   793.5  1000.0 </code></pre>
+</div>
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Gráfico de caja y bigotes para la intensidad de luz</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(df, <span class="fu">aes</span>(<span class="at">y =</span> df<span class="sc">$</span>luz)) <span class="sc">+</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="at">fill =</span> <span class="st">"#F4A261"</span>, <span class="at">color =</span> <span class="st">"#264653"</span>) <span class="sc">+</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Gráfico de Caja y Bigotes: Intensidad de la Luz"</span>, <span class="at">y =</span> <span class="st">"Intensidad de la Luz (lux)"</span>) <span class="sc">+</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="avance_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<ol start="2" type="1">
+<li><strong>Variable: Tiempo de Reconocimiento Facial</strong></li>
+</ol>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Estadísticas descriptivas del tiempo de reconocimiento</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(df<span class="sc">$</span>tiempo)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+   5.10   10.50   17.10   17.32   23.82   29.80 </code></pre>
+</div>
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Diagrama de barras para la distribución del tiempo de reconocimiento</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(df, <span class="fu">aes</span>(<span class="at">x =</span> df<span class="sc">$</span>tiempo)) <span class="sc">+</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">fill =</span> <span class="st">"#E9C46A"</span>, <span class="at">color =</span> <span class="st">"white"</span>) <span class="sc">+</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Distribución del Tiempo de Reconocimiento Facial"</span>, <span class="at">x =</span> <span class="st">"Tiempo de Reconocimiento (segundos)"</span>, <span class="at">y =</span> <span class="st">"Frecuencia"</span>) <span class="sc">+</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="avance_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Gráfico de caja y bigotes del tiempo de reconocimiento facial</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(df, <span class="fu">aes</span>(<span class="at">y =</span> df<span class="sc">$</span>tiempo)) <span class="sc">+</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="at">fill =</span> <span class="st">"#F4A261"</span>, <span class="at">color =</span> <span class="st">"#264653"</span>) <span class="sc">+</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Gráfico de Caja y Bigotes: Tiempo de Reconocimiento"</span>, <span class="at">y =</span> <span class="st">"Tiempo de Reconocimiento (segundos)"</span>) <span class="sc">+</span></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="avance_files/figure-html/unnamed-chunk-9-2.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<ol start="3" type="1">
+<li><p><strong>Variable: Accesorios en la Cabeza y Rostro</strong></p>
+<p>///TODO.</p></li>
+</ol>
+</section>
+<section id="análisis-bivariado" class="level2">
+<h2 class="anchored" data-anchor-id="análisis-bivariado">Análisis Bivariado</h2>
+<ol type="1">
+<li><strong>Gráfico de Caja y Bigotes para la Relación entre el Uso de Accesorios y el Tiempo de Reconocimiento</strong></li>
+</ol>
+<p>`{r} # Gráfico de caja y bigotes multivariable entre accesorios y tiempo de reconocimiento ggplot(df, aes(x =df<span class="math inline">\(accesorios, y = df\)</span>tiempo, fill = df$accesorios)) + geom_boxplot(alpha = 0.7, outlier.color = “#E76F51”, outlier.shape = 16) + labs(title = “Tiempo de Reconocimiento por Uso de Accesorios en Cabeza/Rostro”, x = “Accesorios en Cabeza y Rostro”, y = “Tiempo de Reconocimiento (segundos)”) + scale_fill_manual(values = c(“#F4A261”, “#E9C46A”, “#2A9D8F”, “#264653”)) + theme_minimal() ``</p>
+<!-- -->
+
+</section>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+  const viewSource = window.document.getElementById('quarto-view-source') ||
+                     window.document.getElementById('quarto-code-tools-source');
+  if (viewSource) {
+    const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+    viewSource.addEventListener("click", function(e) {
+      if (sourceUrl) {
+        // rstudio viewer pane
+        if (/\bcapabilities=\b/.test(window.location)) {
+          window.open(sourceUrl);
+        } else {
+          window.location.href = sourceUrl;
+        }
+      } else {
+        const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+        modal.show();
+      }
+      return false;
+    });
+  }
+  function toggleCodeHandler(show) {
+    return function(e) {
+      const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+      for (let i=0; i<detailsSrc.length; i++) {
+        const details = detailsSrc[i].parentElement;
+        if (show) {
+          details.open = true;
+        } else {
+          details.removeAttribute("open");
+        }
+      }
+      const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+      const fromCls = show ? "hidden" : "unhidden";
+      const toCls = show ? "unhidden" : "hidden";
+      for (let i=0; i<cellCodeDivs.length; i++) {
+        const codeDiv = cellCodeDivs[i];
+        if (codeDiv.classList.contains(fromCls)) {
+          codeDiv.classList.remove(fromCls);
+          codeDiv.classList.add(toCls);
+        } 
+      }
+      return false;
+    }
+  }
+  const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+  if (hideAllCode) {
+    hideAllCode.addEventListener("click", toggleCodeHandler(false));
+  }
+  const showAllCode = window.document.getElementById("quarto-show-all-code");
+  if (showAllCode) {
+    showAllCode.addEventListener("click", toggleCodeHandler(true));
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="sourceCode" id="cb15" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Análisis de los factores que influyen en el reconocimiento facial del sistema de control de ingreso y salida de la UTEC en el ciclo 2024-2"</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> "Autor: [Tu nombre]"</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> "`r Sys.Date()`"</span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a><span class="co">  html:</span></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a><span class="co">    toc: true</span></span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a><span class="co">    code-tools: true</span></span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a><span class="co">    toc-depth: 2</span></span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a><span class="co">    code-fold: true</span></span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a><span class="an">execute:</span></span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a><span class="co">  echo: true</span></span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a><span class="co">  warning: false</span></span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a><span class="co">  message: false</span></span>
+<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a><span class="an">editor:</span><span class="co"> visual</span></span>
+<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-18"><a href="#cb15-18" aria-hidden="true" tabindex="-1"></a><span class="fu"># Introducción</span></span>
+<span id="cb15-19"><a href="#cb15-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-20"><a href="#cb15-20" aria-hidden="true" tabindex="-1"></a>El presente estudio tiene como objetivo general determinar los factores que influyen en el reconocimiento facial a través del sistema de control de ingreso y salida de la Universidad de Ingeniería y Tecnología (UTEC) durante el ciclo 2024-2. Este análisis es de gran importancia, ya que un sistema de control eficiente es fundamental para el acceso ágil y seguro de los estudiantes al campus universitario.</span>
+<span id="cb15-21"><a href="#cb15-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-22"><a href="#cb15-22" aria-hidden="true" tabindex="-1"></a>Se evaluarán variables relacionadas con la intensidad de la luz, las características del individuo (como altura, género, color de piel, uso de accesorios en el rostro, entre otros) y las condiciones del entorno (como la aglomeración de personas o las condiciones climáticas). Estas variables pueden afectar la precisión y el tiempo de respuesta del sistema de reconocimiento facial.</span>
+<span id="cb15-23"><a href="#cb15-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-24"><a href="#cb15-24" aria-hidden="true" tabindex="-1"></a><span class="fu">## Objetivos específicos</span></span>
+<span id="cb15-25"><a href="#cb15-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-26"><a href="#cb15-26" aria-hidden="true" tabindex="-1"></a><span class="ss">1.  </span>**Analizar la relación entre la intensidad de la luz y el tiempo que le toma al sistema de reconocimiento facial permitir el ingreso a los estudiantes**.</span>
+<span id="cb15-27"><a href="#cb15-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-28"><a href="#cb15-28" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Analizar el impacto del uso de accesorios en la cabeza y rostro (capucha, gorra, lentes, mascarilla) en el tiempo de reconocimiento facial del sistema de control de ingreso y salida de los estudiantes de UTEC en el ciclo 2024-2.**</span>
+<span id="cb15-29"><a href="#cb15-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-30"><a href="#cb15-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-31"><a href="#cb15-31" aria-hidden="true" tabindex="-1"></a><span class="fu">## Variables estudiadas</span></span>
+<span id="cb15-32"><a href="#cb15-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-33"><a href="#cb15-33" aria-hidden="true" tabindex="-1"></a>Las variables utilizadas para este análisis incluyen:</span>
+<span id="cb15-34"><a href="#cb15-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-35"><a href="#cb15-35" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Altura**: Variable numérica continua medida en metros.</span>
+<span id="cb15-36"><a href="#cb15-36" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Lleva accesorios en la cabeza-rostro**: Variable categórica nominal (capucha, gorro, lentes, mascarilla, etc.).</span>
+<span id="cb15-37"><a href="#cb15-37" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Género**: Variable categórica nominal (Masculino, Femenino).</span>
+<span id="cb15-38"><a href="#cb15-38" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Tamaño del cabello**: Variable categórica ordinal, con categorías "corto", "mediano" o "largo".</span>
+<span id="cb15-39"><a href="#cb15-39" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Color de piel**: Variable categórica nominal, utilizando la Escala Fitzpatrick.</span>
+<span id="cb15-40"><a href="#cb15-40" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Horario**: Variable categórica nominal, dividida en mañana (6am - 11:59am), tarde (12pm - 18:59pm) y noche (19pm - 22pm).</span>
+<span id="cb15-41"><a href="#cb15-41" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Intensidad de la luz**: Variable numérica discreta, medida en luxes.</span>
+<span id="cb15-42"><a href="#cb15-42" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Distancia**: Variable numérica continua, medida en metros (distancia entre el detector y la persona).</span>
+<span id="cb15-43"><a href="#cb15-43" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Aglomeración**: Variable categórica ordinal, categorizada como "casi vacío", "moderadamente concurrido" y "lleno".</span>
+<span id="cb15-44"><a href="#cb15-44" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Tiempo del reconocimiento facial**: Variable numérica discreta, cronometrada en segundos.</span>
+<span id="cb15-45"><a href="#cb15-45" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Color de la prenda superior**: Variable categórica nominal.</span>
+<span id="cb15-46"><a href="#cb15-46" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Clima**: Variable categórica nominal (soleado, parcialmente nublado, nublado, lluvioso).</span>
+<span id="cb15-47"><a href="#cb15-47" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Fallo en el acceso**: Variable booleana que indica si hubo un fallo en el reconocimiento facial (sí/no).</span>
+<span id="cb15-48"><a href="#cb15-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-49"><a href="#cb15-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-50"><a href="#cb15-50" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; Código para cargar los datos y librerías necesarias, además de constantes usadas en el análisis.</span></span>
+<span id="cb15-51"><a href="#cb15-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-54"><a href="#cb15-54" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb15-55"><a href="#cb15-55" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb15-56"><a href="#cb15-56" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb15-57"><a href="#cb15-57" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb15-58"><a href="#cb15-58" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(naniar)</span>
+<span id="cb15-59"><a href="#cb15-59" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(knitr)</span>
+<span id="cb15-60"><a href="#cb15-60" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(data.table)</span>
+<span id="cb15-61"><a href="#cb15-61" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(formattable)</span>
+<span id="cb15-62"><a href="#cb15-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-63"><a href="#cb15-63" aria-hidden="true" tabindex="-1"></a><span class="do">## Color constants</span></span>
+<span id="cb15-64"><a href="#cb15-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-65"><a href="#cb15-65" aria-hidden="true" tabindex="-1"></a>customGreen0 <span class="ot">=</span> <span class="st">"#DeF7E9"</span></span>
+<span id="cb15-66"><a href="#cb15-66" aria-hidden="true" tabindex="-1"></a>customGreen <span class="ot">=</span> <span class="st">"#71CA97"</span></span>
+<span id="cb15-67"><a href="#cb15-67" aria-hidden="true" tabindex="-1"></a>customRed <span class="ot">=</span> <span class="st">"#ff7f7f"</span></span>
+<span id="cb15-68"><a href="#cb15-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-69"><a href="#cb15-69" aria-hidden="true" tabindex="-1"></a><span class="do">## Load data</span></span>
+<span id="cb15-70"><a href="#cb15-70" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"datos_reconocimiento.csv"</span>, <span class="at">locale =</span> <span class="fu">locale</span>(<span class="at">encoding =</span> <span class="st">"ISO-8859-1"</span>))</span>
+<span id="cb15-71"><a href="#cb15-71" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-72"><a href="#cb15-72" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb15-73"><a href="#cb15-73" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-74"><a href="#cb15-74" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-75"><a href="#cb15-75" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; Código: visualización de características generales de las variables</span></span>
+<span id="cb15-76"><a href="#cb15-76" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-79"><a href="#cb15-79" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb15-80"><a href="#cb15-80" aria-hidden="true" tabindex="-1"></a>variables_df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb15-81"><a href="#cb15-81" aria-hidden="true" tabindex="-1"></a>  <span class="at">Variable =</span> <span class="fu">c</span>(<span class="st">"Altura"</span>, <span class="st">"Lleva Accesorios"</span>, <span class="st">"Género"</span>, <span class="st">"Tamaño del Cabello"</span>, </span>
+<span id="cb15-82"><a href="#cb15-82" aria-hidden="true" tabindex="-1"></a>               <span class="st">"Color de Piel"</span>, <span class="st">"Horario"</span>, <span class="st">"Intensidad de Luz"</span>, <span class="st">"Distancia"</span>, </span>
+<span id="cb15-83"><a href="#cb15-83" aria-hidden="true" tabindex="-1"></a>               <span class="st">"Aglomeración"</span>, <span class="st">"Tiempo de Reconocimiento"</span>, <span class="st">"Color de Prenda Superior"</span>, <span class="st">"Clima"</span>, <span class="st">"Fallo en el Acceso"</span>),</span>
+<span id="cb15-84"><a href="#cb15-84" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb15-85"><a href="#cb15-85" aria-hidden="true" tabindex="-1"></a>  <span class="at">Tipo =</span> <span class="fu">c</span>(<span class="st">"Numérica continua"</span>, <span class="st">"Categórica nominal"</span>, <span class="st">"Categórica nominal"</span>, <span class="st">"Categórica ordinal"</span>, </span>
+<span id="cb15-86"><a href="#cb15-86" aria-hidden="true" tabindex="-1"></a>           <span class="st">"Categórica nominal"</span>, <span class="st">"Categórica nominal"</span>, <span class="st">"Numérica discreta"</span>, <span class="st">"Numérica continua"</span>, </span>
+<span id="cb15-87"><a href="#cb15-87" aria-hidden="true" tabindex="-1"></a>           <span class="st">"Categórica ordinal"</span>, <span class="st">"Numérica discreta"</span>, <span class="st">"Categórica nominal"</span>, <span class="st">"Categórica nominal"</span>, <span class="st">"Booleana"</span>),</span>
+<span id="cb15-88"><a href="#cb15-88" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb15-89"><a href="#cb15-89" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Valores Aceptados"</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"Rango: 1.0 - 2.5 metros"</span>, </span>
+<span id="cb15-90"><a href="#cb15-90" aria-hidden="true" tabindex="-1"></a>                          <span class="st">"Capucha, gorro, lentes, mascarilla, ninguno"</span>, </span>
+<span id="cb15-91"><a href="#cb15-91" aria-hidden="true" tabindex="-1"></a>                          <span class="st">"M, F"</span>, </span>
+<span id="cb15-92"><a href="#cb15-92" aria-hidden="true" tabindex="-1"></a>                          <span class="st">"Corto, Mediano, Largo"</span>, </span>
+<span id="cb15-93"><a href="#cb15-93" aria-hidden="true" tabindex="-1"></a>                          <span class="st">"Escala Fitzpatrick 1-6"</span>, </span>
+<span id="cb15-94"><a href="#cb15-94" aria-hidden="true" tabindex="-1"></a>                          <span class="st">"Mañana, Tarde, Noche"</span>, </span>
+<span id="cb15-95"><a href="#cb15-95" aria-hidden="true" tabindex="-1"></a>                          <span class="st">"Rango: 0-1000 lúmenes"</span>, </span>
+<span id="cb15-96"><a href="#cb15-96" aria-hidden="true" tabindex="-1"></a>                          <span class="st">"Rango: 0.5-3.0 metros"</span>, </span>
+<span id="cb15-97"><a href="#cb15-97" aria-hidden="true" tabindex="-1"></a>                          <span class="st">"Casi vacío, Moderadamente concurrido, Lleno"</span>, </span>
+<span id="cb15-98"><a href="#cb15-98" aria-hidden="true" tabindex="-1"></a>                          <span class="st">"Rango: 1-10 segundos"</span>, </span>
+<span id="cb15-99"><a href="#cb15-99" aria-hidden="true" tabindex="-1"></a>                          <span class="st">"Variedad de colores"</span>, </span>
+<span id="cb15-100"><a href="#cb15-100" aria-hidden="true" tabindex="-1"></a>                          <span class="st">"Soleado, Parcialmente nublado, Nublado, Lluvioso"</span>, </span>
+<span id="cb15-101"><a href="#cb15-101" aria-hidden="true" tabindex="-1"></a>                          <span class="st">"Sí, No"</span>),</span>
+<span id="cb15-102"><a href="#cb15-102" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb15-103"><a href="#cb15-103" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Características"</span> <span class="ot">=</span> <span class="fu">c</span>(</span>
+<span id="cb15-104"><a href="#cb15-104" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Puede tener valores atípicos si no es reportado correctamente."</span>,</span>
+<span id="cb15-105"><a href="#cb15-105" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Puede afectar la precisión del reconocimiento facial."</span>,</span>
+<span id="cb15-106"><a href="#cb15-106" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Asignado como nominal para mantenerlo en formato no numérico."</span>,</span>
+<span id="cb15-107"><a href="#cb15-107" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Clasificado como ordinal debido al rango progresivo de longitudes."</span>,</span>
+<span id="cb15-108"><a href="#cb15-108" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Categórica según la escala Fitzpatrick de tonalidad de piel."</span>,</span>
+<span id="cb15-109"><a href="#cb15-109" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Basado en el rango de horas del día."</span>,</span>
+<span id="cb15-110"><a href="#cb15-110" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Debería ser numérica discreta, relacionada con condiciones de luz."</span>,</span>
+<span id="cb15-111"><a href="#cb15-111" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Valores continuos de distancia medida en metros."</span>,</span>
+<span id="cb15-112"><a href="#cb15-112" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Cantidad de personas afecta el rendimiento del sistema."</span>,</span>
+<span id="cb15-113"><a href="#cb15-113" aria-hidden="true" tabindex="-1"></a>    <span class="st">"El sistema registra tiempo en segundos."</span>,</span>
+<span id="cb15-114"><a href="#cb15-114" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Los colores de la prenda pueden afectar la detección."</span>,</span>
+<span id="cb15-115"><a href="#cb15-115" aria-hidden="true" tabindex="-1"></a>    <span class="st">"El clima puede influir en la calidad de la detección."</span>,</span>
+<span id="cb15-116"><a href="#cb15-116" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Es binaria; representa éxito o fallo en la operación."</span></span>
+<span id="cb15-117"><a href="#cb15-117" aria-hidden="true" tabindex="-1"></a>  ),</span>
+<span id="cb15-118"><a href="#cb15-118" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb15-119"><a href="#cb15-119" aria-hidden="true" tabindex="-1"></a>  <span class="at">stringsAsFactors =</span> <span class="cn">FALSE</span></span>
+<span id="cb15-120"><a href="#cb15-120" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb15-121"><a href="#cb15-121" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-122"><a href="#cb15-122" aria-hidden="true" tabindex="-1"></a>tipo_formatter <span class="ot">&lt;-</span> <span class="fu">formatter</span>(<span class="st">"span"</span>, <span class="at">style =</span> x <span class="sc">~</span> <span class="fu">style</span>(<span class="at">color =</span> <span class="fu">ifelse</span>(x <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"Numérica continua"</span>, <span class="st">"Numérica discreta"</span>), <span class="st">"#3498db"</span>, customGreen)))</span>
+<span id="cb15-123"><a href="#cb15-123" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-124"><a href="#cb15-124" aria-hidden="true" tabindex="-1"></a><span class="fu">formattable</span>(variables_df, </span>
+<span id="cb15-125"><a href="#cb15-125" aria-hidden="true" tabindex="-1"></a>            <span class="at">table.attr =</span> <span class="st">'style="color:black; background-color:#f4f4f4; font-size: 12px; width: 100%;text-align: center;"'</span>,</span>
+<span id="cb15-126"><a href="#cb15-126" aria-hidden="true" tabindex="-1"></a>            <span class="fu">list</span>(</span>
+<span id="cb15-127"><a href="#cb15-127" aria-hidden="true" tabindex="-1"></a>              <span class="at">Variable =</span> <span class="fu">formatter</span>(<span class="st">"span"</span>, <span class="at">style =</span> <span class="sc">~</span> <span class="fu">style</span>(<span class="at">color =</span> <span class="st">"black"</span>, <span class="at">font.weight =</span> <span class="st">"bold"</span>)),</span>
+<span id="cb15-128"><a href="#cb15-128" aria-hidden="true" tabindex="-1"></a>              <span class="at">Tipo =</span> tipo_formatter,</span>
+<span id="cb15-129"><a href="#cb15-129" aria-hidden="true" tabindex="-1"></a>              <span class="st">"Valores Aceptados"</span> <span class="ot">=</span> <span class="fu">formatter</span>(<span class="st">"span"</span>, <span class="at">style =</span> <span class="sc">~</span> <span class="fu">style</span>(<span class="at">color =</span> <span class="st">"orange"</span>)),</span>
+<span id="cb15-130"><a href="#cb15-130" aria-hidden="true" tabindex="-1"></a>              <span class="st">"Características"</span> <span class="ot">=</span> <span class="fu">formatter</span>(<span class="st">"span"</span>, <span class="at">style =</span> <span class="sc">~</span> <span class="fu">style</span>(<span class="at">color =</span> <span class="st">"gray"</span>))</span>
+<span id="cb15-131"><a href="#cb15-131" aria-hidden="true" tabindex="-1"></a>              ))</span>
+<span id="cb15-132"><a href="#cb15-132" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb15-133"><a href="#cb15-133" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-134"><a href="#cb15-134" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-135"><a href="#cb15-135" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-136"><a href="#cb15-136" aria-hidden="true" tabindex="-1"></a><span class="fu">## Renombrar variables</span></span>
+<span id="cb15-137"><a href="#cb15-137" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-138"><a href="#cb15-138" aria-hidden="true" tabindex="-1"></a>Para facilitar el análisis y evitar errores comunes en la manipulación de los datos, es crucial renombrar las variables utilizando el formato snake_case y asegurarse de que los nombres sean descriptivos y conciso.</span>
+<span id="cb15-139"><a href="#cb15-139" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-140"><a href="#cb15-140" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; Código: renombrar las variables del dataset.</span></span>
+<span id="cb15-141"><a href="#cb15-141" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-144"><a href="#cb15-144" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb15-145"><a href="#cb15-145" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span></span>
+<span id="cb15-146"><a href="#cb15-146" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(</span>
+<span id="cb15-147"><a href="#cb15-147" aria-hidden="true" tabindex="-1"></a>    <span class="at">fecha =</span> <span class="st">`</span><span class="at">Marca temporal</span><span class="st">`</span>,</span>
+<span id="cb15-148"><a href="#cb15-148" aria-hidden="true" tabindex="-1"></a>    <span class="at">edad =</span> <span class="st">`</span><span class="at">Edad</span><span class="st">`</span>,</span>
+<span id="cb15-149"><a href="#cb15-149" aria-hidden="true" tabindex="-1"></a>    <span class="at">altura =</span> <span class="st">`</span><span class="at">Estatura en metros</span><span class="st">`</span>,</span>
+<span id="cb15-150"><a href="#cb15-150" aria-hidden="true" tabindex="-1"></a>    <span class="at">peso =</span> <span class="st">`</span><span class="at">Peso en kilogramos</span><span class="st">`</span>,</span>
+<span id="cb15-151"><a href="#cb15-151" aria-hidden="true" tabindex="-1"></a>    <span class="at">intentos =</span> <span class="st">`</span><span class="at">Numero de intentos para reconocimiento</span><span class="st">`</span>,</span>
+<span id="cb15-152"><a href="#cb15-152" aria-hidden="true" tabindex="-1"></a>    <span class="at">tiempo =</span> <span class="st">`</span><span class="at">Tiempo total que tomo el reconocimiento en segundos</span><span class="st">`</span>,</span>
+<span id="cb15-153"><a href="#cb15-153" aria-hidden="true" tabindex="-1"></a>    <span class="at">luz =</span> <span class="st">`</span><span class="at">Intensidad de luz en luxes</span><span class="st">`</span>,</span>
+<span id="cb15-154"><a href="#cb15-154" aria-hidden="true" tabindex="-1"></a>    <span class="at">temperatura =</span> <span class="st">`</span><span class="at">Temperatura en C°</span><span class="st">`</span>,</span>
+<span id="cb15-155"><a href="#cb15-155" aria-hidden="true" tabindex="-1"></a>    <span class="at">distancia_detector =</span> <span class="st">`</span><span class="at">Distancia entre el detector y la persona en metros</span><span class="st">`</span>,</span>
+<span id="cb15-156"><a href="#cb15-156" aria-hidden="true" tabindex="-1"></a>    <span class="at">distancia_cabeza =</span> <span class="st">`</span><span class="at">Distancia de la parte superior de cabeza hasta la camara</span><span class="st">`</span>,</span>
+<span id="cb15-157"><a href="#cb15-157" aria-hidden="true" tabindex="-1"></a>    <span class="at">inclinacion =</span> <span class="st">`</span><span class="at">Angulo de inclinación-sexagesimales</span><span class="st">`</span>,</span>
+<span id="cb15-158"><a href="#cb15-158" aria-hidden="true" tabindex="-1"></a>    <span class="at">dispositivo =</span> <span class="st">`</span><span class="at">Dispositivo</span><span class="st">`</span>,</span>
+<span id="cb15-159"><a href="#cb15-159" aria-hidden="true" tabindex="-1"></a>    <span class="at">turno =</span> <span class="st">`</span><span class="at">Turno del registro</span><span class="st">`</span>,</span>
+<span id="cb15-160"><a href="#cb15-160" aria-hidden="true" tabindex="-1"></a>    <span class="at">cabello_color =</span> <span class="st">`</span><span class="at">Color de cabello</span><span class="st">`</span>,</span>
+<span id="cb15-161"><a href="#cb15-161" aria-hidden="true" tabindex="-1"></a>    <span class="at">rostro_forma =</span> <span class="st">`</span><span class="at">Forma del rostro</span><span class="st">`</span>,</span>
+<span id="cb15-162"><a href="#cb15-162" aria-hidden="true" tabindex="-1"></a>    <span class="at">piel_tipo =</span> <span class="st">`</span><span class="at">Tipo de piel</span><span class="st">`</span>,</span>
+<span id="cb15-163"><a href="#cb15-163" aria-hidden="true" tabindex="-1"></a>    <span class="at">cejas_forma =</span> <span class="st">`</span><span class="at">Forma de cejas</span><span class="st">`</span>,</span>
+<span id="cb15-164"><a href="#cb15-164" aria-hidden="true" tabindex="-1"></a>    <span class="at">nariz_tipo =</span> <span class="st">`</span><span class="at">Tipo de nariz</span><span class="st">`</span>,</span>
+<span id="cb15-165"><a href="#cb15-165" aria-hidden="true" tabindex="-1"></a>    <span class="at">accesorios =</span> <span class="st">`</span><span class="at">Accesorios en la cabeza-rostro</span><span class="st">`</span>,</span>
+<span id="cb15-166"><a href="#cb15-166" aria-hidden="true" tabindex="-1"></a>    <span class="at">clima =</span> <span class="st">`</span><span class="at">Clima</span><span class="st">`</span>,</span>
+<span id="cb15-167"><a href="#cb15-167" aria-hidden="true" tabindex="-1"></a>    <span class="at">viento =</span> <span class="st">`</span><span class="at">Corriente del viento</span><span class="st">`</span>,</span>
+<span id="cb15-168"><a href="#cb15-168" aria-hidden="true" tabindex="-1"></a>    <span class="at">lectura_estado =</span> <span class="st">`</span><span class="at">Estado de la lectura</span><span class="st">`</span>,</span>
+<span id="cb15-169"><a href="#cb15-169" aria-hidden="true" tabindex="-1"></a>    <span class="at">genero =</span> <span class="st">`</span><span class="at">Género</span><span class="st">`</span>,</span>
+<span id="cb15-170"><a href="#cb15-170" aria-hidden="true" tabindex="-1"></a>    <span class="at">ojos_color =</span> <span class="st">`</span><span class="at">Color de ojos</span><span class="st">`</span>,</span>
+<span id="cb15-171"><a href="#cb15-171" aria-hidden="true" tabindex="-1"></a>    cabello_tamaño <span class="ot">=</span> <span class="st">`</span><span class="at">Tamaño de cabello</span><span class="st">`</span>,</span>
+<span id="cb15-172"><a href="#cb15-172" aria-hidden="true" tabindex="-1"></a>    <span class="at">ropa_color =</span> <span class="st">`</span><span class="at">Color de ropa</span><span class="st">`</span></span>
+<span id="cb15-173"><a href="#cb15-173" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb15-174"><a href="#cb15-174" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-175"><a href="#cb15-175" aria-hidden="true" tabindex="-1"></a><span class="fu">formattable</span>(</span>
+<span id="cb15-176"><a href="#cb15-176" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>(df),</span>
+<span id="cb15-177"><a href="#cb15-177" aria-hidden="true" tabindex="-1"></a>  <span class="at">table.attr =</span> <span class="st">'style="color:black; background-color:#f4f4f4; font-size: 12px; width: 100%;text-align: center;"'</span></span>
+<span id="cb15-178"><a href="#cb15-178" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb15-179"><a href="#cb15-179" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-180"><a href="#cb15-180" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb15-181"><a href="#cb15-181" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-182"><a href="#cb15-182" aria-hidden="true" tabindex="-1"></a><span class="fu">## Perfilamiento Inicial de datos</span></span>
+<span id="cb15-183"><a href="#cb15-183" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-184"><a href="#cb15-184" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-185"><a href="#cb15-185" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; Código: funciones de ayuda para realizar un análisis simple de variables categóricas y numéricas.</span></span>
+<span id="cb15-186"><a href="#cb15-186" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-189"><a href="#cb15-189" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb15-190"><a href="#cb15-190" aria-hidden="true" tabindex="-1"></a>analisis_categorica_simple <span class="ot">&lt;-</span> <span class="cf">function</span>(df, variables) {</span>
+<span id="cb15-191"><a href="#cb15-191" aria-hidden="true" tabindex="-1"></a>  resultados <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb15-192"><a href="#cb15-192" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Variable"</span> <span class="ot">=</span> <span class="fu">character</span>(),</span>
+<span id="cb15-193"><a href="#cb15-193" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Valores Únicos"</span> <span class="ot">=</span> <span class="fu">integer</span>(),</span>
+<span id="cb15-194"><a href="#cb15-194" aria-hidden="true" tabindex="-1"></a>    <span class="st">"NAs"</span> <span class="ot">=</span> <span class="fu">integer</span>(),</span>
+<span id="cb15-195"><a href="#cb15-195" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Moda"</span> <span class="ot">=</span> <span class="fu">character</span>(),</span>
+<span id="cb15-196"><a href="#cb15-196" aria-hidden="true" tabindex="-1"></a>    <span class="at">stringsAsFactors =</span> <span class="cn">FALSE</span></span>
+<span id="cb15-197"><a href="#cb15-197" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb15-198"><a href="#cb15-198" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb15-199"><a href="#cb15-199" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (var <span class="cf">in</span> variables) {</span>
+<span id="cb15-200"><a href="#cb15-200" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb15-201"><a href="#cb15-201" aria-hidden="true" tabindex="-1"></a>    valores_unicos <span class="ot">&lt;-</span> <span class="fu">length</span>(<span class="fu">unique</span>(<span class="fu">na.omit</span>(df[[var]])))</span>
+<span id="cb15-202"><a href="#cb15-202" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb15-203"><a href="#cb15-203" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb15-204"><a href="#cb15-204" aria-hidden="true" tabindex="-1"></a>    n_nas <span class="ot">&lt;-</span> <span class="fu">sum</span>(<span class="fu">is.na</span>(df[[var]]))</span>
+<span id="cb15-205"><a href="#cb15-205" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb15-206"><a href="#cb15-206" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb15-207"><a href="#cb15-207" aria-hidden="true" tabindex="-1"></a>    moda <span class="ot">&lt;-</span> <span class="fu">names</span>(<span class="fu">sort</span>(<span class="fu">table</span>(df[[var]]), <span class="at">decreasing =</span> <span class="cn">TRUE</span>))[<span class="dv">1</span>]</span>
+<span id="cb15-208"><a href="#cb15-208" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb15-209"><a href="#cb15-209" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb15-210"><a href="#cb15-210" aria-hidden="true" tabindex="-1"></a>    resultados <span class="ot">&lt;-</span> <span class="fu">rbind</span>(resultados, <span class="fu">data.frame</span>(</span>
+<span id="cb15-211"><a href="#cb15-211" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Variable"</span> <span class="ot">=</span> var,</span>
+<span id="cb15-212"><a href="#cb15-212" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Valores Únicos"</span> <span class="ot">=</span> valores_unicos,</span>
+<span id="cb15-213"><a href="#cb15-213" aria-hidden="true" tabindex="-1"></a>      <span class="st">"NAs"</span> <span class="ot">=</span> n_nas,</span>
+<span id="cb15-214"><a href="#cb15-214" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Moda"</span> <span class="ot">=</span> moda,</span>
+<span id="cb15-215"><a href="#cb15-215" aria-hidden="true" tabindex="-1"></a>      <span class="at">stringsAsFactors =</span> <span class="cn">FALSE</span></span>
+<span id="cb15-216"><a href="#cb15-216" aria-hidden="true" tabindex="-1"></a>    ))</span>
+<span id="cb15-217"><a href="#cb15-217" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb15-218"><a href="#cb15-218" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb15-219"><a href="#cb15-219" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(resultados)</span>
+<span id="cb15-220"><a href="#cb15-220" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb15-221"><a href="#cb15-221" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-222"><a href="#cb15-222" aria-hidden="true" tabindex="-1"></a>analisis_numerica_simple <span class="ot">&lt;-</span> <span class="cf">function</span>(df, variables) {</span>
+<span id="cb15-223"><a href="#cb15-223" aria-hidden="true" tabindex="-1"></a>  resultados <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb15-224"><a href="#cb15-224" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Variable"</span> <span class="ot">=</span> <span class="fu">character</span>(),</span>
+<span id="cb15-225"><a href="#cb15-225" aria-hidden="true" tabindex="-1"></a>    <span class="st">"NAs"</span> <span class="ot">=</span> <span class="fu">integer</span>(),</span>
+<span id="cb15-226"><a href="#cb15-226" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Media"</span> <span class="ot">=</span> <span class="fu">numeric</span>(),</span>
+<span id="cb15-227"><a href="#cb15-227" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Mediana"</span> <span class="ot">=</span> <span class="fu">numeric</span>(),</span>
+<span id="cb15-228"><a href="#cb15-228" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Desviación Estándar"</span> <span class="ot">=</span> <span class="fu">numeric</span>(),</span>
+<span id="cb15-229"><a href="#cb15-229" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Coeficiente Variación"</span> <span class="ot">=</span> <span class="fu">numeric</span>(),</span>
+<span id="cb15-230"><a href="#cb15-230" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Mínimo"</span> <span class="ot">=</span> <span class="fu">numeric</span>(),</span>
+<span id="cb15-231"><a href="#cb15-231" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Máximo"</span> <span class="ot">=</span> <span class="fu">numeric</span>(),</span>
+<span id="cb15-232"><a href="#cb15-232" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Valores Atípicos"</span> <span class="ot">=</span> <span class="fu">integer</span>(),</span>
+<span id="cb15-233"><a href="#cb15-233" aria-hidden="true" tabindex="-1"></a>    <span class="at">stringsAsFactors =</span> <span class="cn">FALSE</span></span>
+<span id="cb15-234"><a href="#cb15-234" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb15-235"><a href="#cb15-235" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb15-236"><a href="#cb15-236" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (var <span class="cf">in</span> variables) {</span>
+<span id="cb15-237"><a href="#cb15-237" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb15-238"><a href="#cb15-238" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (<span class="sc">!</span>var <span class="sc">%in%</span> <span class="fu">colnames</span>(df)) <span class="cf">next</span></span>
+<span id="cb15-239"><a href="#cb15-239" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb15-240"><a href="#cb15-240" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (<span class="fu">is.numeric</span>(df[[var]]) <span class="sc">&amp;&amp;</span> <span class="sc">!</span><span class="fu">all</span>(<span class="fu">is.na</span>(df[[var]]))) {</span>
+<span id="cb15-241"><a href="#cb15-241" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb15-242"><a href="#cb15-242" aria-hidden="true" tabindex="-1"></a>      n_nas <span class="ot">&lt;-</span> <span class="fu">sum</span>(<span class="fu">is.na</span>(df[[var]]))</span>
+<span id="cb15-243"><a href="#cb15-243" aria-hidden="true" tabindex="-1"></a>      media <span class="ot">&lt;-</span> <span class="fu">mean</span>(df[[var]], <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb15-244"><a href="#cb15-244" aria-hidden="true" tabindex="-1"></a>      mediana <span class="ot">&lt;-</span> <span class="fu">median</span>(df[[var]], <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb15-245"><a href="#cb15-245" aria-hidden="true" tabindex="-1"></a>      desviacion_estandar <span class="ot">&lt;-</span> <span class="fu">sd</span>(df[[var]], <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb15-246"><a href="#cb15-246" aria-hidden="true" tabindex="-1"></a>      coeficiente_variacion <span class="ot">&lt;-</span> desviacion_estandar <span class="sc">/</span> media</span>
+<span id="cb15-247"><a href="#cb15-247" aria-hidden="true" tabindex="-1"></a>      minimo <span class="ot">&lt;-</span> <span class="fu">min</span>(df[[var]], <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb15-248"><a href="#cb15-248" aria-hidden="true" tabindex="-1"></a>      maximo <span class="ot">&lt;-</span> <span class="fu">max</span>(df[[var]], <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb15-249"><a href="#cb15-249" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb15-250"><a href="#cb15-250" aria-hidden="true" tabindex="-1"></a>      Q1 <span class="ot">&lt;-</span> <span class="fu">quantile</span>(df[[var]], <span class="fl">0.25</span>, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb15-251"><a href="#cb15-251" aria-hidden="true" tabindex="-1"></a>      Q3 <span class="ot">&lt;-</span> <span class="fu">quantile</span>(df[[var]], <span class="fl">0.75</span>, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb15-252"><a href="#cb15-252" aria-hidden="true" tabindex="-1"></a>      IQR_valor <span class="ot">&lt;-</span> Q3 <span class="sc">-</span> Q1</span>
+<span id="cb15-253"><a href="#cb15-253" aria-hidden="true" tabindex="-1"></a>      lower_bound <span class="ot">&lt;-</span> Q1 <span class="sc">-</span> <span class="fl">1.5</span> <span class="sc">*</span> IQR_valor</span>
+<span id="cb15-254"><a href="#cb15-254" aria-hidden="true" tabindex="-1"></a>      upper_bound <span class="ot">&lt;-</span> Q3 <span class="sc">+</span> <span class="fl">1.5</span> <span class="sc">*</span> IQR_valor</span>
+<span id="cb15-255"><a href="#cb15-255" aria-hidden="true" tabindex="-1"></a>      valores_atipicos <span class="ot">&lt;-</span> <span class="fu">sum</span>(df[[var]] <span class="sc">&lt;</span> lower_bound <span class="sc">|</span> df[[var]] <span class="sc">&gt;</span> upper_bound, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb15-256"><a href="#cb15-256" aria-hidden="true" tabindex="-1"></a>    } <span class="cf">else</span> {</span>
+<span id="cb15-257"><a href="#cb15-257" aria-hidden="true" tabindex="-1"></a>      n_nas <span class="ot">&lt;-</span> <span class="fu">sum</span>(<span class="fu">is.na</span>(df[[var]]))</span>
+<span id="cb15-258"><a href="#cb15-258" aria-hidden="true" tabindex="-1"></a>      media <span class="ot">&lt;-</span> <span class="cn">NA</span></span>
+<span id="cb15-259"><a href="#cb15-259" aria-hidden="true" tabindex="-1"></a>      mediana <span class="ot">&lt;-</span> <span class="cn">NA</span></span>
+<span id="cb15-260"><a href="#cb15-260" aria-hidden="true" tabindex="-1"></a>      desviacion_estandar <span class="ot">&lt;-</span> <span class="cn">NA</span></span>
+<span id="cb15-261"><a href="#cb15-261" aria-hidden="true" tabindex="-1"></a>      coeficiente_variacion <span class="ot">&lt;-</span> <span class="cn">NA</span></span>
+<span id="cb15-262"><a href="#cb15-262" aria-hidden="true" tabindex="-1"></a>      minimo <span class="ot">&lt;-</span> <span class="cn">NA</span></span>
+<span id="cb15-263"><a href="#cb15-263" aria-hidden="true" tabindex="-1"></a>      maximo <span class="ot">&lt;-</span> <span class="cn">NA</span></span>
+<span id="cb15-264"><a href="#cb15-264" aria-hidden="true" tabindex="-1"></a>      valores_atipicos <span class="ot">&lt;-</span> <span class="cn">NA</span></span>
+<span id="cb15-265"><a href="#cb15-265" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb15-266"><a href="#cb15-266" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb15-267"><a href="#cb15-267" aria-hidden="true" tabindex="-1"></a>    resultados <span class="ot">&lt;-</span> <span class="fu">rbind</span>(resultados, <span class="fu">data.frame</span>(</span>
+<span id="cb15-268"><a href="#cb15-268" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Variable"</span> <span class="ot">=</span> var,</span>
+<span id="cb15-269"><a href="#cb15-269" aria-hidden="true" tabindex="-1"></a>      <span class="st">"NAs"</span> <span class="ot">=</span> n_nas,</span>
+<span id="cb15-270"><a href="#cb15-270" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Media"</span> <span class="ot">=</span> media,</span>
+<span id="cb15-271"><a href="#cb15-271" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Mediana"</span> <span class="ot">=</span> mediana,</span>
+<span id="cb15-272"><a href="#cb15-272" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Desviación Estándar"</span> <span class="ot">=</span> desviacion_estandar,</span>
+<span id="cb15-273"><a href="#cb15-273" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Coeficiente Variación"</span> <span class="ot">=</span> coeficiente_variacion,</span>
+<span id="cb15-274"><a href="#cb15-274" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Mínimo"</span> <span class="ot">=</span> minimo,</span>
+<span id="cb15-275"><a href="#cb15-275" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Máximo"</span> <span class="ot">=</span> maximo,</span>
+<span id="cb15-276"><a href="#cb15-276" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Valores Atípicos"</span> <span class="ot">=</span> valores_atipicos,</span>
+<span id="cb15-277"><a href="#cb15-277" aria-hidden="true" tabindex="-1"></a>      <span class="at">stringsAsFactors =</span> <span class="cn">FALSE</span></span>
+<span id="cb15-278"><a href="#cb15-278" aria-hidden="true" tabindex="-1"></a>    ))</span>
+<span id="cb15-279"><a href="#cb15-279" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb15-280"><a href="#cb15-280" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb15-281"><a href="#cb15-281" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(resultados)</span>
+<span id="cb15-282"><a href="#cb15-282" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb15-283"><a href="#cb15-283" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb15-284"><a href="#cb15-284" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-285"><a href="#cb15-285" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-286"><a href="#cb15-286" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Altura**: Se ha clasificado como una variable numérica continua porque la altura de los sujetos es una medida que puede tomar cualquier valor dentro de un rango (1.0 a 2.5 metros). Aunque teóricamente es continua, es posible que en la recolección de datos solo se obtengan valores discretos.</span>
+<span id="cb15-287"><a href="#cb15-287" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-288"><a href="#cb15-288" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Lleva Accesorios**: Esta variable se clasifica como categórica nominal debido a que describe la presencia de diferentes tipos de accesorios en el rostro o la cabeza, como capuchas o gafas, que no siguen ningún orden natural.</span>
+<span id="cb15-289"><a href="#cb15-289" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-290"><a href="#cb15-290" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Género**: Aunque podría tratarse de una variable cualitativa, en esta muestra específica se clasifica como categórica nominal con dos valores posibles: "M" (Masculino) y "F" (Femenino).</span>
+<span id="cb15-291"><a href="#cb15-291" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-292"><a href="#cb15-292" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>**Tamaño del Cabello**: Esta variable es categórica ordinal, ya que existen categorías que siguen un orden progresivo (Corto, Mediano, Largo). Aunque no tiene una métrica numérica exacta, sigue un gradiente lógico.</span>
+<span id="cb15-293"><a href="#cb15-293" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-294"><a href="#cb15-294" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>**Color de Piel**: Se utiliza la escala Fitzpatrick para clasificar esta variable categórica nominalmente. Aunque la escala tiene un rango numérico, no hay una relación de orden en el contexto de esta investigación.</span>
+<span id="cb15-295"><a href="#cb15-295" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-296"><a href="#cb15-296" aria-hidden="true" tabindex="-1"></a><span class="ss">6. </span>**Horario**: Se clasifica como categórica nominal, ya que se divide en tres intervalos de tiempo durante el día (mañana, tarde y noche) sin un orden estricto entre ellos.</span>
+<span id="cb15-297"><a href="#cb15-297" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-298"><a href="#cb15-298" aria-hidden="true" tabindex="-1"></a><span class="ss">7. </span>**Intensidad de Luz**: Esta es una variable numérica discreta, ya que se mide en un rango de lúmenes, pero solo acepta valores enteros.</span>
+<span id="cb15-299"><a href="#cb15-299" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-300"><a href="#cb15-300" aria-hidden="true" tabindex="-1"></a><span class="ss">8. </span>**Distancia**: Se clasifica como numérica continua, dado que la distancia entre el sujeto y la cámara se mide en metros y puede tener cualquier valor dentro de un rango continuo.</span>
+<span id="cb15-301"><a href="#cb15-301" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-302"><a href="#cb15-302" aria-hidden="true" tabindex="-1"></a><span class="ss">9. </span>**Aglomeración**: Es categórica ordinal, ya que las categorías (casi vacío, moderadamente concurrido, lleno) siguen un orden lógico que afecta la precisión del sistema de reconocimiento.</span>
+<span id="cb15-303"><a href="#cb15-303" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-304"><a href="#cb15-304" aria-hidden="true" tabindex="-1"></a><span class="ss">10. </span>**Tiempo de Reconocimiento**: Esta variable es numérica discreta, ya que mide el tiempo en segundos que tarda el sistema en identificar a una persona. Los valores están en un rango numérico fijo.</span>
+<span id="cb15-305"><a href="#cb15-305" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-306"><a href="#cb15-306" aria-hidden="true" tabindex="-1"></a><span class="ss">11. </span>**Color de Prenda Superior**: Esta variable es categórica nominal, ya que el color de la prenda no tiene un orden lógico y se clasifica simplemente por el color.</span>
+<span id="cb15-307"><a href="#cb15-307" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-308"><a href="#cb15-308" aria-hidden="true" tabindex="-1"></a><span class="ss">12. </span>**Clima**: Se clasifica como categórica nominal, con diferentes estados del clima (soleado, nublado, lluvioso) que no siguen un orden específico.</span>
+<span id="cb15-309"><a href="#cb15-309" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-310"><a href="#cb15-310" aria-hidden="true" tabindex="-1"></a><span class="ss">13. </span>**Fallo en el Acceso**: Esta es una variable booleana, ya que tiene solo dos posibles estados: éxito o fallo en el proceso de reconocimiento facial.</span>
+<span id="cb15-311"><a href="#cb15-311" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-312"><a href="#cb15-312" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-313"><a href="#cb15-313" aria-hidden="true" tabindex="-1"></a><span class="fu">### Variables Categóricas</span></span>
+<span id="cb15-314"><a href="#cb15-314" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-315"><a href="#cb15-315" aria-hidden="true" tabindex="-1"></a>Se excluyó la variable <span class="in">`accesorios`</span> ya que en el estado en crudo del dataset esta columna permite variables tipo lista e incluso <span class="in">`NAs`</span></span>
+<span id="cb15-316"><a href="#cb15-316" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-319"><a href="#cb15-319" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb15-320"><a href="#cb15-320" aria-hidden="true" tabindex="-1"></a>categoricas <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"dispositivo"</span>, <span class="st">"turno"</span>, <span class="st">"cabello_color"</span>, <span class="st">"rostro_forma"</span>, </span>
+<span id="cb15-321"><a href="#cb15-321" aria-hidden="true" tabindex="-1"></a>                 <span class="st">"piel_tipo"</span>, <span class="st">"cejas_forma"</span>, <span class="st">"nariz_tipo"</span>, <span class="st">"clima"</span>, <span class="st">"viento"</span>, <span class="st">"lectura_estado"</span>,</span>
+<span id="cb15-322"><a href="#cb15-322" aria-hidden="true" tabindex="-1"></a>                 <span class="st">"genero"</span>, <span class="st">"ojos_color"</span>, <span class="st">"cabello_tamaño"</span>)</span>
+<span id="cb15-323"><a href="#cb15-323" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-324"><a href="#cb15-324" aria-hidden="true" tabindex="-1"></a>numericas <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"altura"</span>, <span class="st">"tiempo_reconocimiento"</span>, <span class="st">"intensidad_luz"</span>, <span class="st">"distancia_detector"</span>, </span>
+<span id="cb15-325"><a href="#cb15-325" aria-hidden="true" tabindex="-1"></a>               <span class="st">"distancia_cabeza"</span>, <span class="st">"temperatura"</span>)</span>
+<span id="cb15-326"><a href="#cb15-326" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-327"><a href="#cb15-327" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-328"><a href="#cb15-328" aria-hidden="true" tabindex="-1"></a>tabla_categoricas <span class="ot">&lt;-</span> <span class="fu">analisis_categorica_simple</span>(df, categoricas)</span>
+<span id="cb15-329"><a href="#cb15-329" aria-hidden="true" tabindex="-1"></a><span class="fu">formattable</span>(tabla_categoricas,</span>
+<span id="cb15-330"><a href="#cb15-330" aria-hidden="true" tabindex="-1"></a>            <span class="at">table.attr =</span> <span class="st">'style="color:black; background-color:#f4f4f4; font-size: 12px; width: 100%;text-align: center;"'</span>,</span>
+<span id="cb15-331"><a href="#cb15-331" aria-hidden="true" tabindex="-1"></a>            <span class="fu">list</span>(</span>
+<span id="cb15-332"><a href="#cb15-332" aria-hidden="true" tabindex="-1"></a>              <span class="st">`</span><span class="at">Valores.Únicos</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">color_tile</span>(<span class="st">"white"</span>, customGreen),</span>
+<span id="cb15-333"><a href="#cb15-333" aria-hidden="true" tabindex="-1"></a>               <span class="at">NAs =</span> <span class="fu">color_tile</span>(<span class="st">"white"</span>, customRed)</span>
+<span id="cb15-334"><a href="#cb15-334" aria-hidden="true" tabindex="-1"></a>            ))</span>
+<span id="cb15-335"><a href="#cb15-335" aria-hidden="true" tabindex="-1"></a>            </span>
+<span id="cb15-336"><a href="#cb15-336" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb15-337"><a href="#cb15-337" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-338"><a href="#cb15-338" aria-hidden="true" tabindex="-1"></a><span class="fu">## Variables Numéricas</span></span>
+<span id="cb15-339"><a href="#cb15-339" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-342"><a href="#cb15-342" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb15-343"><a href="#cb15-343" aria-hidden="true" tabindex="-1"></a>tabla_numericas <span class="ot">&lt;-</span> <span class="fu">analisis_numerica_simple</span>(df, numericas)</span>
+<span id="cb15-344"><a href="#cb15-344" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-345"><a href="#cb15-345" aria-hidden="true" tabindex="-1"></a><span class="fu">formattable</span>(tabla_numericas,</span>
+<span id="cb15-346"><a href="#cb15-346" aria-hidden="true" tabindex="-1"></a>            <span class="at">table.attr =</span> <span class="st">'style="color:black; background-color:#f4f4f4; font-size: 12px; width: 100%;text-align: center;"'</span>,</span>
+<span id="cb15-347"><a href="#cb15-347" aria-hidden="true" tabindex="-1"></a>            <span class="fu">list</span>(</span>
+<span id="cb15-348"><a href="#cb15-348" aria-hidden="true" tabindex="-1"></a>              <span class="at">NAs =</span> <span class="fu">color_tile</span>(customGreen0, customRed),</span>
+<span id="cb15-349"><a href="#cb15-349" aria-hidden="true" tabindex="-1"></a>              <span class="st">`</span><span class="at">Coeficiente.Variación</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">color_tile</span>(customGreen, customRed),  </span>
+<span id="cb15-350"><a href="#cb15-350" aria-hidden="true" tabindex="-1"></a>              <span class="st">`</span><span class="at">Valores.Atípicos</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">color_tile</span>(<span class="st">"white"</span>, customRed)</span>
+<span id="cb15-351"><a href="#cb15-351" aria-hidden="true" tabindex="-1"></a>            ))</span>
+<span id="cb15-352"><a href="#cb15-352" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-353"><a href="#cb15-353" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb15-354"><a href="#cb15-354" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-355"><a href="#cb15-355" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-356"><a href="#cb15-356" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-357"><a href="#cb15-357" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-358"><a href="#cb15-358" aria-hidden="true" tabindex="-1"></a><span class="fu">## Selección de variables relevantes</span></span>
+<span id="cb15-359"><a href="#cb15-359" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-360"><a href="#cb15-360" aria-hidden="true" tabindex="-1"></a>Para alcanzar nuestros objetivos específicos, identificamos las siguientes variables del conjunto de datos que son clave para nuestro análisis:</span>
+<span id="cb15-361"><a href="#cb15-361" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-362"><a href="#cb15-362" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Objetivo 1**: Relación entre la intensidad de la luz y el tiempo de reconocimiento facial.</span>
+<span id="cb15-363"><a href="#cb15-363" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb15-364"><a href="#cb15-364" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>**Intensidad de la luz**: numérica discreta.</span>
+<span id="cb15-365"><a href="#cb15-365" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>**Tiempo de reconocimiento facial**:numérica discreta.</span>
+<span id="cb15-366"><a href="#cb15-366" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-367"><a href="#cb15-367" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Objetivo 2**: Impacto del uso de accesorios en la cabeza y rostro en el tiempo de reconocimiento.</span>
+<span id="cb15-368"><a href="#cb15-368" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-369"><a href="#cb15-369" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>**Accesorios en cabeza/rostro**: Variable categórica nominal que indica el uso de capucha, gorra, lentes, o mascarilla.</span>
+<span id="cb15-370"><a href="#cb15-370" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>**Tiempo de reconocimiento facial**: Variable numérica discreta.</span>
+<span id="cb15-371"><a href="#cb15-371" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-372"><a href="#cb15-372" aria-hidden="true" tabindex="-1"></a>Estas variables serán el foco del análisis en las siguientes secciones, con el fin de visualizar y evaluar cómo se relacionan entre sí.</span>
+<span id="cb15-373"><a href="#cb15-373" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-374"><a href="#cb15-374" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-375"><a href="#cb15-375" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-378"><a href="#cb15-378" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb15-379"><a href="#cb15-379" aria-hidden="true" tabindex="-1"></a>df_seleccion <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span> <span class="fu">select</span>(luz, tiempo, accesorios)</span>
+<span id="cb15-380"><a href="#cb15-380" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb15-381"><a href="#cb15-381" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-382"><a href="#cb15-382" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-383"><a href="#cb15-383" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-384"><a href="#cb15-384" aria-hidden="true" tabindex="-1"></a><span class="fu">## Exploración y Análisis Univariado de las Variables Seleccionadas</span></span>
+<span id="cb15-385"><a href="#cb15-385" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-386"><a href="#cb15-386" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Variable: Intensidad de la Luz**</span>
+<span id="cb15-387"><a href="#cb15-387" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-388"><a href="#cb15-388" aria-hidden="true" tabindex="-1"></a>La intensidad de la luz es una variable numérica discreta que mide la cantidad de luz en el ambiente. En este análisis, exploraremos su distribución mediante un gráfico de barras, calcularemos la media y la mediana, y observaremos su dispersión a través de un gráfico de caja y bigotes.</span>
+<span id="cb15-389"><a href="#cb15-389" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-390"><a href="#cb15-390" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-393"><a href="#cb15-393" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb15-394"><a href="#cb15-394" aria-hidden="true" tabindex="-1"></a><span class="co"># Estadísticas descriptivas de la intensidad de luz</span></span>
+<span id="cb15-395"><a href="#cb15-395" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(df<span class="sc">$</span>luz)</span>
+<span id="cb15-396"><a href="#cb15-396" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-397"><a href="#cb15-397" aria-hidden="true" tabindex="-1"></a><span class="co"># Gráfico de caja y bigotes para la intensidad de luz</span></span>
+<span id="cb15-398"><a href="#cb15-398" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(df, <span class="fu">aes</span>(<span class="at">y =</span> df<span class="sc">$</span>luz)) <span class="sc">+</span></span>
+<span id="cb15-399"><a href="#cb15-399" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="at">fill =</span> <span class="st">"#F4A261"</span>, <span class="at">color =</span> <span class="st">"#264653"</span>) <span class="sc">+</span></span>
+<span id="cb15-400"><a href="#cb15-400" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Gráfico de Caja y Bigotes: Intensidad de la Luz"</span>, <span class="at">y =</span> <span class="st">"Intensidad de la Luz (lux)"</span>) <span class="sc">+</span></span>
+<span id="cb15-401"><a href="#cb15-401" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span>
+<span id="cb15-402"><a href="#cb15-402" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-403"><a href="#cb15-403" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb15-404"><a href="#cb15-404" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-405"><a href="#cb15-405" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-406"><a href="#cb15-406" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Variable: Tiempo de Reconocimiento Facial**</span>
+<span id="cb15-407"><a href="#cb15-407" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-410"><a href="#cb15-410" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb15-411"><a href="#cb15-411" aria-hidden="true" tabindex="-1"></a><span class="co"># Estadísticas descriptivas del tiempo de reconocimiento</span></span>
+<span id="cb15-412"><a href="#cb15-412" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(df<span class="sc">$</span>tiempo)</span>
+<span id="cb15-413"><a href="#cb15-413" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-414"><a href="#cb15-414" aria-hidden="true" tabindex="-1"></a><span class="co"># Diagrama de barras para la distribución del tiempo de reconocimiento</span></span>
+<span id="cb15-415"><a href="#cb15-415" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(df, <span class="fu">aes</span>(<span class="at">x =</span> df<span class="sc">$</span>tiempo)) <span class="sc">+</span></span>
+<span id="cb15-416"><a href="#cb15-416" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">fill =</span> <span class="st">"#E9C46A"</span>, <span class="at">color =</span> <span class="st">"white"</span>) <span class="sc">+</span></span>
+<span id="cb15-417"><a href="#cb15-417" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Distribución del Tiempo de Reconocimiento Facial"</span>, <span class="at">x =</span> <span class="st">"Tiempo de Reconocimiento (segundos)"</span>, <span class="at">y =</span> <span class="st">"Frecuencia"</span>) <span class="sc">+</span></span>
+<span id="cb15-418"><a href="#cb15-418" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span>
+<span id="cb15-419"><a href="#cb15-419" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-420"><a href="#cb15-420" aria-hidden="true" tabindex="-1"></a><span class="co"># Gráfico de caja y bigotes del tiempo de reconocimiento facial</span></span>
+<span id="cb15-421"><a href="#cb15-421" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(df, <span class="fu">aes</span>(<span class="at">y =</span> df<span class="sc">$</span>tiempo)) <span class="sc">+</span></span>
+<span id="cb15-422"><a href="#cb15-422" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="at">fill =</span> <span class="st">"#F4A261"</span>, <span class="at">color =</span> <span class="st">"#264653"</span>) <span class="sc">+</span></span>
+<span id="cb15-423"><a href="#cb15-423" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Gráfico de Caja y Bigotes: Tiempo de Reconocimiento"</span>, <span class="at">y =</span> <span class="st">"Tiempo de Reconocimiento (segundos)"</span>) <span class="sc">+</span></span>
+<span id="cb15-424"><a href="#cb15-424" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span>
+<span id="cb15-425"><a href="#cb15-425" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-426"><a href="#cb15-426" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb15-427"><a href="#cb15-427" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-428"><a href="#cb15-428" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-429"><a href="#cb15-429" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Variable: Accesorios en la Cabeza y Rostro**</span>
+<span id="cb15-430"><a href="#cb15-430" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb15-431"><a href="#cb15-431" aria-hidden="true" tabindex="-1"></a>    ///TODO. </span>
+<span id="cb15-432"><a href="#cb15-432" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-433"><a href="#cb15-433" aria-hidden="true" tabindex="-1"></a><span class="fu">## Análisis Bivariado</span></span>
+<span id="cb15-434"><a href="#cb15-434" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-435"><a href="#cb15-435" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Gráfico de Caja y Bigotes para la Relación entre el Uso de Accesorios y el Tiempo de Reconocimiento**</span>
+<span id="cb15-436"><a href="#cb15-436" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-437"><a href="#cb15-437" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-438"><a href="#cb15-438" aria-hidden="true" tabindex="-1"></a>`{r}</span>
+<span id="cb15-439"><a href="#cb15-439" aria-hidden="true" tabindex="-1"></a><span class="fu"># Gráfico de caja y bigotes multivariable entre accesorios y tiempo de reconocimiento</span></span>
+<span id="cb15-440"><a href="#cb15-440" aria-hidden="true" tabindex="-1"></a>ggplot(df, aes(x =df$accesorios, y = df$tiempo, fill = df$accesorios)) +</span>
+<span id="cb15-441"><a href="#cb15-441" aria-hidden="true" tabindex="-1"></a>  geom_boxplot(alpha = 0.7, outlier.color = "#E76F51", outlier.shape = 16) +</span>
+<span id="cb15-442"><a href="#cb15-442" aria-hidden="true" tabindex="-1"></a>  labs(title = "Tiempo de Reconocimiento por Uso de Accesorios en Cabeza/Rostro", </span>
+<span id="cb15-443"><a href="#cb15-443" aria-hidden="true" tabindex="-1"></a>       x = "Accesorios en Cabeza y Rostro", </span>
+<span id="cb15-444"><a href="#cb15-444" aria-hidden="true" tabindex="-1"></a>       y = "Tiempo de Reconocimiento (segundos)") +</span>
+<span id="cb15-445"><a href="#cb15-445" aria-hidden="true" tabindex="-1"></a>  scale_fill_manual(values = c("#F4A261", "#E9C46A", "#2A9D8F", "#264653")) +</span>
+<span id="cb15-446"><a href="#cb15-446" aria-hidden="true" tabindex="-1"></a>  theme_minimal()</span>
+<span id="cb15-447"><a href="#cb15-447" aria-hidden="true" tabindex="-1"></a>``</span>
+<span id="cb15-448"><a href="#cb15-448" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-449"><a href="#cb15-449" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-450"><a href="#cb15-450" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-451"><a href="#cb15-451" aria-hidden="true" tabindex="-1"></a></span>
+</code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
+</div></div></div></div></div>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

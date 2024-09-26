@@ -1,0 +1,201 @@
+Marca temporal,Edad,Estatura en metros,Peso en kilogramos,Numero de intentos para reconocimiento,Tiempo total que tomo el reconocimiento en segundos,Intensidad de luz en luxes,Temperatura en C°,Distancia entre el detector y la persona en metros,Distancia de la parte superior de cabeza hasta la camara,Angulo de inclinación-sexagesimales,Dispositivo,Turno del registro,Color de cabello,Forma del rostro,Tipo de piel,Forma de cejas,Tipo de nariz,Accesorios en la cabeza-rostro,Clima,Corriente del viento,Estado de la lectura,Género,Color de ojos,Color de ropa,Tamaño de cabello
+03/01/2024 16:14:45,25,1.96,67.4,3,19.4,539,19.7,0.51,0.58,5,3I,Mañana,negro,cuadrado,2,rectas,silla de montar,"capucha, lentes",Soleado,mediana,fallido,Masculino,marron claro,claro,mediano
+12/11/2023 13:13:17,27,1.89,54.2,4,21.8,148,16.8,1.95,0.71,38,1I,Noche,marron claro,redondo,3,arqueadas,aguileña,capucha,nublado,fuerte,fallido,Masculino,otro,claro,largo
+26/06/2024 08:48:11,19,1.69,70.4,1,23.4,354,21.8,0.64,0.94,3,6I,Mañana,castaño,alargado,4,rectas,aguileña,gorra,Soleado,debil,fallido,Masculino,marron claro,claro,corto
+11/01/2024 10:25:01,28,1.76,56.2,1,23.4,489,20.7,1.15,0.56,33,6I,Tarde,negro,triangular a,3,arqueadas,gibal nasal,"gorra, lentes",lluvioso,mediana,exitoso,Femenino,negro,claro,corto
+16/10/2023 09:27:52,21,1.66,50.8,4,25.2,512,19.3,1.75,0.83,35,3I,Noche,negro,redondo,4,rectas,silla de montar,,lluvioso,debil,exitoso,Femenino,negro,claro,mediano
+12/09/2024 12:43:29,22,1.96,99.7,1,6.9,779,20.2,1.14,0.58,39,3E,Tarde,marron claro,triangular v,2,forma de s,aplastad,"lentes, capucha, gorra",Soleado,debil,fallido,Masculino,negro,claro,mediano
+22/05/2024 00:30:38,25,1.97,60.6,5,29.2,790,21.8,0.62,0.65,25,2I,Mañana,castaño,triangular a,5,forma de s,levantada,"capucha, gorra, mascarilla",lluvioso,debil,fallido,Femenino,otro,claro,largo
+27/04/2024 22:05:27,19,1.58,94.4,2,21.4,676,16.8,1.6,0.69,45,2E,Noche,negro,cuadrado,1,angulo marcado,silla de montar,mascarilla,nublado,mediana,fallido,Femenino,otro,claro,corto
+26/08/2024 07:05:58,24,1.55,85.2,2,20.2,831,22.0,1.19,0.98,37,5I,Tarde,castaño,ovalado,4,redondas,pinocho,"lentes, capucha, mascarilla",Soleado,mediana,exitoso,Masculino,marron claro,claro,corto
+27/01/2024 19:30:32,22,1.92,71.0,1,6.2,817,20.5,1.47,0.82,3,2I,Mañana,castaño,triangular v,4,redondas,gibal nasal,"lentes, mascarilla",nublado,debil,fallido,Femenino,negro,claro,largo
+13/02/2024 17:07:57,17,1.75,76.1,4,24.2,184,18.7,0.66,0.71,32,1I,Mañana,castaño,rectangular,4,angulo marcado,recta,"lentes, mascarilla, gorra",nublado,mediana,exitoso,Masculino,negro,oscura,largo
+11/11/2023 20:20:01,21,1.94,88.8,3,17.6,585,19.6,0.98,0.97,45,3E,Tarde,negro,corazon,1,rectas,aguileña,"capucha, mascarilla, gorra, lentes",Soleado,debil,exitoso,Femenino,marron claro,oscura,mediano
+29/09/2023 08:45:40,28,1.52,57.8,5,15.3,532,16.2,1.78,0.54,39,3E,Mañana,marron claro,corazon,3,forma de s,levantada,"capucha, lentes",nublado,mediana,fallido,Femenino,negro,oscura,largo
+01/07/2024 07:13:21,17,1.6,63.3,3,26.1,793,15.0,0.65,0.6,45,2I,Tarde,marron claro,corazon,6,forma de s,pinocho,"lentes, capucha, mascarilla, gorra",lluvioso,mediana,fallido,Femenino,negro,oscura,largo
+06/07/2024 20:31:33,30,1.75,65.7,4,15.6,229,18.4,1.8,0.51,14,4E,Mañana,negro,diamante,5,forma de s,gibal nasal,,Soleado,mediana,fallido,Masculino,marron oscuro,oscura,largo
+19/02/2024 11:47:49,23,1.77,54.6,4,25.5,903,15.5,1.92,0.72,5,6E,Noche,marron claro,alargado,6,rectas,recta,"lentes, mascarilla",nublado,mediana,fallido,Femenino,otro,oscura,mediano
+06/12/2023 03:22:38,24,1.52,53.1,2,10.2,201,18.4,1.12,0.89,0,7I,Noche,castaño,ovalado,1,angulo marcado,silla de montar,lentes,Soleado,debil,fallido,Masculino,otro,oscura,corto
+23/01/2024 09:24:43,26,1.59,61.1,4,8.9,958,21.6,1.24,0.83,18,4E,Noche,negro,redondo,5,rectas,aguileña,,lluvioso,fuerte,exitoso,Masculino,negro,claro,corto
+01/05/2024 06:55:21,29,1.56,85.3,4,26.7,684,19.6,1.4,0.97,45,1E,Mañana,castaño,rectangular,6,arqueadas,levantada,,nublado,debil,fallido,Femenino,negro,claro,corto
+18/01/2024 02:26:47,18,1.79,70.2,2,6.1,899,16.0,1.61,0.78,8,6E,Noche,castaño,triangular a,1,arqueadas,levantada,"mascarilla, lentes, capucha",lluvioso,fuerte,fallido,Masculino,negro,oscura,corto
+19/11/2023 22:25:02,23,1.95,53.5,4,23.4,276,16.2,1.2,0.79,25,4I,Noche,castaño,diamante,3,forma de s,aguileña,"gorra, mascarilla, lentes, capucha",Soleado,debil,fallido,Masculino,marron oscuro,oscura,largo
+26/08/2024 17:16:48,30,1.63,77.7,5,9.9,932,18.1,1.9,0.8,30,3E,Tarde,negro,ovalado,4,arqueadas,pinocho,"gorra, mascarilla",nublado,mediana,exitoso,Femenino,otro,oscura,largo
+20/12/2023 03:00:04,21,1.65,71.1,4,9.2,416,18.4,1.08,0.65,33,1E,Noche,castaño,ovalado,1,redondas,aplastad,"mascarilla, gorra, lentes",lluvioso,debil,exitoso,Femenino,negro,oscura,mediano
+26/12/2023 07:09:38,20,1.94,80.3,2,22.9,757,19.2,1.44,0.88,35,4I,Tarde,negro,ovalado,1,forma de s,aguileña,"gorra, lentes, capucha",nublado,debil,exitoso,Masculino,negro,oscura,corto
+29/08/2024 04:23:19,24,1.8,83.4,4,7.4,114,16.3,0.58,0.51,18,1E,Mañana,castaño,rectangular,5,arqueadas,levantada,gorra,Soleado,debil,exitoso,Femenino,otro,oscura,mediano
+08/11/2023 18:35:25,28,1.86,65.9,2,8.5,421,20.5,1.12,0.63,12,1E,Mañana,negro,cuadrado,2,arqueadas,pinocho,"mascarilla, capucha",lluvioso,debil,fallido,Masculino,otro,claro,mediano
+22/11/2023 02:58:50,25,1.69,90.5,3,25.3,585,21.9,0.89,0.94,2,7I,Noche,castaño,rectangular,1,redondas,pinocho,"capucha, lentes, gorra",lluvioso,mediana,exitoso,Masculino,marron oscuro,oscura,mediano
+18/05/2024 19:12:49,23,1.91,91.3,2,5.2,460,16.0,0.86,0.59,5,3I,Noche,castaño,triangular a,5,rectas,aplastad,capucha,lluvioso,fuerte,exitoso,Femenino,marron oscuro,oscura,corto
+17/02/2024 21:19:26,21,1.68,69.8,2,10.7,629,18.7,0.5,0.83,38,4E,Mañana,negro,diamante,5,rectas,gibal nasal,"gorra, capucha, mascarilla, lentes",nublado,mediana,fallido,Femenino,negro,claro,largo
+01/07/2024 07:21:49,29,1.67,62.1,1,13.2,587,20.4,1.13,0.53,5,2I,Tarde,negro,triangular a,5,rectas,aplastad,"mascarilla, gorra, capucha, lentes",lluvioso,debil,fallido,Femenino,negro,oscura,mediano
+10/10/2023 01:25:26,23,1.76,89.4,1,6.2,844,20.4,1.24,0.88,21,2E,Noche,marron claro,triangular v,5,angulo marcado,recta,"capucha, mascarilla",nublado,fuerte,exitoso,Masculino,marron claro,claro,mediano
+14/08/2024 09:11:55,26,1.57,74.2,5,6.9,340,21.6,0.95,1.0,13,3I,Mañana,castaño,diamante,2,redondas,silla de montar,"lentes, mascarilla, capucha",nublado,mediana,fallido,Masculino,marron oscuro,oscura,mediano
+19/12/2023 12:53:18,19,1.6,63.7,3,9.1,487,20.7,1.6,0.64,44,6I,Tarde,negro,diamante,4,redondas,recta,mascarilla,Soleado,mediana,exitoso,Masculino,negro,oscura,largo
+13/02/2024 12:22:38,21,1.71,53.1,3,26.1,410,17.2,1.93,0.69,41,7I,Tarde,marron claro,alargado,2,rectas,recta,"capucha, mascarilla, lentes",Soleado,debil,exitoso,Masculino,marron oscuro,claro,corto
+21/12/2023 03:23:41,20,1.7,87.5,4,13.4,612,15.7,1.11,0.55,30,6I,Mañana,castaño,corazon,4,angulo marcado,silla de montar,lentes,lluvioso,fuerte,exitoso,Masculino,marron claro,claro,mediano
+02/06/2024 03:18:53,24,1.6,90.3,4,29.5,277,20.8,1.44,0.97,22,2E,Mañana,marron claro,alargado,6,angulo marcado,silla de montar,lentes,Soleado,mediana,exitoso,Femenino,otro,oscura,mediano
+17/10/2023 23:40:47,26,1.65,62.9,3,20.0,514,20.9,1.13,0.63,36,6E,Tarde,marron claro,alargado,3,redondas,silla de montar,capucha,lluvioso,fuerte,fallido,Femenino,marron claro,claro,largo
+14/06/2024 06:28:20,23,1.69,56.0,3,18.4,326,15.1,1.9,0.73,30,4E,Mañana,castaño,rectangular,3,rectas,levantada,,lluvioso,debil,exitoso,Masculino,marron claro,oscura,corto
+16/06/2024 12:03:29,28,1.63,58.6,3,21.6,800,16.8,1.42,0.69,4,2I,Mañana,castaño,triangular v,2,arqueadas,aplastad,,nublado,fuerte,fallido,Femenino,marron claro,oscura,corto
+21/12/2023 04:08:41,18,1.7,54.2,2,8.4,474,16.7,0.6,0.89,29,5E,Mañana,negro,diamante,6,rectas,gibal nasal,"gorra, mascarilla, capucha",lluvioso,debil,exitoso,Masculino,marron claro,claro,corto
+10/10/2023 21:39:48,20,1.62,75.3,5,11.0,710,16.3,1.39,0.75,0,6E,Noche,marron claro,corazon,4,arqueadas,aguileña,mascarilla,Soleado,fuerte,exitoso,Masculino,otro,oscura,mediano
+13/07/2024 06:31:47,25,1.67,89.2,5,29.7,292,20.3,1.62,0.85,32,3E,Tarde,negro,diamante,4,arqueadas,aguileña,"lentes, capucha, mascarilla",Soleado,fuerte,fallido,Masculino,negro,oscura,largo
+29/10/2023 18:08:29,23,1.66,68.8,5,24.4,344,17.5,1.42,0.5,43,4E,Mañana,castaño,alargado,5,arqueadas,recta,,lluvioso,fuerte,exitoso,Masculino,marron oscuro,claro,mediano
+05/06/2024 07:51:23,18,1.58,59.9,2,25.8,933,20.5,1.77,0.59,44,5E,Mañana,castaño,alargado,2,angulo marcado,silla de montar,,nublado,fuerte,exitoso,Masculino,marron oscuro,claro,mediano
+16/04/2024 08:59:13,29,1.74,92.1,5,13.1,623,21.5,1.29,0.74,39,1E,Noche,negro,redondo,1,redondas,aguileña,"lentes, gorra, mascarilla, capucha",lluvioso,debil,exitoso,Femenino,marron oscuro,claro,mediano
+24/02/2024 04:45:18,21,1.58,98.5,2,7.9,1000,18.6,1.11,0.8,24,7I,Noche,negro,rectangular,5,redondas,gibal nasal,,nublado,mediana,fallido,Femenino,negro,claro,mediano
+15/01/2024 09:26:14,21,1.66,79.0,5,7.1,436,21.6,0.75,0.66,3,6E,Tarde,castaño,triangular a,1,arqueadas,recta,"gorra, mascarilla, capucha, lentes",nublado,fuerte,fallido,Femenino,otro,claro,largo
+20/12/2023 03:06:48,23,1.77,66.4,1,26.3,880,18.0,1.0,0.55,19,7I,Noche,marron claro,corazon,6,rectas,aguileña,,nublado,debil,fallido,Femenino,marron oscuro,claro,largo
+27/12/2023 13:31:27,25,1.55,82.2,5,8.5,723,17.5,1.12,0.7,8,5I,Mañana,negro,redondo,4,redondas,levantada,"capucha, lentes",nublado,fuerte,exitoso,Femenino,otro,oscura,largo
+14/10/2023 21:48:43,27,1.51,74.8,4,17.2,939,18.7,0.76,0.67,5,3I,Tarde,castaño,alargado,1,forma de s,aguileña,"lentes, mascarilla, capucha",nublado,mediana,exitoso,Masculino,otro,oscura,corto
+10/03/2024 23:11:30,17,1.7,93.9,5,9.7,750,17.8,0.96,0.85,17,6E,Noche,marron claro,cuadrado,3,redondas,aguileña,"capucha, lentes",lluvioso,mediana,fallido,Masculino,marron oscuro,oscura,mediano
+20/01/2024 09:36:26,29,1.61,67.7,1,29.8,573,21.7,1.99,0.74,25,3E,Tarde,negro,diamante,6,redondas,pinocho,"gorra, mascarilla, lentes, capucha",nublado,debil,fallido,Femenino,negro,claro,corto
+13/02/2024 05:57:03,22,1.91,52.8,4,9.6,167,20.6,1.82,0.9,27,6I,Noche,castaño,redondo,3,angulo marcado,pinocho,"lentes, capucha",Soleado,fuerte,exitoso,Femenino,marron claro,oscura,corto
+13/03/2024 09:09:37,28,1.65,56.1,4,23.5,399,16.9,1.94,0.86,41,5E,Tarde,castaño,triangular v,1,angulo marcado,aplastad,"gorra, capucha",nublado,mediana,exitoso,Masculino,otro,oscura,corto
+31/10/2023 00:39:28,30,1.57,72.3,5,14.4,914,21.2,1.98,0.7,21,6E,Noche,marron claro,redondo,4,rectas,gibal nasal,"mascarilla, gorra, capucha",nublado,debil,exitoso,Femenino,negro,claro,largo
+06/12/2023 06:49:02,30,1.81,56.3,4,17.0,769,20.4,1.03,0.85,8,7I,Mañana,castaño,ovalado,1,angulo marcado,pinocho,"lentes, gorra",Soleado,mediana,fallido,Masculino,marron oscuro,claro,corto
+13/12/2023 09:25:32,23,1.7,68.8,1,17.4,281,20.3,0.78,0.51,34,1E,Tarde,negro,redondo,1,rectas,gibal nasal,"mascarilla, lentes, gorra",Soleado,mediana,fallido,Masculino,marron claro,claro,corto
+09/04/2024 23:39:36,21,1.81,79.7,1,13.5,162,19.4,1.01,0.95,27,1I,Tarde,marron claro,alargado,5,rectas,aplastad,capucha,nublado,fuerte,fallido,Masculino,marron claro,oscura,largo
+07/01/2024 07:21:04,17,1.73,98.8,1,29.3,419,20.5,1.0,0.93,37,2E,Mañana,negro,diamante,4,redondas,gibal nasal,"gorra, lentes, capucha, mascarilla",Soleado,debil,fallido,Masculino,negro,oscura,largo
+20/04/2024 06:12:59,17,1.63,64.3,1,11.5,880,21.8,0.95,0.9,7,6I,Mañana,castaño,diamante,3,rectas,aguileña,"capucha, lentes",lluvioso,fuerte,fallido,Masculino,negro,oscura,mediano
+11/04/2024 02:26:21,30,1.89,78.2,1,16.8,100,19.8,1.35,0.87,7,1E,Noche,castaño,diamante,6,forma de s,recta,gorra,lluvioso,debil,fallido,Masculino,otro,claro,largo
+17/10/2023 16:31:27,27,1.96,56.4,3,24.6,595,15.4,1.9,0.67,16,7E,Tarde,negro,rectangular,6,angulo marcado,pinocho,gorra,Soleado,fuerte,fallido,Femenino,marron claro,claro,mediano
+28/12/2023 20:02:57,30,1.79,94.9,1,19.0,781,15.3,1.61,0.55,11,3I,Mañana,marron claro,rectangular,1,angulo marcado,aplastad,capucha,nublado,mediana,exitoso,Masculino,marron oscuro,oscura,mediano
+13/03/2024 00:44:20,24,1.82,92.4,2,24.5,881,20.8,1.4,0.85,43,6I,Noche,negro,corazon,4,arqueadas,aplastad,,nublado,debil,fallido,Femenino,marron claro,claro,corto
+06/03/2024 12:39:37,25,1.62,68.9,3,9.5,169,20.2,0.9,0.6,11,6I,Noche,negro,corazon,3,redondas,recta,"lentes, gorra, mascarilla, capucha",Soleado,fuerte,fallido,Masculino,negro,oscura,largo
+07/05/2024 23:58:30,26,1.71,98.8,2,14.7,583,18.0,1.1,0.87,25,2I,Mañana,marron claro,triangular v,4,redondas,gibal nasal,"lentes, capucha, gorra, mascarilla",Soleado,debil,exitoso,Femenino,marron oscuro,claro,largo
+04/12/2023 21:23:25,20,1.63,70.2,4,25.2,763,16.4,1.04,0.65,1,5I,Mañana,negro,cuadrado,5,arqueadas,aplastad,,nublado,mediana,exitoso,Femenino,marron oscuro,oscura,corto
+10/06/2024 08:11:51,26,1.97,78.8,2,7.3,328,17.1,0.68,0.88,12,7E,Noche,negro,cuadrado,1,rectas,silla de montar,"capucha, lentes",lluvioso,debil,fallido,Femenino,marron oscuro,oscura,mediano
+15/02/2024 04:32:56,30,1.99,61.9,1,14.3,501,17.4,1.71,0.91,24,4E,Tarde,marron claro,cuadrado,3,forma de s,silla de montar,"mascarilla, capucha, lentes",lluvioso,mediana,fallido,Masculino,otro,oscura,corto
+29/09/2023 14:08:35,24,1.53,99.0,1,17.8,106,19.2,0.55,0.82,39,1I,Mañana,castaño,diamante,3,arqueadas,aguileña,"mascarilla, lentes",Soleado,mediana,fallido,Masculino,marron oscuro,claro,corto
+11/08/2024 07:53:59,19,1.75,59.5,4,24.8,510,18.2,1.98,0.95,37,1I,Mañana,marron claro,cuadrado,6,arqueadas,silla de montar,"gorra, capucha, mascarilla, lentes",lluvioso,mediana,exitoso,Masculino,negro,oscura,mediano
+24/07/2024 16:32:21,18,1.77,74.2,5,19.2,102,16.3,1.49,0.84,42,4I,Mañana,castaño,ovalado,1,redondas,silla de montar,"gorra, capucha, mascarilla",nublado,mediana,fallido,Femenino,marron claro,oscura,mediano
+21/02/2024 13:13:02,25,1.66,94.8,2,17.2,865,21.6,1.93,0.52,24,4E,Noche,castaño,ovalado,3,angulo marcado,pinocho,"gorra, mascarilla, lentes",nublado,debil,exitoso,Femenino,otro,oscura,largo
+04/09/2024 08:18:59,29,1.6,91.2,3,19.3,992,16.3,1.5,0.61,39,5E,Mañana,negro,redondo,2,forma de s,gibal nasal,gorra,lluvioso,debil,exitoso,Masculino,marron claro,claro,mediano
+11/11/2023 01:01:59,19,1.61,50.3,4,10.8,345,16.9,1.42,0.92,15,2I,Noche,marron claro,redondo,1,arqueadas,levantada,gorra,Soleado,debil,exitoso,Femenino,marron claro,claro,corto
+10/06/2024 05:45:13,18,1.6,56.7,3,20.2,151,16.4,1.99,0.84,16,6E,Mañana,negro,alargado,6,rectas,aplastad,,Soleado,mediana,fallido,Masculino,marron claro,claro,mediano
+14/04/2024 22:15:51,22,1.58,64.1,3,9.3,151,17.9,0.51,0.5,44,5E,Tarde,castaño,redondo,1,rectas,gibal nasal,lentes,Soleado,debil,exitoso,Femenino,otro,claro,mediano
+03/01/2024 04:48:48,27,1.64,95.7,1,12.4,806,16.8,1.49,0.8,38,6E,Noche,negro,triangular v,5,rectas,aplastad,capucha,Soleado,fuerte,exitoso,Femenino,otro,claro,largo
+30/11/2023 06:19:24,30,1.83,74.0,5,18.0,245,21.1,1.11,0.71,27,3E,Noche,negro,rectangular,4,angulo marcado,aplastad,"lentes, gorra",Soleado,debil,fallido,Masculino,marron oscuro,oscura,corto
+22/07/2024 13:44:42,21,1.7,94.2,4,11.6,751,21.2,0.79,0.7,21,7E,Mañana,negro,alargado,4,redondas,gibal nasal,,Soleado,mediana,exitoso,Femenino,marron claro,claro,mediano
+01/11/2023 11:51:50,27,1.78,52.2,2,19.7,268,16.3,1.12,0.97,3,2I,Mañana,negro,cuadrado,2,forma de s,gibal nasal,"mascarilla, lentes",nublado,mediana,fallido,Masculino,otro,claro,largo
+03/11/2023 17:45:01,29,1.69,56.4,3,19.2,410,21.6,0.71,0.75,35,2I,Mañana,castaño,diamante,1,forma de s,aplastad,"capucha, lentes, mascarilla, gorra",nublado,fuerte,exitoso,Masculino,marron oscuro,claro,mediano
+12/01/2024 08:04:55,18,1.75,67.5,5,28.8,596,21.5,0.84,0.51,12,2E,Mañana,castaño,ovalado,1,redondas,aguileña,,lluvioso,fuerte,exitoso,Femenino,marron claro,claro,corto
+09/12/2023 11:22:32,28,1.74,60.9,1,16.8,883,21.5,1.62,0.97,14,2I,Noche,castaño,corazon,2,forma de s,gibal nasal,"gorra, capucha, lentes, mascarilla",nublado,debil,fallido,Femenino,negro,claro,mediano
+31/12/2023 02:39:29,23,1.83,57.5,5,7.2,307,21.4,1.49,0.75,10,6I,Tarde,castaño,ovalado,3,redondas,levantada,"mascarilla, lentes",Soleado,fuerte,exitoso,Femenino,marron claro,oscura,corto
+14/11/2023 03:03:53,24,1.9,75.0,1,7.4,546,19.4,1.46,0.54,5,6E,Mañana,castaño,ovalado,6,redondas,gibal nasal,"mascarilla, capucha, gorra, lentes",nublado,debil,exitoso,Masculino,marron oscuro,claro,largo
+16/07/2024 09:15:04,30,1.57,87.2,1,15.5,582,19.9,0.71,0.66,3,7I,Mañana,marron claro,triangular v,1,angulo marcado,levantada,"lentes, mascarilla",lluvioso,mediana,exitoso,Masculino,otro,claro,corto
+29/02/2024 18:14:44,26,1.98,96.4,3,22.5,257,17.5,1.8,0.99,22,1I,Noche,castaño,ovalado,2,redondas,aguileña,"capucha, lentes, mascarilla, gorra",lluvioso,fuerte,exitoso,Femenino,negro,claro,largo
+30/11/2023 10:14:35,21,1.73,56.9,1,24.3,797,20.0,0.76,0.93,22,2E,Mañana,castaño,rectangular,1,forma de s,gibal nasal,"lentes, mascarilla, gorra, capucha",lluvioso,fuerte,exitoso,Masculino,marron oscuro,oscura,mediano
+14/03/2024 21:00:34,17,1.52,69.2,4,14.7,286,18.0,1.41,0.83,29,6I,Mañana,negro,corazon,4,forma de s,aguileña,lentes,Soleado,mediana,exitoso,Masculino,negro,oscura,corto
+11/04/2024 19:31:35,30,1.63,98.3,4,8.8,620,21.2,1.91,0.69,25,3E,Mañana,negro,rectangular,1,angulo marcado,gibal nasal,"capucha, gorra, mascarilla, lentes",lluvioso,fuerte,fallido,Masculino,marron oscuro,claro,corto
+04/10/2023 04:36:00,26,1.76,86.6,5,10.3,481,15.3,1.85,1.0,1,5I,Mañana,castaño,ovalado,5,angulo marcado,aguileña,lentes,lluvioso,mediana,fallido,Masculino,marron oscuro,claro,mediano
+09/06/2024 16:06:37,25,1.64,77.9,4,8.4,561,21.7,0.62,0.73,26,3I,Mañana,negro,ovalado,1,forma de s,pinocho,,nublado,fuerte,exitoso,Masculino,otro,oscura,corto
+31/12/2023 02:28:31,29,1.84,67.8,5,24.2,948,19.8,1.23,0.81,40,6E,Noche,castaño,cuadrado,2,forma de s,silla de montar,gorra,lluvioso,mediana,exitoso,Femenino,marron oscuro,claro,largo
+17/01/2024 08:53:56,27,1.64,88.0,4,10.1,498,15.7,1.93,0.72,16,5E,Noche,marron claro,triangular v,4,angulo marcado,recta,,nublado,fuerte,fallido,Masculino,marron oscuro,claro,largo
+24/08/2024 02:18:57,29,1.82,75.4,5,16.5,380,20.7,1.37,0.68,39,4I,Mañana,marron claro,diamante,5,angulo marcado,levantada,"gorra, lentes",lluvioso,fuerte,fallido,Femenino,negro,oscura,mediano
+20/03/2024 13:35:59,24,1.74,88.3,1,14.3,509,20.4,1.63,0.91,42,4I,Mañana,marron claro,redondo,4,forma de s,recta,"gorra, mascarilla, lentes, capucha",lluvioso,fuerte,fallido,Masculino,otro,oscura,corto
+30/05/2024 11:24:31,23,1.5,95.4,3,6.4,583,18.2,1.58,0.51,6,6I,Mañana,negro,diamante,4,forma de s,pinocho,"lentes, mascarilla",lluvioso,debil,exitoso,Masculino,negro,oscura,mediano
+22/05/2024 20:43:11,29,1.71,65.6,5,7.0,779,19.0,1.84,0.93,15,3I,Mañana,negro,triangular a,3,arqueadas,aplastad,"lentes, capucha, gorra, mascarilla",lluvioso,debil,fallido,Masculino,otro,oscura,mediano
+01/06/2024 14:22:22,27,1.85,58.8,2,14.1,945,18.2,0.78,0.74,11,5E,Noche,castaño,redondo,1,arqueadas,aplastad,,lluvioso,mediana,fallido,Femenino,negro,claro,largo
+20/12/2023 13:39:06,26,1.63,84.4,3,29.4,625,21.9,0.61,0.97,12,7E,Mañana,negro,ovalado,5,arqueadas,silla de montar,,lluvioso,fuerte,exitoso,Femenino,otro,claro,mediano
+23/04/2024 17:52:16,24,1.86,85.2,4,8.2,450,17.6,1.97,0.8,41,4E,Tarde,marron claro,alargado,3,arqueadas,aguileña,lentes,nublado,fuerte,fallido,Masculino,marron oscuro,claro,mediano
+15/05/2024 20:16:42,22,1.81,87.7,5,13.0,753,19.3,1.63,0.98,34,7E,Tarde,marron claro,diamante,6,forma de s,recta,"mascarilla, lentes, gorra",Soleado,fuerte,fallido,Masculino,marron claro,oscura,corto
+06/10/2023 12:06:13,22,1.62,62.3,3,23.0,523,16.7,1.48,0.72,23,6I,Mañana,negro,ovalado,1,forma de s,pinocho,mascarilla,Soleado,debil,fallido,Femenino,marron claro,oscura,corto
+04/06/2024 14:38:40,29,1.71,70.7,2,10.3,527,16.6,1.05,0.7,5,3I,Mañana,castaño,rectangular,6,arqueadas,aplastad,,nublado,mediana,fallido,Femenino,otro,oscura,mediano
+27/02/2024 16:57:54,30,1.94,86.4,4,10.5,423,19.7,1.69,0.77,31,5E,Tarde,negro,triangular a,6,rectas,recta,capucha,nublado,fuerte,exitoso,Femenino,marron claro,oscura,mediano
+30/05/2024 16:28:24,27,1.64,79.1,3,22.2,137,16.5,1.0,0.97,3,5I,Tarde,marron claro,corazon,1,angulo marcado,silla de montar,"capucha, mascarilla, gorra, lentes",lluvioso,debil,exitoso,Femenino,marron claro,claro,corto
+28/04/2024 10:01:16,21,1.96,74.1,4,15.6,976,19.9,1.07,0.59,12,6I,Mañana,marron claro,ovalado,1,rectas,aplastad,"lentes, capucha",lluvioso,mediana,fallido,Femenino,marron oscuro,oscura,corto
+27/06/2024 18:17:24,17,1.83,93.1,2,27.6,839,21.6,1.38,0.54,37,4E,Mañana,negro,triangular v,3,forma de s,silla de montar,"mascarilla, gorra, lentes, capucha",lluvioso,mediana,fallido,Femenino,negro,claro,mediano
+07/08/2024 17:25:18,23,1.7,81.6,4,19.6,740,21.0,1.79,0.61,2,7E,Tarde,marron claro,rectangular,5,rectas,pinocho,"gorra, lentes",Soleado,debil,exitoso,Masculino,otro,claro,mediano
+02/11/2023 09:47:31,19,1.62,82.5,5,23.5,658,18.6,1.03,0.59,37,7I,Noche,castaño,corazon,6,arqueadas,aplastad,,Soleado,debil,fallido,Femenino,marron oscuro,oscura,mediano
+05/12/2023 21:14:55,24,1.86,53.2,3,13.5,397,15.7,1.58,0.56,14,1E,Mañana,marron claro,corazon,3,angulo marcado,pinocho,"lentes, gorra, mascarilla",lluvioso,debil,exitoso,Masculino,marron oscuro,oscura,corto
+05/07/2024 13:38:09,20,1.91,74.9,3,16.5,376,19.7,0.7,0.91,9,1E,Noche,castaño,triangular a,1,forma de s,aplastad,,Soleado,debil,exitoso,Femenino,marron oscuro,claro,largo
+24/08/2024 22:57:56,18,1.93,95.0,5,26.0,878,15.7,1.51,0.75,11,2E,Tarde,marron claro,diamante,5,rectas,aplastad,"gorra, lentes, capucha, mascarilla",Soleado,fuerte,exitoso,Masculino,otro,claro,corto
+12/01/2024 00:51:18,21,1.96,56.7,2,9.5,716,17.0,0.73,0.96,2,3I,Tarde,castaño,diamante,6,redondas,silla de montar,gorra,lluvioso,fuerte,exitoso,Masculino,otro,claro,corto
+19/12/2023 18:04:03,20,1.99,87.0,3,21.8,888,17.7,0.64,0.88,26,1E,Mañana,castaño,rectangular,5,angulo marcado,gibal nasal,"mascarilla, lentes, gorra",Soleado,mediana,exitoso,Masculino,marron claro,oscura,corto
+18/12/2023 07:11:37,23,1.93,92.9,2,25.1,134,16.3,0.97,0.67,21,7I,Tarde,negro,triangular a,2,angulo marcado,gibal nasal,"mascarilla, gorra, capucha, lentes",nublado,fuerte,exitoso,Femenino,marron claro,oscura,largo
+11/03/2024 20:55:40,30,1.93,90.3,1,15.4,966,21.0,1.24,0.62,40,6I,Mañana,negro,triangular a,3,angulo marcado,aguileña,lentes,nublado,debil,fallido,Masculino,marron claro,claro,corto
+21/02/2024 15:03:38,22,1.64,90.5,5,28.1,916,15.2,1.83,0.65,35,4E,Tarde,negro,ovalado,6,angulo marcado,silla de montar,,nublado,debil,fallido,Masculino,marron oscuro,oscura,largo
+14/02/2024 03:24:02,22,1.82,51.2,5,22.0,525,21.1,1.49,0.58,7,5I,Noche,marron claro,alargado,3,rectas,silla de montar,"capucha, gorra",Soleado,debil,fallido,Masculino,marron claro,oscura,mediano
+27/06/2024 23:26:18,24,1.82,98.8,4,14.5,141,18.3,0.81,0.9,36,4I,Tarde,negro,alargado,6,angulo marcado,silla de montar,"lentes, mascarilla, capucha",nublado,fuerte,fallido,Femenino,otro,claro,largo
+03/03/2024 20:43:10,25,1.75,55.6,2,12.6,233,20.7,1.29,0.87,13,5I,Mañana,marron claro,diamante,2,angulo marcado,pinocho,gorra,lluvioso,mediana,fallido,Masculino,marron oscuro,oscura,largo
+08/06/2024 22:47:45,22,1.55,60.2,2,11.4,399,20.9,1.21,0.58,3,5I,Mañana,negro,corazon,4,rectas,levantada,gorra,nublado,mediana,exitoso,Masculino,otro,claro,corto
+21/11/2023 23:20:32,28,1.91,89.6,5,28.0,176,21.9,1.04,0.72,33,6I,Mañana,castaño,triangular v,1,redondas,aguileña,"mascarilla, gorra, lentes, capucha",Soleado,fuerte,exitoso,Masculino,negro,claro,mediano
+02/01/2024 03:36:10,28,1.76,59.3,1,25.9,283,17.1,1.35,0.81,8,7I,Mañana,negro,triangular a,1,redondas,aplastad,"mascarilla, lentes",nublado,fuerte,fallido,Femenino,marron oscuro,claro,mediano
+02/06/2024 12:44:48,28,1.76,88.0,2,18.9,972,19.8,1.92,0.7,15,2I,Noche,marron claro,rectangular,6,rectas,levantada,"gorra, capucha, mascarilla, lentes",nublado,fuerte,fallido,Femenino,otro,claro,mediano
+07/02/2024 06:47:03,29,1.73,77.1,2,23.7,398,19.5,1.36,0.63,33,5E,Tarde,negro,diamante,2,arqueadas,silla de montar,,lluvioso,mediana,exitoso,Masculino,otro,claro,mediano
+19/09/2024 15:25:30,22,1.61,95.2,4,22.3,929,17.9,1.29,0.71,29,7E,Tarde,castaño,triangular v,5,forma de s,silla de montar,,Soleado,mediana,exitoso,Masculino,marron claro,oscura,corto
+18/02/2024 14:06:31,20,1.74,88.6,5,8.5,722,17.0,0.87,0.52,45,6I,Noche,negro,cuadrado,2,rectas,silla de montar,,lluvioso,fuerte,exitoso,Masculino,marron claro,claro,mediano
+30/09/2023 23:58:34,24,1.86,86.7,1,6.0,140,15.9,1.39,0.56,14,2I,Mañana,castaño,alargado,2,angulo marcado,pinocho,"lentes, mascarilla, capucha, gorra",nublado,fuerte,exitoso,Masculino,marron oscuro,claro,largo
+30/06/2024 22:19:05,20,1.5,70.1,4,27.2,923,19.9,1.04,0.95,32,3I,Noche,marron claro,triangular v,4,rectas,aguileña,,nublado,mediana,fallido,Masculino,marron claro,claro,corto
+24/08/2024 19:18:17,20,1.82,65.2,5,28.0,848,20.6,1.96,0.93,0,3E,Tarde,castaño,corazon,1,redondas,aplastad,"capucha, gorra",nublado,fuerte,fallido,Masculino,negro,oscura,mediano
+14/03/2024 11:48:52,30,1.84,69.1,1,22.3,268,16.6,0.9,0.89,43,1I,Tarde,negro,alargado,1,rectas,levantada,"capucha, gorra, mascarilla, lentes",lluvioso,debil,fallido,Femenino,marron oscuro,oscura,mediano
+29/01/2024 00:31:04,20,1.97,95.8,4,6.0,920,21.8,1.52,0.64,18,2E,Noche,castaño,redondo,5,angulo marcado,silla de montar,"lentes, mascarilla, capucha, gorra",Soleado,mediana,fallido,Masculino,marron oscuro,oscura,mediano
+30/09/2023 09:01:52,25,1.91,81.9,2,27.8,552,15.3,1.09,0.96,6,2E,Tarde,castaño,rectangular,4,redondas,aplastad,"lentes, mascarilla, gorra, capucha",Soleado,fuerte,exitoso,Femenino,marron claro,oscura,largo
+29/03/2024 20:54:10,24,1.62,73.2,4,21.9,114,21.8,0.94,0.63,39,6E,Mañana,castaño,redondo,1,arqueadas,silla de montar,"mascarilla, lentes, gorra",nublado,debil,fallido,Masculino,negro,claro,mediano
+16/08/2024 04:58:16,25,1.63,65.6,4,13.0,932,15.6,0.72,0.72,28,3E,Noche,castaño,rectangular,4,redondas,silla de montar,"lentes, capucha",nublado,mediana,exitoso,Masculino,negro,oscura,largo
+21/08/2024 11:18:21,26,1.81,96.1,1,18.2,935,17.1,1.82,0.71,3,7I,Tarde,castaño,alargado,5,angulo marcado,recta,lentes,nublado,debil,exitoso,Femenino,marron oscuro,claro,corto
+13/07/2024 12:52:49,25,1.63,88.9,2,17.4,965,16.1,0.79,0.69,38,2E,Noche,negro,alargado,5,angulo marcado,levantada,,Soleado,fuerte,exitoso,Masculino,marron claro,oscura,mediano
+07/07/2024 18:15:36,17,1.64,56.7,1,28.9,663,20.6,0.62,0.89,35,6I,Tarde,castaño,redondo,4,forma de s,silla de montar,"mascarilla, lentes, capucha, gorra",nublado,mediana,exitoso,Masculino,marron oscuro,claro,mediano
+11/06/2024 14:48:35,17,1.78,68.8,1,25.8,597,19.3,0.66,0.88,8,3I,Mañana,castaño,rectangular,2,redondas,gibal nasal,mascarilla,nublado,debil,exitoso,Masculino,marron claro,oscura,corto
+10/03/2024 08:33:05,19,1.56,52.9,2,26.1,692,21.2,1.2,0.66,1,4I,Mañana,negro,corazon,2,arqueadas,pinocho,"capucha, lentes",nublado,mediana,fallido,Masculino,otro,claro,corto
+23/03/2024 23:43:27,30,1.83,55.8,5,14.2,284,15.8,1.26,0.73,0,2I,Tarde,castaño,triangular a,1,arqueadas,silla de montar,,lluvioso,mediana,fallido,Masculino,marron claro,claro,corto
+01/05/2024 05:24:54,18,1.58,78.3,1,17.6,998,15.6,1.0,0.59,37,2E,Tarde,negro,corazon,5,rectas,aguileña,"lentes, mascarilla, capucha, gorra",lluvioso,debil,exitoso,Masculino,marron claro,claro,corto
+20/02/2024 11:17:30,17,1.63,64.8,5,6.6,662,21.9,0.95,0.72,20,3I,Mañana,marron claro,cuadrado,4,arqueadas,pinocho,"lentes, gorra",Soleado,debil,exitoso,Masculino,marron oscuro,claro,largo
+11/02/2024 08:07:50,30,1.9,98.4,5,7.5,344,21.0,0.57,0.65,36,4E,Mañana,marron claro,cuadrado,6,angulo marcado,gibal nasal,"mascarilla, gorra, lentes, capucha",nublado,debil,fallido,Femenino,otro,oscura,corto
+20/05/2024 08:16:17,19,1.93,72.8,3,6.0,324,16.5,1.77,0.94,38,7E,Noche,negro,triangular a,5,rectas,aguileña,"capucha, mascarilla, lentes",lluvioso,debil,exitoso,Masculino,marron oscuro,oscura,corto
+09/07/2024 08:22:02,18,1.94,78.0,2,26.8,607,19.5,1.02,0.53,10,5E,Mañana,negro,diamante,3,redondas,aplastad,,nublado,fuerte,exitoso,Femenino,marron claro,claro,corto
+14/01/2024 15:32:31,26,1.7,74.0,5,28.0,262,19.4,0.92,0.78,40,3I,Mañana,marron claro,diamante,6,redondas,levantada,"lentes, mascarilla",nublado,mediana,fallido,Femenino,otro,claro,corto
+17/12/2023 17:15:39,25,1.74,83.4,4,14.9,996,18.5,1.78,0.57,6,6I,Mañana,negro,diamante,6,redondas,silla de montar,"gorra, lentes",nublado,fuerte,exitoso,Femenino,negro,oscura,largo
+30/11/2023 22:22:04,29,1.63,98.8,2,27.3,804,21.3,1.22,0.87,1,5I,Tarde,marron claro,rectangular,4,redondas,gibal nasal,"lentes, mascarilla, gorra, capucha",nublado,mediana,fallido,Femenino,negro,oscura,mediano
+14/10/2023 20:20:57,22,1.95,94.5,1,22.5,791,21.8,0.67,0.51,6,1I,Tarde,marron claro,corazon,2,rectas,pinocho,"mascarilla, lentes",Soleado,mediana,fallido,Masculino,negro,claro,corto
+17/03/2024 06:17:46,26,1.91,51.3,1,9.2,790,20.6,2.0,0.53,34,3I,Mañana,negro,rectangular,4,arqueadas,aplastad,"lentes, mascarilla, gorra",nublado,fuerte,fallido,Femenino,marron claro,claro,corto
+15/04/2024 01:11:05,18,1.73,77.4,2,15.7,391,19.0,0.7,0.96,7,5E,Noche,castaño,triangular v,3,angulo marcado,silla de montar,,lluvioso,mediana,exitoso,Femenino,otro,oscura,corto
+16/06/2024 22:55:13,25,1.87,78.5,1,14.6,688,21.7,1.85,0.72,16,3I,Mañana,castaño,redondo,6,rectas,silla de montar,,lluvioso,debil,exitoso,Masculino,negro,oscura,largo
+25/11/2023 15:56:40,29,1.87,86.2,5,12.0,195,15.0,1.64,0.93,8,7I,Mañana,negro,redondo,2,rectas,pinocho,"mascarilla, lentes, gorra",Soleado,fuerte,fallido,Femenino,negro,oscura,mediano
+16/03/2024 01:55:28,24,1.67,94.9,2,9.1,404,16.1,1.41,0.92,42,2I,Noche,negro,triangular a,5,rectas,silla de montar,"lentes, gorra, capucha, mascarilla",lluvioso,fuerte,exitoso,Femenino,negro,claro,largo
+11/11/2023 08:59:49,22,1.7,87.8,4,20.3,292,16.5,1.64,0.87,16,4I,Noche,negro,triangular v,4,arqueadas,pinocho,"capucha, gorra",lluvioso,mediana,exitoso,Femenino,marron claro,oscura,corto
+20/03/2024 12:30:55,21,1.62,80.8,5,26.1,826,21.3,1.42,0.63,27,4I,Tarde,castaño,redondo,6,redondas,aplastad,"gorra, mascarilla, lentes, capucha",nublado,debil,exitoso,Masculino,marron claro,oscura,largo
+18/10/2023 23:58:45,25,1.79,58.5,1,15.4,404,20.6,1.36,0.95,16,5I,Noche,marron claro,cuadrado,4,angulo marcado,pinocho,"lentes, capucha, mascarilla",lluvioso,fuerte,exitoso,Masculino,marron claro,claro,largo
+20/11/2023 05:00:20,24,1.77,77.2,5,24.9,137,21.5,1.41,0.9,30,6E,Noche,castaño,triangular v,1,redondas,gibal nasal,"lentes, capucha",lluvioso,debil,fallido,Femenino,marron claro,claro,mediano
+25/08/2024 17:23:21,24,1.63,73.3,4,27.8,848,15.8,0.89,0.51,14,4E,Noche,negro,triangular v,2,rectas,aguileña,gorra,Soleado,debil,exitoso,Femenino,negro,claro,corto
+21/02/2024 10:46:12,28,1.72,86.9,3,13.4,355,16.2,1.28,0.62,36,3I,Tarde,marron claro,diamante,3,arqueadas,aguileña,gorra,lluvioso,fuerte,exitoso,Masculino,marron oscuro,oscura,largo
+04/04/2024 02:55:50,23,1.81,76.7,2,12.7,277,19.4,0.7,0.59,25,6E,Mañana,negro,rectangular,3,forma de s,silla de montar,,Soleado,mediana,exitoso,Masculino,marron claro,claro,corto
+11/07/2024 15:27:57,23,1.87,95.2,5,29.3,229,15.7,1.85,0.7,11,4E,Mañana,castaño,triangular a,3,forma de s,silla de montar,,lluvioso,fuerte,fallido,Femenino,marron oscuro,claro,largo
+07/05/2024 19:41:43,25,1.77,69.5,2,6.5,192,18.0,0.68,0.61,31,1I,Tarde,castaño,rectangular,4,forma de s,levantada,,nublado,mediana,fallido,Femenino,marron oscuro,oscura,corto
+02/05/2024 01:56:35,29,1.93,86.7,1,7.5,517,16.0,1.99,0.99,36,6I,Noche,castaño,ovalado,6,forma de s,aguileña,,nublado,debil,exitoso,Femenino,otro,oscura,mediano
+08/06/2024 07:15:19,18,1.72,51.1,2,15.3,587,20.1,1.84,0.62,7,4E,Tarde,castaño,ovalado,1,forma de s,aguileña,capucha,lluvioso,debil,exitoso,Masculino,negro,claro,mediano
+06/12/2023 19:08:11,24,1.76,51.5,3,10.1,645,20.3,0.56,0.66,37,1I,Mañana,marron claro,corazon,5,redondas,gibal nasal,,nublado,fuerte,fallido,Femenino,marron oscuro,oscura,largo
+29/12/2023 19:19:20,17,1.82,78.2,2,5.1,286,21.7,1.53,0.68,31,5I,Mañana,castaño,diamante,6,forma de s,aguileña,"lentes, capucha, mascarilla",lluvioso,debil,fallido,Femenino,otro,oscura,largo
+19/04/2024 04:03:06,25,1.97,81.5,5,27.8,834,20.2,1.39,0.67,18,7I,Tarde,castaño,alargado,6,angulo marcado,gibal nasal,,Soleado,fuerte,exitoso,Femenino,otro,claro,corto
+13/08/2024 23:45:33,29,1.55,70.5,1,29.4,364,19.9,1.31,0.82,42,5I,Mañana,negro,corazon,5,arqueadas,recta,,Soleado,debil,fallido,Femenino,otro,claro,largo
+01/03/2024 21:58:58,22,1.91,83.7,1,14.3,616,15.7,1.2,0.88,20,4I,Noche,marron claro,cuadrado,2,rectas,pinocho,"capucha, gorra",nublado,fuerte,fallido,Femenino,marron oscuro,claro,largo
+05/10/2023 09:09:07,22,1.91,51.1,4,21.7,320,17.0,1.82,0.56,28,6E,Noche,castaño,triangular a,4,forma de s,silla de montar,"mascarilla, lentes, gorra",nublado,fuerte,exitoso,Masculino,marron claro,claro,corto
+22/11/2023 08:12:20,25,1.83,76.3,4,13.2,422,15.6,1.37,0.66,43,4E,Tarde,negro,diamante,6,arqueadas,aplastad,"gorra, mascarilla, capucha, lentes",Soleado,debil,fallido,Masculino,negro,claro,largo
+03/12/2023 13:04:14,18,1.9,55.7,3,8.4,975,21.5,0.92,0.61,0,7E,Noche,castaño,alargado,6,rectas,pinocho,"lentes, capucha, mascarilla",nublado,mediana,fallido,Femenino,marron claro,claro,largo
+10/07/2024 05:33:09,28,1.78,71.0,2,26.0,706,18.7,1.82,0.61,17,7I,Noche,castaño,diamante,4,redondas,levantada,"capucha, mascarilla",nublado,debil,fallido,Masculino,otro,oscura,largo
+14/03/2024 15:51:23,22,1.55,85.3,4,20.8,975,19.3,1.71,0.99,28,6E,Tarde,castaño,cuadrado,3,arqueadas,pinocho,"capucha, mascarilla, lentes, gorra",nublado,fuerte,exitoso,Masculino,otro,oscura,largo
+09/03/2024 16:22:46,26,1.98,53.6,5,20.6,470,19.7,1.83,0.95,33,2E,Noche,negro,redondo,4,arqueadas,aguileña,"mascarilla, lentes, capucha",nublado,debil,exitoso,Masculino,marron oscuro,claro,corto
+09/10/2023 23:14:19,25,1.51,64.4,3,25.6,930,18.6,1.65,0.56,26,5E,Tarde,marron claro,redondo,6,arqueadas,silla de montar,"gorra, mascarilla, capucha",lluvioso,mediana,fallido,Masculino,marron oscuro,claro,corto
+28/11/2023 04:01:18,18,1.64,53.8,1,14.6,678,21.3,0.59,0.68,38,3I,Tarde,castaño,redondo,5,forma de s,aguileña,"gorra, mascarilla, lentes, capucha",lluvioso,debil,exitoso,Femenino,otro,claro,largo
+25/11/2023 05:53:03,20,1.77,84.1,4,17.3,375,16.5,1.12,0.8,14,6I,Mañana,negro,redondo,5,redondas,levantada,"capucha, gorra, mascarilla, lentes",nublado,fuerte,exitoso,Femenino,marron oscuro,oscura,mediano
+28/02/2024 06:59:59,22,1.96,86.0,5,18.9,728,16.4,1.05,0.8,6,4I,Mañana,castaño,cuadrado,2,arqueadas,aguileña,"capucha, lentes",Soleado,debil,exitoso,Masculino,negro,claro,largo
+21/02/2024 07:56:28,17,1.74,99.3,3,13.4,583,19.9,1.18,0.88,15,3I,Noche,negro,redondo,3,arqueadas,silla de montar,"capucha, gorra",lluvioso,mediana,fallido,Masculino,marron oscuro,claro,largo
+16/06/2024 07:30:40,27,1.91,59.0,5,25.9,842,15.1,1.34,0.85,2,1E,Tarde,marron claro,triangular a,2,forma de s,levantada,gorra,nublado,debil,exitoso,Femenino,marron oscuro,oscura,largo
+12/02/2024 14:44:23,23,1.53,64.8,3,10.5,568,19.8,1.13,0.78,0,5I,Tarde,castaño,rectangular,4,angulo marcado,pinocho,mascarilla,lluvioso,mediana,exitoso,Femenino,otro,oscura,largo
+08/03/2024 08:55:52,24,1.75,81.7,5,14.5,962,15.8,0.58,0.98,0,7E,Noche,castaño,rectangular,1,arqueadas,recta,"mascarilla, gorra",Soleado,debil,fallido,Masculino,marron oscuro,claro,mediano
+26/06/2024 18:49:29,20,1.72,86.8,5,20.6,923,15.8,1.46,0.98,37,4E,Noche,marron claro,diamante,3,redondas,aplastad,"lentes, capucha, gorra, mascarilla",lluvioso,fuerte,fallido,Femenino,otro,oscura,largo
+04/05/2024 18:26:52,20,1.71,55.6,1,16.8,468,15.3,1.14,0.83,39,5I,Noche,negro,corazon,5,angulo marcado,aguileña,"lentes, capucha, mascarilla",lluvioso,mediana,exitoso,Masculino,negro,claro,corto
+10/02/2024 18:53:53,24,1.64,66.3,2,22.0,646,20.4,1.58,0.92,21,3I,Tarde,marron claro,rectangular,2,forma de s,levantada,,lluvioso,debil,fallido,Masculino,marron oscuro,claro,mediano
+15/05/2024 10:49:09,28,1.81,89.6,4,19.5,795,17.6,1.82,0.89,8,6E,Noche,marron claro,rectangular,3,rectas,levantada,,nublado,debil,exitoso,Femenino,negro,claro,mediano
+27/02/2024 08:56:04,21,1.75,56.8,3,22.4,783,19.4,1.43,0.68,45,2E,Noche,castaño,ovalado,6,redondas,pinocho,capucha,Soleado,mediana,fallido,Femenino,otro,oscura,mediano
+14/03/2024 16:28:19,23,1.83,87.6,4,8.7,269,18.5,1.19,1.0,5,3I,Noche,marron claro,alargado,1,forma de s,silla de montar,"lentes, gorra",nublado,debil,fallido,Femenino,otro,oscura,corto
+19/12/2023 04:47:44,19,1.87,97.3,1,6.8,476,16.4,0.85,0.73,44,7I,Mañana,negro,rectangular,3,arqueadas,levantada,gorra,lluvioso,fuerte,exitoso,Femenino,marron oscuro,claro,mediano
+28/03/2024 11:09:29,25,1.84,86.7,4,15.0,683,21.3,1.92,0.74,44,1I,Tarde,negro,triangular a,1,angulo marcado,pinocho,"mascarilla, lentes, capucha",Soleado,fuerte,exitoso,Masculino,marron claro,oscura,largo
+27/06/2024 19:41:05,17,1.98,69.1,2,27.7,565,18.0,1.97,0.95,44,4I,Tarde,negro,triangular a,2,forma de s,recta,"mascarilla, gorra, capucha",nublado,mediana,exitoso,Femenino,marron claro,claro,largo
+07/11/2023 04:39:58,20,1.89,65.0,2,27.9,214,16.4,1.92,0.62,10,1E,Tarde,marron claro,ovalado,1,arqueadas,pinocho,"mascarilla, lentes, gorra, capucha",lluvioso,mediana,exitoso,Masculino,marron oscuro,oscura,largo
+08/11/2023 02:32:41,23,1.82,74.0,3,13.5,420,20.0,1.31,0.6,40,4I,Tarde,marron claro,redondo,1,angulo marcado,gibal nasal,"lentes, gorra, capucha",nublado,debil,exitoso,Masculino,marron oscuro,claro,mediano
+14/12/2023 22:47:16,28,1.56,99.5,5,24.7,894,15.5,1.98,0.65,12,7E,Noche,marron claro,rectangular,3,forma de s,aplastad,,nublado,fuerte,exitoso,Femenino,negro,claro,mediano
+10/05/2024 16:51:25,20,1.68,63.8,5,5.7,252,21.8,1.48,0.78,36,2I,Tarde,negro,triangular v,4,redondas,pinocho,"lentes, mascarilla, gorra, capucha",nublado,fuerte,exitoso,Masculino,marron oscuro,claro,corto
