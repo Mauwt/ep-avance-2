@@ -71,6 +71,9 @@ customRed = "#ff7f7f"
 
 df <- read_csv("datos_reconocimiento.csv", locale = locale(encoding = "ISO-8859-1"))
 
+# Eliminando columnas innecesarias para el estudio
+df = df[ , -c(3,4,5,6,7,8,18,19,20,21,22,23,24,32,33,34,35,45,46)]
+
 ```
 
 
@@ -146,17 +149,17 @@ Para facilitar el análisis y evitar errores comunes en la manipulación de los 
 df <- df %>%
   rename(
     fecha = `Marca temporal`,
-    edad = `Edad`,
+    grupo = `Grupo`
+    edad = `Edad (Años)`,
     altura = `Estatura en metros (usar punto como separador decimal)`,
     peso = `Peso en kilogramos (usar punto como separador decimal)`,
     intentos = `Numero de intentos para reconocimiento`,
     tiempo = `Tiempo total que tomo el reconocimiento en segundos`,
-    luz = `Intensidad de luz en luxes`,
-    temperatura = `Temperatura en C° (usar punto como separador decimal)`,
-    distancia_detector = `Distancia entre el detector y la persona en metros (usar punto como separador decimal)`,
-    distancia_cabeza = `Distancia de la parte superior de cabeza hasta la camara`,
-    inclinacion = `Angulo de inclinación-sexagesimales`,
-    dispositivo = `Dispositivo`,
+    luz = `Intensidad de luz (en luxes)`,
+    temperatura = `Temperatura en C°`,
+    distancia_detector = `Distancia horizontal entre el pie del detector y el pie de la persona en metros   (usar punto como separador decimal)`,
+    distancia_cabeza = `Distancia de la parte superior de cabeza del estudiante  hasta la camara   en metros   (usar punto como separador decimal)`,
+    dispositivo = `ID del Dispositivo`,
     turno = `Turno del registro`,
     cabello_color = `Color de cabello`,
     rostro_forma = `Forma del rostro`,
@@ -171,6 +174,7 @@ df <- df %>%
     ojos_color = `Color de ojos`,
     cabello_tamaño = `Tamaño del cabello`,
     ropa_color = `Color de ropa`
+    inclinación = `Inclinación de la persona durante la lectura`
   )
 
 formattable(
