@@ -1,5 +1,5 @@
 ---
-title: "Análisis de los factores que influyen en el reconocimiento facial a través del sistema de control de ingreso y salida de la UTEC en el ciclo 2024-2"
+title: "PG1"
 author: 
   - name: "Castro Revoredo, Luis Alonso"
   - name: "Jacobo Ruiz, David Mauricio"
@@ -19,9 +19,9 @@ execute:
   message: false
 editor: visual
 ---
+# ANÁLISIS DE LOS FACTORES QUE INFLUYEN EN EL RECONOCIMIENTO FACIAL A TRAVÉS DEL SISTEMA DE INGRESO Y SALIDA DE LA UTEC EN EL CICLO 2024-2"
 
 # Introducción
-
 El presente estudio tiene como objetivo general determinar los factores que influyen en el reconocimiento facial a través del sistema de control de ingreso y salida de la Universidad de Ingeniería y Tecnología (UTEC) durante el ciclo 2024-2. Este análisis es de gran importancia, ya que un sistema de control eficiente es fundamental para el acceso ágil y seguro de los estudiantes al campus universitario.
 
 Se evaluarán variables relacionadas con la intensidad de la luz, las características del individuo (como altura, género, color de piel, uso de accesorios en el rostro, entre otros) y las condiciones del entorno (como la aglomeración de personas o las condiciones climáticas). Estas variables pueden afectar la precisión y el tiempo de respuesta del sistema de reconocimiento facial.
@@ -32,10 +32,11 @@ Se evaluarán variables relacionadas con la intensidad de la luz, las caracterí
 
 ## Objetivos específicos
 
--  Analizar la relación entre la intensidad de la luz y el tiempo que le toma al sistema de reconocimiento facial permitir el ingreso a los estudiantes.
+-  Analizar la correlación entre la intensidad de la luz y el tiempo que le toma al sistema de reconocimiento facial permitir el ingreso a los estudiantes de UTEC en el ciclo 2024-2.
 
--  Analizar el impacto del uso de accesorios en la cabeza y rostro (capucha, gorra, lentes, mascarilla) en el tiempo de reconocimiento facial del sistema de control de ingreso y salida de los estudiantes de UTEC en el ciclo 2024-2.
+-  Comparar y determinar cual es el vinculo entre el uso de accesorios en la cabeza y rostro (capucha, gorra, lentes, mascarilla) con el número de intentos que le toma al sistema de control de reconocimiento facial de ingreso y salida de reconocer a los estudiantes de UTEC en el ciclo 2024-2
 
+-
 
 ---
 
@@ -55,7 +56,6 @@ check_and_install("ggplot2")
 check_and_install("dplyr")
 check_and_install("formattable")
 check_and_install("skimr")
-
 
 library(tidyverse)
 library(ggplot2)
@@ -86,11 +86,11 @@ Las variables utilizadas para este análisis incluyen:
 variables_df <- data.frame(
   Variable = c("Altura", "Lleva Accesorios", "Género", "Tamaño del Cabello", 
                "Color de Piel", "Horario", "Intensidad de Luz", "Distancia", 
-               "Aglomeración", "Tiempo de Reconocimiento", "Color de Prenda Superior", "Clima", "Fallo en el Acceso"),
+               "Tiempo de Reconocimiento", "Color de Prenda Superior", "Clima", "Fallo en el Acceso"),
   
   Tipo = c("Numérica continua", "Categórica nominal", "Categórica nominal", "Categórica ordinal", 
            "Categórica nominal", "Categórica nominal", "Numérica discreta", "Numérica continua", 
-           "Categórica ordinal", "Numérica discreta", "Categórica nominal", "Categórica nominal", "Booleana"),
+           "Numérica discreta", "Categórica nominal", "Categórica nominal", "Booleana"),
   
   "Valores Aceptados" = c("Rango: 1.0 - 2.5 metros", 
                           "Capucha, gorro, lentes, mascarilla, ninguno", 
@@ -98,13 +98,12 @@ variables_df <- data.frame(
                           "Corto, Mediano, Largo", 
                           "Escala Fitzpatrick 1-6", 
                           "Mañana, Tarde, Noche", 
-                          "Rango: 0-1000 lúmenes", 
+                          "Rango: 0-10000 luxes", 
                           "Rango: 0.5-3.0 metros", 
-                          "Casi vacío, Moderadamente concurrido, Lleno", 
                           "Rango: 1-10 segundos", 
                           "Variedad de colores", 
                           "Soleado, Parcialmente nublado, Nublado, Lluvioso", 
-                          "Sí, No"),
+                          "Exitoso, Fallido"),
   
   "Características" = c(
     "Puede tener valores atípicos si no es reportado correctamente.",
@@ -115,7 +114,6 @@ variables_df <- data.frame(
     "Basado en el rango de horas del día.",
     "Debería ser numérica discreta, relacionada con condiciones de luz.",
     "Valores continuos de distancia medida en metros.",
-    "Cantidad de personas afecta el rendimiento del sistema.",
     "El sistema registra tiempo en segundos.",
     "Los colores de la prenda pueden afectar la detección.",
     "El clima puede influir en la calidad de la detección.",
@@ -149,13 +147,13 @@ df <- df %>%
   rename(
     fecha = `Marca temporal`,
     edad = `Edad`,
-    altura = `Estatura en metros`,
-    peso = `Peso en kilogramos`,
+    altura = `Estatura en metros (usar punto como separador decimal)`,
+    peso = `Peso en kilogramos (usar punto como separador decimal)`,
     intentos = `Numero de intentos para reconocimiento`,
     tiempo = `Tiempo total que tomo el reconocimiento en segundos`,
     luz = `Intensidad de luz en luxes`,
-    temperatura = `Temperatura en C°`,
-    distancia_detector = `Distancia entre el detector y la persona en metros`,
+    temperatura = `Temperatura en C° (usar punto como separador decimal)`,
+    distancia_detector = `Distancia entre el detector y la persona en metros (usar punto como separador decimal)`,
     distancia_cabeza = `Distancia de la parte superior de cabeza hasta la camara`,
     inclinacion = `Angulo de inclinación-sexagesimales`,
     dispositivo = `Dispositivo`,
@@ -171,7 +169,7 @@ df <- df %>%
     lectura_estado = `Estado de la lectura`,
     genero = `Género`,
     ojos_color = `Color de ojos`,
-    cabello_tamaño = `Tamaño de cabello`,
+    cabello_tamaño = `Tamaño del cabello`,
     ropa_color = `Color de ropa`
   )
 
