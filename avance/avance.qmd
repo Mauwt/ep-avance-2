@@ -87,36 +87,24 @@ Las variables utilizadas para este análisis incluyen:
 
 ```{r}
 variables_df <- data.frame(
-  Variable = c("Intensidad de Luz", "Edad", "Intentos", "Altura", 
-              "Distancia horizontal", "Distancia diagonal", "Tiempo de Reconocimiento", "Peso",
-              "Temperatura", "Tamaño del Cabello", 
-"Lleva Accesorios", 
-"Género", 
-               "Color de Piel", 
-"Horario",   
-"Color de Prenda Superior", 
-"Clima", 
-"Fallo en el Acceso"),
+  Variable = c("Intensidad de Luz", "Edad", "Intentos", "Altura", "Distancia horizontal", 
+              "Distancia diagonal", "Tiempo de Reconocimiento", "Peso", "Temperatura",  "Color de Piel", 
+              "Corriente del viento", "Tamaño del Cabello", "Color de Cabello", "Género", "Clima",
+              "Accesorios", "Turno del registro", "ID del Dispositivo", "Forma del rostro", "Forma de las cejas",
+              "Color de Ojos", "Tipo de nariz", "Color de Ropa", "Inclinación, "Estado de la Lectura"),
   
-  Tipo = c("Numérica discreta", "Numérica discreta", "Numérica discreta", "Numérica continua"
-          "Numérica continua", "Numérica continua", "Numérica continua", "Numérica continua"
-          "Numérica continua", "Categórica ordinal", 
-"Categórica nominal", 
-           "Categórica nominal", 
-"Categórica nominal", 
-           "Numérica discreta", 
-"Categórica nominal", 
-"Categórica nominal", 
-"Booleana"),
-  
-  "Valores Aceptados" = c("Rango: 1.0 - 2.5 metros", 
+  Tipo = c("Numérica discreta", "Numérica discreta", "Numérica discreta", "Numérica continua", "Numérica continua",
+          "Numérica continua", "Numérica continua", "Numérica continua", "Numérica continua", "Categórica ordinal",
+          "Categórica ordinal", "Categórica ordinal", "Categórica nominal", "Categórica nominal", "Categórica nominal",
+          "Categórica nominal", "Categórica nominal", "Categórica nominal", "Categórica nominal", "Categórica nominal",
+          "Categórica nominal", "Categórica nominal", "Categórica nominal", "Categórica nominal", "Categórica nominal"),
+          
+  "Valores Aceptados" = c("Rango: 0-10000 luxes", "Rango: 0-80 años", "Rango: 1-5",  "Rango: 1.0 - 2.5 metros", "Rango: 0.5-3.0 metros", 
                           "Capucha, gorro, lentes, mascarilla, ninguno", 
                           "M, F", 
                           "Corto, Mediano, Largo", 
                           "Escala Fitzpatrick 1-6", 
                           "Mañana, Tarde, Noche", 
-                          "Rango: 0-10000 luxes", 
-                          "Rango: 0.5-3.0 metros", 
                           "Rango: 1-10 segundos", 
                           "Variedad de colores", 
                           "Soleado, Parcialmente nublado, Nublado, Lluvioso", 
