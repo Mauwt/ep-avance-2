@@ -87,13 +87,27 @@ Las variables utilizadas para este análisis incluyen:
 
 ```{r}
 variables_df <- data.frame(
-  Variable = c("Altura", "Lleva Accesorios", "Género", "Tamaño del Cabello", 
-               "Color de Piel", "Horario", "Intensidad de Luz", "Distancia", 
-               "Tiempo de Reconocimiento", "Color de Prenda Superior", "Clima", "Fallo en el Acceso"),
+  Variable = c("Intensidad de Luz", "Edad", "Intentos", "Altura", 
+              "Distancia horizontal", "Distancia diagonal", "Tiempo de Reconocimiento", "Peso",
+              "Temperatura", "Tamaño del Cabello", 
+"Lleva Accesorios", 
+"Género", 
+               "Color de Piel", 
+"Horario",   
+"Color de Prenda Superior", 
+"Clima", 
+"Fallo en el Acceso"),
   
-  Tipo = c("Numérica continua", "Categórica nominal", "Categórica nominal", "Categórica ordinal", 
-           "Categórica nominal", "Categórica nominal", "Numérica discreta", "Numérica continua", 
-           "Numérica discreta", "Categórica nominal", "Categórica nominal", "Booleana"),
+  Tipo = c("Numérica discreta", "Numérica discreta", "Numérica discreta", "Numérica continua"
+          "Numérica continua", "Numérica continua", "Numérica continua", "Numérica continua"
+          "Numérica continua", "Categórica ordinal", 
+"Categórica nominal", 
+           "Categórica nominal", 
+"Categórica nominal", 
+           "Numérica discreta", 
+"Categórica nominal", 
+"Categórica nominal", 
+"Booleana"),
   
   "Valores Aceptados" = c("Rango: 1.0 - 2.5 metros", 
                           "Capucha, gorro, lentes, mascarilla, ninguno", 
