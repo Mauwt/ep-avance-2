@@ -34,7 +34,7 @@ Se evaluarán variables relacionadas con la intensidad de la luz, las caracterí
 
 -  Analizar la correlación entre la intensidad de la luz y el tiempo que le toma al sistema de reconocimiento facial permitir el ingreso a los estudiantes de UTEC en el ciclo 2024-2.
 
--  Comparar y determinar cual es el vinculo entre el uso de accesorios en la cabeza y rostro (capucha, gorra, lentes, mascarilla) con el número de intentos que le toma al sistema de control de reconocimiento facial de ingreso y salida de reconocer a los estudiantes de UTEC en el ciclo 2024-2
+-  Comparar y determinar cual es el vinculo entre el uso de accesorios en la cabeza y rostro (capucha, gorra, lentes, mascarilla) con el tiempo que le toma al sistema de control de reconocimiento facial de ingreso y salida de reconocer a los estudiantes de UTEC en el ciclo 2024-2
 
 -
 
